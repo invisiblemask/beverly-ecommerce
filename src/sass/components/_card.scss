@@ -1,0 +1,35 @@
+.card-container {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 4rem;
+  padding-bottom: 20px;
+  //   height: 100vh;
+
+  .card-wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+
+    img {
+      width: 270px;
+    }
+
+    .card-name {
+      font-weight: 600;
+      text-transform: uppercase;
+    }
+
+    .card-price {
+      color: $banner-bg-color;
+    }
+
+    @media (max-width: $layout-breakpoint-xsmall) {
+      img {
+        width: 100%;
+      }
+    }
+  }
+}

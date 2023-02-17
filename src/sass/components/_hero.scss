@@ -1,0 +1,122 @@
+.hero {
+  height: 100vh;
+  object-fit: cover;
+  background-size: cover;
+  position: relative;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)),
+    url("/images/bg.jpeg");
+
+  .hero-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    .hero-wrapper {
+      display: flex;
+      flex-direction: column;
+
+      .hero-text {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        font-size: 60px;
+        margin-top: 70px;
+        color: $white;
+        font-weight: 600;
+
+        span {
+          font-size: $font-md;
+        }
+      }
+
+      button {
+        align-self: center;
+        width: 180px;
+        margin-top: 20px;
+        border: 2px solid white;
+        font-weight: 600;
+
+        &:hover {
+          background-color: $white;
+          color: black;
+          transition: all ease-in-out 0.5s;
+        }
+      }
+    }
+
+    @media (max-width: $layout-breakpoint-xsmall) {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      .hero-wrapper {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+
+        .hero-text {
+          font-size: $font-xl;
+          text-align: center;
+          margin-top: 8rem;
+          color: $white;
+          font-weight: 600;
+        }
+
+        button {
+          margin-top: 20px;
+          width: 200px;
+        }
+      }
+    }
+  }
+
+  .image-container {
+    position: absolute;
+    display: flex;
+    flex-direction: row;
+    bottom: -32%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    gap: 4rem;
+
+    @media (max-width: $layout-breakpoint-xsmall) {
+      position: relative;
+      display: flex;
+      flex-direction: column;
+      gap: 2rem;
+      margin-top: 20rem;
+      padding: 0 14px;
+    }
+
+    .image-link {
+      position: relative;
+      width: 370px;
+      height: 247px;
+      object-fit: contain;
+      background-size: contain;
+      box-shadow: 11px 13px 12px -13px rgba(0, 0, 0, 0.48);
+
+      @media (max-width: $layout-breakpoint-xsmall) {
+        width: 100%;
+      }
+
+      div {
+        position: absolute;
+        top: 50%;
+        display: flex;
+        flex-direction: column;
+        text-transform: uppercase;
+        font-size: $font-lg;
+        color: $white;
+        font-weight: 600;
+        padding-left: 20px;
+
+        span {
+          font-size: $font-sm;
+        }
+      }
+    }
+  }
+}

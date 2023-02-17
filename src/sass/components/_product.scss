@@ -1,0 +1,56 @@
+.product-container {
+  margin-top: 10rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 1.5rem;
+  padding-bottom: 20px;
+
+  .text-sm {
+    font-size: $font-md;
+    color: $banner-bg-color;
+    font-weight: 600;
+  }
+
+  .text-lg {
+    font-size: $font-lg;
+    font-weight: 400;
+  }
+
+  .paragraph {
+    width: 55%;
+    text-align: center;
+    font-size: $font-xs;
+    line-height: 1.5;
+  }
+
+  .product-card {
+    margin: 40px 0;
+  }
+
+  button {
+    width: 200px;
+    border: 2px solid $banner-bg-color;
+    color: $banner-bg-color;
+    font-weight: 600;
+    text-transform: uppercase;
+    align-self: center;
+
+    &:hover {
+      background-color: $banner-bg-color;
+      color: $white;
+      transition: all ease-in-out 0.5s;
+    }
+  }
+
+  @media (max-width: $layout-breakpoint-xsmall) {
+    padding: 0 14px;
+    margin-top: 45rem;
+    padding-bottom: 20px;
+
+    .paragraph {
+      width: 100%;
+    }
+  }
+}

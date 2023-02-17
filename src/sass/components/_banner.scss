@@ -1,0 +1,10 @@
+.banner {
+  background-color: $banner-bg-color;
+  color: $white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 40px;
+  font-size: $font-md;
+  text-transform: uppercase;
+}

@@ -1,0 +1,29 @@
+body {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: $font-mono;
+}
+
+a {
+  text-decoration: none;
+  color: black;
+}
+
+button {
+  padding: 1rem 2rem;
+  outline: none;
+  border: 1px solid $white;
+  color: $white;
+  background-color: transparent;
+  cursor: pointer;
+}
+
+.bg {
+  height: 100vh;
+  object-fit: cover;
+  background-size: cover;
+  position: relative;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)),
+    url("/images/bg.jpeg");
+}
