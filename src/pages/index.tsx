@@ -4,6 +4,8 @@ import { Inter } from "@next/font/google";
 import HeroPage from "@/components/Hero";
 import ProductPage from "@/components/ProductPage";
 import Navbar from "@/components/Navbar";
+import ProductDisplay from "@/components/ProductDisplay";
+import SLCollection from "@/components/SLCollection";
 // import styles from '@/styles/Home.module.css'
 const inter = Inter({ subsets: ["latin"] });
 
@@ -20,6 +22,8 @@ export default function Home() {
       <main>
         <HeroPage />
         <ProductPage />
+        <ProductDisplay />
+        <SLCollection />
       </main>
     </>
   );

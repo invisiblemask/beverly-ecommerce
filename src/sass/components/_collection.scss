@@ -1,0 +1,93 @@
+.collection {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+  padding: 0 8rem;
+  margin-top: 8rem;
+  margin-bottom: 40px;
+
+  .collection-container {
+    display: flex;
+    flex-direction: row;
+    gap: 40px;
+
+    .card-wrapper {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+
+      .card-name {
+        font-weight: bold;
+        text-transform: uppercase;
+      }
+
+      .card-price {
+        color: $banner-bg-color;
+      }
+    }
+  }
+
+  .collection-wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+
+    .collection-header {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      justify-content: center;
+      align-items: center;
+      font-size: $font-lg;
+      font-weight: 400;
+
+      span {
+        color: $banner-bg-color;
+        font-size: 18px;
+      }
+    }
+
+    .img-collection {
+      display: flex;
+      flex-direction: row;
+      gap: 40px;
+
+      img {
+        width: 300px;
+      }
+    }
+  }
+
+  @media (max-width: $layout-breakpoint-xsmall) {
+    padding: 0 14px;
+    margin-top: 1rem;
+    padding-bottom: 20px;
+
+    .collection-container {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      grid-template-rows: repeat(2, 1fr);
+      gap: 10px;
+
+      .card-wrapper {
+        img {
+          width: 100%;
+        }
+      }
+    }
+
+    .collection-wrapper {
+      .collection-header {
+        text-align: center;
+      }
+
+      .img-collection {
+        flex-direction: column;
+        gap: 20px;
+        img {
+          width: 100%;
+        }
+      }
+    }
+  }
+}

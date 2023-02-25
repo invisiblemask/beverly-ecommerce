@@ -3,10 +3,8 @@ nav {
   justify-content: space-between;
   align-items: center;
   padding: 1rem 10rem;
-  position: sticky;
-  top: 0;
   z-index: 999;
-  transition: 0.5s all ease;
+  background-color: transparent;
 
   .hamburger {
     display: none;
@@ -33,6 +31,16 @@ nav {
   &.active {
     background-color: white;
     color: black;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    transition: background-color 0.5s ease-in-out;
+    box-shadow: 11px 13px 12px -13px rgba(0, 0, 0, 0.48);
+  }
+
+  &.animate {
+    animation: fadeIn 0.5s ease;
   }
 
   .middle-left,
@@ -77,13 +85,6 @@ nav {
   img {
     width: 100px;
     height: 100px;
-
-    &:hover {
-      background: linear-gradient(
-        rgba(224, 224, 224, 0.1),
-        rgba(224, 224, 224, 0.1)
-      );
-    }
   }
 
   .cart-container {
@@ -164,5 +165,14 @@ nav {
       width: 120px;
       height: 120px;
     }
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
   }
 }

@@ -7,6 +7,7 @@ import { useEffect, useState } from "react";
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
   const [active, setActive] = useState(false);
+  const [animate, setAnimate] = useState(true);
 
   const sidebarAnimation = useSpring({
     transform: isOpen ? "translateX(0%)" : "translateX(-100%)",
@@ -23,8 +24,14 @@ export default function Navbar() {
     };
   }, []);
 
+  useEffect(() => {
+    setTimeout(() => {
+      setAnimate(false);
+    }, 1000);
+  }, []);
+
   return (
-    <nav className={active ? "active" : ""}>
+    <nav className={`${active ? "active" : ""} ${animate ? "animate" : ""}`}>
       <div className="hamburger" onClick={() => setIsOpen(!isOpen)}>
         <div
           className={active ? "hamburger-one active" : "hamburger-one"}

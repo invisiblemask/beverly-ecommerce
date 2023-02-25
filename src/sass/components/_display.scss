@@ -1,0 +1,148 @@
+.product-display {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  padding: 0 8rem;
+  margin-top: 10rem;
+  padding-bottom: 20px;
+
+  .display-top {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+
+    .display-img-lg {
+      width: 500px;
+    }
+
+    .display-wrapper {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+      margin-top: 70px;
+
+      .display-header {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        justify-content: center;
+        align-items: center;
+        font-size: $font-lg;
+        font-weight: 400;
+
+        span {
+          color: $banner-bg-color;
+          font-size: 18px;
+        }
+      }
+
+      .side-display {
+        display: flex;
+        flex-direction: row;
+        gap: 70px;
+
+        .side-display-card {
+          display: flex;
+          flex-direction: column;
+          gap: 10px;
+
+          .display-card-name {
+            font-weight: 600;
+            text-transform: uppercase;
+          }
+
+          .display-card-price {
+            color: $banner-bg-color;
+          }
+        }
+      }
+    }
+  }
+
+  .display-bottom {
+    display: flex;
+    gap: 7rem;
+    flex-direction: row;
+
+    .display-img-lg {
+      width: 500px;
+    }
+
+    .display-wrapper {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+      margin-top: 70px;
+
+      .display-header {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        justify-content: center;
+        align-items: center;
+        font-size: $font-lg;
+        font-weight: 400;
+
+        span {
+          color: $banner-bg-color;
+          font-size: 18px;
+        }
+      }
+
+      .side-display {
+        display: flex;
+        flex-direction: row;
+        gap: 70px;
+
+        .side-display-card {
+          display: flex;
+          flex-direction: column;
+          gap: 10px;
+
+          .display-card-name {
+            font-weight: 600;
+            text-transform: uppercase;
+          }
+
+          .display-card-price {
+            color: $banner-bg-color;
+          }
+        }
+      }
+    }
+  }
+
+  @media (max-width: $layout-breakpoint-xsmall) {
+    padding: 0 14px;
+    margin-top: 1rem;
+    padding-bottom: 20px;
+
+    .display-top,
+    .display-bottom {
+      flex-direction: column;
+
+      .display-img-lg {
+        width: 100%;
+      }
+
+      .display-wrapper {
+        .side-display {
+          display: grid;
+          grid-template-columns: repeat(2, 1fr);
+          gap: 10px;
+
+          img {
+            width: 100%;
+          }
+        }
+      }
+
+      .display-wrapper {
+        margin: 0;
+        .display-header {
+          text-align: center;
+        }
+      }
+    }
+  }
+}
