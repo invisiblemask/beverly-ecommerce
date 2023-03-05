@@ -46,11 +46,21 @@
 
   @media (max-width: $layout-breakpoint-xsmall) {
     padding: 0 14px;
-    margin-top: 45rem;
+    margin-top: 44rem;
     padding-bottom: 20px;
 
     .paragraph {
       width: 100%;
     }
   }
+
+  // @media (max-width: $layout-breakpoint-medium) {
+  //   padding: 0 14px;
+  //   margin-top: 18rem;
+  //   padding-bottom: 20px;
+
+  //   .paragraph {
+  //     width: 100%;
+  //   }
+  // }
 }

@@ -90,4 +90,44 @@
       }
     }
   }
+
+  @media (max-width: $layout-breakpoint-small) {
+    padding: 0 14px;
+    margin-top: 1rem;
+    padding-bottom: 20px;
+
+    .collection-container {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      grid-template-rows: repeat(2, 1fr);
+      gap: 20px;
+
+      .card-wrapper {
+        img {
+          width: 100%;
+        }
+      }
+    }
+
+    .collection-wrapper {
+      .collection-header {
+        text-align: center;
+      }
+
+      .img-collection {
+        flex-direction: column;
+        gap: 20px;
+        img {
+          width: 100%;
+        }
+
+        @media (max-width: $layout-breakpoint-small) {
+          display: grid;
+          grid-template-columns: repeat(2, 1fr);
+          grid-template-rows: repeat(2, 1fr);
+          gap: 20px;
+        }
+      }
+    }
+  }
 }

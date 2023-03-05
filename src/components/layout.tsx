@@ -1,4 +1,5 @@
 import Banner from "./Banner";
+import Footer from "./Footer";
 import Navbar from "./Navbar";
 
 type LayoutProps = {
@@ -11,6 +12,7 @@ export default function Layout({ children }: LayoutProps) {
       <Banner />
       {/* <Navbar /> */}
       <main>{children}</main>
+      <Footer />
     </div>
   );
 }

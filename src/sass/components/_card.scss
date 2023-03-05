@@ -26,11 +26,25 @@
       color: $banner-bg-color;
     }
   }
+
   @media (max-width: $layout-breakpoint-xsmall) {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     grid-template-rows: repeat(2, 1fr);
-    gap: 10px;
+    gap: 20px;
+
+    .card-wrapper {
+      img {
+        width: 100%;
+      }
+    }
+  }
+
+  @media (min-width: $layout-breakpoint-small) {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    // grid-template-rows: repeat(2, 1fr);
+    gap: 20px;
 
     .card-wrapper {
       img {

@@ -129,7 +129,41 @@
         .side-display {
           display: grid;
           grid-template-columns: repeat(2, 1fr);
-          gap: 10px;
+          gap: 20px;
+
+          img {
+            width: 100%;
+          }
+        }
+      }
+
+      .display-wrapper {
+        margin: 0;
+        .display-header {
+          text-align: center;
+        }
+      }
+    }
+  }
+
+  @media (max-width: $layout-breakpoint-small) {
+    padding: 0 14px;
+    margin-top: 1rem;
+    padding-bottom: 20px;
+
+    .display-top,
+    .display-bottom {
+      flex-direction: column;
+
+      .display-img-lg {
+        width: 100%;
+      }
+
+      .display-wrapper {
+        .side-display {
+          display: grid;
+          grid-template-columns: repeat(2, 1fr);
+          gap: 20px;
 
           img {
             width: 100%;
