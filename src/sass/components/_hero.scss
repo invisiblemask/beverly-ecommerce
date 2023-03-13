@@ -25,8 +25,24 @@
         color: $white;
         font-weight: 600;
 
+        @include media(">=phone", "<desktop") {
+          display: none;
+        }
+
         span {
           font-size: $font-md;
+        }
+      }
+
+      .hero-image {
+        display: none;
+
+        @include media(">=phone", "<desktop") {
+          display: block;
+
+          img {
+            width: 120px;
+          }
         }
       }
 
@@ -45,7 +61,7 @@
       }
     }
 
-    @media (max-width: $layout-breakpoint-xsmall) {
+    @include media(">=phone", "<=375px") {
       display: flex;
       justify-content: center;
       align-items: center;
@@ -59,7 +75,107 @@
         .hero-text {
           font-size: $font-xl;
           text-align: center;
-          margin-top: 8rem;
+          color: $white;
+          font-weight: 600;
+        }
+
+        button {
+          margin-top: 20px;
+          width: 200px;
+        }
+      }
+    }
+
+    @include media(">375px", "<=414px") {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      .hero-wrapper {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+
+        .hero-text {
+          font-size: $font-xl;
+          text-align: center;
+          color: $white;
+          font-weight: 600;
+        }
+
+        button {
+          margin-top: 20px;
+          width: 200px;
+        }
+      }
+    }
+
+    @include media(">=820px", "<=960px") {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      .hero-wrapper {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+
+        .hero-text {
+          font-size: $font-xl;
+          text-align: center;
+          color: $white;
+          font-weight: 600;
+        }
+
+        button {
+          margin-top: 20px;
+          width: 200px;
+        }
+      }
+    }
+
+    @include media(">=820px", "<=960px") {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      .hero-wrapper {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+
+        .hero-text {
+          font-size: $font-xl;
+          text-align: center;
+          color: $white;
+          font-weight: 600;
+        }
+
+        button {
+          margin-top: 20px;
+          width: 200px;
+        }
+      }
+    }
+
+    @include media(">=desktop") {
+      height: 50%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      .hero-wrapper {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+
+        .hero-text {
+          font-size: 65px;
+          text-align: center;
           color: $white;
           font-weight: 600;
         }
@@ -76,29 +192,60 @@
     position: absolute;
     display: flex;
     flex-direction: row;
-    bottom: -32%;
+    bottom: -3%;
     left: 50%;
     transform: translate(-50%, -50%);
     gap: 4rem;
 
-    @media (max-width: $layout-breakpoint-xsmall) {
+    @include media(">=phone") {
       position: relative;
       display: flex;
       flex-direction: column;
       gap: 2rem;
-      margin-top: 20rem;
+      margin-top: 25rem;
       padding: 0 14px;
     }
 
-    @media (max-width: $layout-breakpoint-small) {
+    @include media(">375px", "<=414px") {
+      position: relative;
+      display: flex;
+      flex-direction: column;
+      gap: 2rem;
+      margin-top: 30rem;
+      padding: 0 14px;
+    }
+
+    @include media(">=tablet", "<820px") {
       position: relative;
       display: flex;
       flex-direction: column;
       justify-content: center;
       align-items: center;
       gap: 2rem;
-      margin-top: 20rem;
+      margin-top: 30rem;
       padding: 0 14px;
+    }
+
+    @include media(">=820px", "<=960px") {
+      position: relative;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      gap: 2rem;
+      margin-top: 30rem;
+      padding: 0 14px;
+    }
+
+    @include media(">=desktop") {
+      position: absolute;
+      bottom: -23%;
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      // align-items: center;
+
+      gap: 2rem;
     }
 
     .image-link {
@@ -109,16 +256,23 @@
       background-size: contain;
       box-shadow: 11px 13px 12px -13px rgba(0, 0, 0, 0.48);
 
-      @media (max-width: $layout-breakpoint-xsmall) {
+      @include media(">=phone", "<=375px") {
         width: 100%;
       }
 
-      // @media (max-width: $layout-breakpoint-small) {
-      //   width: 700px;
-      //   height: 300px;
-      //   background-repeat: no-repeat;
-      //   background-size: cover;
-      // }
+      @include media(">=tablet", "<=960px") {
+        width: 700px;
+        height: 300px;
+        background-repeat: no-repeat;
+        background-size: cover;
+      }
+
+      @include media(">=desktop") {
+        width: 450px;
+        height: 250px;
+        background-repeat: no-repeat;
+        background-size: cover;
+      }
 
       div {
         position: absolute;

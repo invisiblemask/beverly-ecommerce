@@ -14,6 +14,9 @@ export default function HeroPage() {
           <div className="hero-text">
             <span>THE</span> SOFT LIFE COLLECTION
           </div>
+          <div className="hero-image">
+            <img src="/images/benaya-white-small.png" alt="" />
+          </div>
           <button>BUY NOW</button>
         </div>
       </section>

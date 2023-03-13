@@ -1,5 +1,4 @@
 import Card from "./Card";
-import { products } from "./data";
 
 export default function ProductPage() {
   return (
@@ -11,9 +10,7 @@ export default function ProductPage() {
         define what we are made of, and that is black, strength, beauty,
         intelligence and most importantly style…
       </div>
-      <div>
-        <Card />
-      </div>
+      <Card />
       <button className="product-button">view more</button>
     </section>
   );

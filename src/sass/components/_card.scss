@@ -27,7 +27,7 @@
     }
   }
 
-  @media (max-width: $layout-breakpoint-xsmall) {
+  @include media(">=phone") {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     grid-template-rows: repeat(2, 1fr);
@@ -40,9 +40,35 @@
     }
   }
 
-  @media (min-width: $layout-breakpoint-small) {
+  @include media(">375px", "<=414px") {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
+    // grid-template-rows: repeat(2, 1fr);
+    gap: 20px;
+
+    .card-wrapper {
+      img {
+        width: 100%;
+      }
+    }
+  }
+
+  @include media(">=820px", "<=960px") {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    // grid-template-rows: repeat(2, 1fr);
+    gap: 20px;
+
+    .card-wrapper {
+      img {
+        width: 100%;
+      }
+    }
+  }
+
+  @include media(">=desktop") {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
     // grid-template-rows: repeat(2, 1fr);
     gap: 20px;
 

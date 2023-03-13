@@ -8,7 +8,7 @@
   font-size: $font-md;
   text-transform: uppercase;
 
-  @media (max-width: $layout-breakpoint-small) {
+  @include media("<=phone") {
     width: 100%;
   }
 }

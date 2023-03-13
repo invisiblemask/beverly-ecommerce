@@ -11,14 +11,17 @@
     font-size: $font-md;
     color: $banner-bg-color;
     font-weight: 600;
+    text-align: center;
   }
 
   .text-lg {
     font-size: $font-lg;
     font-weight: 400;
+    text-align: center;
   }
 
   .paragraph {
+    align-self: center;
     width: 55%;
     text-align: center;
     font-size: $font-xs;
@@ -44,9 +47,9 @@
     }
   }
 
-  @media (max-width: $layout-breakpoint-xsmall) {
+  @include media(">=phone") {
     padding: 0 14px;
-    margin-top: 44rem;
+    margin-top: 35rem;
     padding-bottom: 20px;
 
     .paragraph {
@@ -54,13 +57,61 @@
     }
   }
 
-  // @media (max-width: $layout-breakpoint-medium) {
+  @include media(">375px", "<=414px") {
+    padding: 0 14px;
+    margin-top: 20rem;
+    padding-bottom: 20px;
+
+    .paragraph {
+      width: 100%;
+    }
+  }
+
+  @include media(">=820px", "<=960px") {
+    padding: 0 14px;
+    margin-top: 10rem;
+    padding-bottom: 20px;
+
+    .paragraph {
+      width: 100%;
+    }
+  }
+
+  @include media(">=tablet", "<820px") {
+    padding: 0 14px;
+    margin-top: 25rem;
+    padding-bottom: 20px;
+
+    .paragraph {
+      width: 100%;
+    }
+  }
+
+  @include media(">=desktop") {
+    padding: 0 14px;
+    margin-top: 5rem;
+    padding-bottom: 20px;
+
+    .paragraph {
+      align-self: center;
+      width: 55%;
+      text-align: center;
+      font-size: $font-xs;
+      line-height: 1.5;
+    }
+  }
+
+  // @media (min-width: $layout-breakpoint-large) {
   //   padding: 0 14px;
-  //   margin-top: 18rem;
+  //   margin-top: 12rem;
   //   padding-bottom: 20px;
 
   //   .paragraph {
-  //     width: 100%;
+  //     align-self: center;
+  //     width: 55%;
+  //     text-align: center;
+  //     font-size: $font-xs;
+  //     line-height: 1.5;
   //   }
   // }
 }
