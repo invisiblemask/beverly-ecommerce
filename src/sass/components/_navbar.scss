@@ -90,7 +90,7 @@ nav {
     display: flex;
     flex-direction: row;
     gap: 3rem;
-    font-size: $font-md;
+    font-size: 20px;
     color: $white;
 
     a {
@@ -100,7 +100,16 @@ nav {
         color: black;
       }
     }
+
+    .link-home {
+      color: $white;
+    }
+
+    .link-other {
+      color: black;
+    }
   }
+
   .middle-right {
     display: flex;
     justify-content: center;
@@ -111,16 +120,6 @@ nav {
       display: flex;
       gap: 3rem;
     }
-    .cart-icon {
-      width: 35px;
-      height: 35px;
-      font-weight: 100;
-      color: $white;
-
-      &.active {
-        color: black;
-      }
-    }
   }
 
   img {
@@ -130,6 +129,17 @@ nav {
 
   .cart-container {
     position: relative;
+
+    .cart-icon {
+      width: 35px;
+      height: 35px;
+      font-weight: 100;
+      color: $white;
+    }
+
+    .link-home {
+      color: black;
+    }
 
     div {
       position: absolute;

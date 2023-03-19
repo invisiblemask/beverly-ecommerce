@@ -4,8 +4,10 @@ footer {
 
   .footer {
     display: flex;
+    background-color: #f9fcff;
 
     .footer-left {
+      padding-top: 4rem;
       display: flex;
       flex-direction: column;
       gap: 10px;
@@ -58,6 +60,7 @@ footer {
     .footer-right {
       display: flex;
       gap: 4rem;
+      padding-top: 4rem;
 
       .links {
         display: flex;
