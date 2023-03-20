@@ -24,6 +24,10 @@ nav {
         &.active {
           background-color: black;
         }
+
+        .link-other {
+          background-color: black;
+        }
       }
     }
 
@@ -43,6 +47,10 @@ nav {
           background-color: black;
         }
       }
+
+      .link-other {
+        background-color: black;
+      }
     }
 
     @include media(">=tablet") {
@@ -58,6 +66,10 @@ nav {
         background: $white;
 
         &.active {
+          background-color: black;
+        }
+
+        .link-other {
           background-color: black;
         }
       }
@@ -129,6 +141,7 @@ nav {
 
   .cart-container {
     position: relative;
+    cursor: pointer;
 
     .cart-icon {
       width: 35px;
@@ -148,8 +161,8 @@ nav {
       font-size: 17px;
       background-color: $banner-bg-color;
       color: $white;
-      width: 14px;
-      height: 14px;
+      width: 10px;
+      height: 10px;
       display: flex;
       justify-content: center;
       align-items: center;

@@ -6,6 +6,11 @@
   margin-bottom: 40px;
   gap: 50px;
 
+  @include media(">=phone", "<desktop") {
+    padding: 0 14px;
+    flex-direction: column;
+  }
+
   .product-image {
     display: flex;
     flex-direction: column;
@@ -18,6 +23,10 @@
         width: 400px;
         height: 400px;
         object-fit: cover;
+
+        @include media(">=phone", "<desktop") {
+          width: 100%;
+        }
       }
     }
 
@@ -26,10 +35,20 @@
       grid-template-columns: repeat(4, 1fr);
       gap: 20px;
 
+      @include media(">=phone", "<desktop") {
+        grid-template-columns: repeat(4, 1fr);
+      }
+
       .small-img {
         width: 85px;
         height: 80px;
         object-fit: cover;
+
+        @include media(">=phone", "<desktop") {
+          width: 100%;
+          height: 100px;
+          object-fit: contain;
+        }
 
         .selected-img {
           background-color: #f02d34;
@@ -135,6 +154,10 @@
       width: 260px;
       gap: 18px;
 
+      @include media(">=phone", "<desktop") {
+        width: fit-content;
+      }
+
       .order-item {
         display: flex;
         flex-direction: row;
@@ -235,7 +258,7 @@
           gap: 10px;
           align-items: center;
           justify-content: center;
-          color: black;
+          color: $banner-bg-color;
           border: 1px solid $banner-bg-color;
 
           .order-cart {

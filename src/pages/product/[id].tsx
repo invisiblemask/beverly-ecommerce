@@ -50,19 +50,17 @@ export default function Product() {
             <img src={images && images[index]} alt="" />
           </div>
           <div className="small-image-container">
-            {images
-              .map((image, index) => (
-                <img
-                  key={index}
-                  src={image}
-                  alt=""
-                  className={
-                    index === index ? "small-img selected-img" : "small-img"
-                  }
-                  onClick={() => setIndex(index)}
-                />
-              ))
-              .slice(0, 4)}
+            {images.map((image, index) => (
+              <img
+                key={index}
+                src={image}
+                alt=""
+                className={
+                  index === index ? "small-img selected-img" : "small-img"
+                }
+                onClick={() => setIndex(index)}
+              />
+            ))}
           </div>
         </div>
         <div className="product-details">

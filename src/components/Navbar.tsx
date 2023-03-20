@@ -4,6 +4,7 @@ import { HiLink, HiOutlineShoppingCart } from "react-icons/hi";
 import { animated, useSpring } from "@react-spring/web";
 import { useEffect, useState } from "react";
 import { useRouter } from "next/router";
+import Modal from "./Modal";
 
 const links1 = [
   {
@@ -35,6 +36,11 @@ export default function Navbar() {
   const router = useRouter();
   const path = router.pathname;
   const [isOpen, setIsOpen] = useState(false);
+  const [showModal, setShowModal] = useState(false);
+
+  const toggleModal = () => {
+    setShowModal(!showModal);
+  };
 
   const sidebarAnimation = useSpring({
     transform: isOpen ? "translateX(0%)" : "translateX(-100%)",
@@ -43,9 +49,21 @@ export default function Navbar() {
   return (
     <nav>
       <div className="hamburger" onClick={() => setIsOpen(!isOpen)}>
-        <div className="hamburger-one"></div>
-        <div className="hamburger-two"></div>
-        <div className="hamburger-three"></div>
+        <div
+          className={
+            path === "/" ? "hamburger-one" : "hamburger-one link-other"
+          }
+        ></div>
+        <div
+          className={
+            path === "/" ? "hamburger-two" : "hamburger-two link-other"
+          }
+        ></div>
+        <div
+          className={
+            path === "/" ? "hamburger-three" : "hamburger-three link-other"
+          }
+        ></div>
       </div>
       <div className="middle-left">
         {links1.map((link, index) => {
@@ -84,13 +102,13 @@ export default function Navbar() {
             );
           })}
         </div>
-        <div className="cart-container">
-          <Link href="/cart">
-            <HiOutlineShoppingCart
-              className={path === "/" ? "cart-icon" : "cart-icon link-home"}
-            />
-            <div>0</div>
-          </Link>
+        <div className="cart-container" onClick={toggleModal}>
+          {/* <Link href="/cart"> */}
+          <HiOutlineShoppingCart
+            className={path === "/" ? "cart-icon" : "cart-icon link-home"}
+          />
+          <div>0</div>
+          {/* </Link> */}
         </div>
       </div>
       {isOpen && (
@@ -112,6 +130,7 @@ export default function Navbar() {
           <div className="close" onClick={() => setIsOpen(false)}></div>
         </animated.div>
       )}
+      {showModal && <Modal toggleModal={toggleModal} />}
     </nav>
   );
 }
