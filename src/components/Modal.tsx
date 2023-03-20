@@ -30,7 +30,7 @@ export default function Modal({ toggleModal }: ModalProps) {
             <div className="details-wrapper">
               <img src="/images/product2.jpeg" alt="" />
               <div className="items-info">
-                <span>THE BALI SHIRT DRESS</span>
+                <span>The Bali Shirt Dress</span>
                 <span>₦39,850</span>
               </div>
             </div>
@@ -42,7 +42,9 @@ export default function Modal({ toggleModal }: ModalProps) {
             Sub-total: <span>₦62,350</span>
           </div>
           <div className="modal-btns">
-            <button>View Cart</button>
+            <Link href="/cart" onClick={toggleModal}>
+              <button>View Cart</button>
+            </Link>
             <button>Checkout</button>
           </div>
         </div>

@@ -107,7 +107,7 @@ export default function Navbar() {
           <HiOutlineShoppingCart
             className={path === "/" ? "cart-icon" : "cart-icon link-home"}
           />
-          <div>0</div>
+          <div>2</div>
           {/* </Link> */}
         </div>
       </div>
