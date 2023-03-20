@@ -19,11 +19,96 @@ $easing: cubic-bezier(0.42, 0, 0.58, 1);
     flex-direction: column;
     gap: 10px;
     background-color: white;
-    padding: 50px 20px;
+    padding: 20px;
     border-radius: 5px;
     box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
     width: 50%;
-    height: 200px;
+    height: 300px;
+
+    .modal-item {
+      display: flex;
+      flex-direction: column;
+      gap: 24px;
+      overflow: auto;
+
+      .item-header {
+        font-size: 18px;
+        font-weight: 600;
+        font-family: $font-robo;
+
+        span {
+          font-weight: lighter;
+        }
+      }
+
+      .item-details {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        .details-wrapper {
+          display: flex;
+          flex-direction: row;
+          gap: 20px;
+
+          img {
+            width: 90px;
+            height: 90px;
+            object-fit: cover;
+          }
+
+          .items-info {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            font-weight: bold;
+            font-family: serif;
+          }
+        }
+
+        .item-icon {
+          width: 25px;
+          height: 25px;
+          cursor: pointer;
+          margin-right: 40px;
+        }
+      }
+    }
+
+    .total-btn {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      margin-top: auto;
+      border-top: 1px solid #cecece;
+      padding-top: 15px;
+
+      .total {
+        span {
+          font-weight: bold;
+        }
+      }
+
+      .modal-btns {
+        display: flex;
+        flex-direction: row;
+        gap: 20px;
+        align-items: center;
+        button {
+          text-transform: uppercase;
+          font-weight: bold;
+        }
+
+        button:nth-child(1) {
+          border: 1px solid black;
+          color: black;
+        }
+
+        button:nth-child(2) {
+          background-color: $banner-bg-color;
+        }
+      }
+    }
 
     .modal-initial {
       display: flex;
