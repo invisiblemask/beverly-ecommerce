@@ -1,0 +1,63 @@
+.about {
+    display: flex;
+    flex-direction: row;
+    gap: 40px;
+    padding: 0 8rem;
+    margin-top: 4rem;
+
+    @include media(">=phone", "<desktop") {
+        padding: 0 14px;
+        flex-direction: column;
+    }
+
+    .about-wrapper {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 20px;
+
+        .about-header {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            font-size: 20px;
+            letter-spacing: 7px;
+            font-family: 'Clash Grotesk', sans-serif;
+
+            span {
+                color: $banner-bg-color;
+                letter-spacing: 0px;
+                text-align: center;
+                font-size: 19px;
+                font-weight: 600;
+            }
+        }
+
+        .about-desc {
+            font-size: 15px;
+            line-height: 1.5;
+            text-align: center;
+        }
+
+        .about-img {
+            img {
+                width: 400px;
+
+                @include media(">=phone", "<desktop") {
+                    width: 100%;
+                }
+            }
+        }
+    }
+
+    .about-bg-img {
+        img {
+            width: 900px;
+
+            @include media(">=phone", "<desktop") {
+                width: 100%;
+            }
+        }
+    }
+}

@@ -76,23 +76,6 @@ nav {
     }
   }
 
-  // &.active {
-  //   background-color: white;
-  //   color: black;
-  //   position: fixed;
-  //   top: 0;
-  //   left: 0;
-  //   right: 0;
-  //   height: 50px;
-  //   transition: background-color 0.5s ease-in-out;
-  //   box-shadow: 1px 2px 6px 4px rgba(0, 0, 0, 0.2);
-
-  //   img {
-  //     width: 60px;
-  //     height: 60px;
-  //   }
-  // }
-
   &.animate {
     animation: fadeIn 0.5s ease;
   }
@@ -104,6 +87,7 @@ nav {
     gap: 3rem;
     font-size: 18px;
     color: $white;
+    font-family: 'Clash Grotesk', sans-serif;
 
     a {
       color: $white;
@@ -156,8 +140,8 @@ nav {
 
     div {
       position: absolute;
-      top: 0;
-      right: 0;
+      top: -6px;
+      right: -8px;
       font-size: 17px;
       background-color: $banner-bg-color;
       color: $white;
