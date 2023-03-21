@@ -102,7 +102,7 @@ nav {
     display: flex;
     flex-direction: row;
     gap: 3rem;
-    font-size: 20px;
+    font-size: 18px;
     color: $white;
 
     a {
@@ -251,6 +251,7 @@ nav {
     justify-content: center;
     gap: 4rem;
     font-size: $font-md;
+
     .close {
       position: absolute;
       top: 0;
@@ -258,6 +259,7 @@ nav {
       height: 100px;
       width: 100px;
       border-radius: 5px;
+
       &:after {
         position: absolute;
         top: 0;
@@ -282,6 +284,7 @@ nav {
   from {
     opacity: 0;
   }
+
   to {
     opacity: 1;
   }

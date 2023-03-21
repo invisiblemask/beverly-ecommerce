@@ -24,11 +24,11 @@ const links1 = [
 const links2 = [
   {
     name: "ACCOUNT",
-    href: "/Account",
+    href: "/account",
   },
   {
     name: "CONTACT",
-    href: "/Contact",
+    href: "/contact",
   },
 ];
 
@@ -45,6 +45,14 @@ export default function Navbar() {
   const sidebarAnimation = useSpring({
     transform: isOpen ? "translateX(0%)" : "translateX(-100%)",
   });
+
+  const handleCartClick: () => void = () => {
+    if (path === "/cart") {
+      setShowModal(false);
+    } else {
+      setShowModal(true);
+    }
+  };
 
   return (
     <nav>
@@ -102,13 +110,11 @@ export default function Navbar() {
             );
           })}
         </div>
-        <div className="cart-container" onClick={toggleModal}>
-          {/* <Link href="/cart"> */}
+        <div className="cart-container" onClick={handleCartClick}>
           <HiOutlineShoppingCart
             className={path === "/" ? "cart-icon" : "cart-icon link-home"}
           />
           <div>2</div>
-          {/* </Link> */}
         </div>
       </div>
       {isOpen && (
