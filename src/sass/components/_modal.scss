@@ -24,6 +24,7 @@ $easing: cubic-bezier(0.42, 0, 0.58, 1);
         box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
         width: 50%;
         height: 300px;
+        animation: modalFadeIn 0.3s ease-out forwards;
 
         @include media(">=phone", "<desktop") {
             width: 85%;
@@ -31,6 +32,7 @@ $easing: cubic-bezier(0.42, 0, 0.58, 1);
 
         .modal-item {
             display: flex;
+            height: 50;
             flex-direction: column;
             gap: 24px;
             overflow: auto;
@@ -179,9 +181,47 @@ $easing: cubic-bezier(0.42, 0, 0.58, 1);
             cursor: pointer;
             background-color: #919090f8;
 
+            .isVisible {
+                animation: modalFadeIn 0.3s ease-out forwards;
+            }
+
             .modal-icon {
                 width: 1.3rem;
             }
+        }
+    }
+
+    &.isOpen {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    &.isVisible {
+        animation: modalFadeIn 0.3s ease-out forwards;
+    }
+
+    &.isHidden {
+        animation: modalFadeOut 0.3s ease-out forwards;
+    }
+
+    @keyframes modalFadeIn {
+        from {
+            transform: translateY(0%);
+        }
+
+        to {
+            transform: translateY(10%);
+        }
+    }
+
+    @keyframes modalFadeOut {
+        from {
+            transform: translateY(10%);
+        }
+
+        to {
+            transform: translateY(0%);
         }
     }
 }
