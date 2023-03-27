@@ -25,44 +25,58 @@ export default function Cart() {
       <Navbar />
       <div className="cart">
         <table>
-          <tr>
-            <th>PRODUCT</th>
-            <th>PRICE</th>
-            <th>QUANTITY</th>
-            <th>TOTAL</th>
-          </tr>
-          <tr>
-            <td>
-              <div className="cart-img">
-                <img src="/images/products/product1.jpeg" alt="" />
-                <div className="overlay">
-                  <RiDeleteBinLine className="animated-icon" />
+          <thead>
+            <tr>
+              <th>PRODUCT</th>
+              <th>PRICE</th>
+              <th>QUANTITY</th>
+              <th>TOTAL</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>
+                <div className="cart-img">
+                  <img src="/images/products/product1.jpeg" alt="" />
+                  <div className="overlay">
+                    <RiDeleteBinLine className="animated-icon" />
+                  </div>
                 </div>
-              </div>
-              <div className="cart-name">The Print Monroe Dress</div>
-            </td>
-            <td>$80.60</td>
-            <td>
-              <div className="cart-btn">
-                <div onClick={handleDecrease} className="minus">
-                  -
+                <div className="cart-name">The Print Monroe Dress</div>
+              </td>
+              <td>$80.60</td>
+              <td>
+                <div className="cart-btn">
+                  <div onClick={handleDecrease} className="minus">
+                    -
+                  </div>
+                  <div className="num">{increment}</div>
+                  <div onClick={handleIncrease} className="plus">
+                    +
+                  </div>
                 </div>
-                <div className="num">{increment}</div>
-                <div onClick={handleIncrease} className="plus">
-                  +
-                </div>
-              </div>
-            </td>
-            <td>
-              <span>${(price * increment).toLocaleString()}</span>
-            </td>
-          </tr>
+              </td>
+              <td>
+                <span>${(price * increment).toLocaleString()}</span>
+              </td>
+            </tr>
+          </tbody>
         </table>
         <div className="cart-right">
-          Lorem ipsum dolor sit amet consectetur, adipisicing elit. Vitae
-          blanditiis, similique earum nulla voluptate dignissimos suscipit
-          minima, repellendus nihil, assumenda odio! Alias, hic maxime minima
-          eius illo tenetur deleniti architecto?
+          <div className="cart-total">Cart Total</div>
+          <div className="sub-total">
+            Sub-total: <span>$234.56</span>
+          </div>
+          <div className="delivery">
+            Delivery: <span>Free</span>
+          </div>
+          <div className="discount">
+            Discount: <span>-15%</span>
+          </div>
+          <div className="total">
+            Discount: <span>$199.376</span>
+          </div>
+          <div className="checkout-btn">Checkout</div>
         </div>
       </div>
     </div>

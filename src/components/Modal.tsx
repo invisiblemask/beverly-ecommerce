@@ -12,7 +12,7 @@ export default function Modal({ toggleModal }: ModalProps) {
   return (
     <div className="modal-container">
       <div className="modal-content">
-        <div className="modal-item">
+        {/* <div className="modal-item">
           <div className="item-header">
             My Cart, <span>2 items</span>{" "}
           </div>
@@ -47,14 +47,14 @@ export default function Modal({ toggleModal }: ModalProps) {
             </Link>
             <button>Checkout</button>
           </div>
-        </div>
-        {/* <div className="modal-initial">
+        </div> */}
+        <div className="modal-initial">
           <HiOutlineShoppingCart className="modal-cart" />
           <div className="modal-text">Your Shopping Cart is empty</div>
           <Link href="/" onClick={toggleModal}>
             <button className="modal-btn">Starting Shopping</button>
           </Link>
-        </div> */}
+        </div>
         <div className="modal-close" onClick={toggleModal}>
           <AiOutlineClose className="modal-icon" />
         </div>
