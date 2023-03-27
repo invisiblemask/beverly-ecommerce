@@ -21,7 +21,7 @@ export default function Modal({ toggleModal }: ModalProps) {
               <img src="/images/products/product1.jpeg" alt="" />
               <div className="items-info">
                 <span>The Print Monroe Dress</span>
-                <span>₦22,500</span>
+                <span>$80.60</span>
               </div>
             </div>
             <RiDeleteBinLine className="item-icon" />
@@ -31,7 +31,7 @@ export default function Modal({ toggleModal }: ModalProps) {
               <img src="/images/product2.jpeg" alt="" />
               <div className="items-info">
                 <span>The Bali Shirt Dress</span>
-                <span>₦39,850</span>
+                <span>$74.45</span>
               </div>
             </div>
             <RiDeleteBinLine className="item-icon" />
@@ -39,7 +39,7 @@ export default function Modal({ toggleModal }: ModalProps) {
         </div>
         <div className="total-btn">
           <div className="total">
-            Sub-total: <span>₦62,350</span>
+            Sub-total: <span>$155.05</span>
           </div>
           <div className="modal-btns">
             <Link href="/cart" onClick={toggleModal}>

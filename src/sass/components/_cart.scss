@@ -1,27 +1,74 @@
 .cart {
   display: flex;
   flex-direction: row;
+  justify-content: space-between;
   padding: 0 8rem;
   margin-top: 4rem;
 
-  table {
-    border-collapse: collapse;
-    width: 100%;
 
-    th,
-    td {
-      border: 1px solid black;
-      padding: 8px;
-      text-align: left;
-    }
+  table {
+    color: #555555;
+    border-collapse: collapse;
+    border: 1px solid #a7a5a5;
+    overflow: auto;
 
     th {
-      background-color: gray;
-      color: white;
+      padding: 24px;
+      text-align: left;
+      border-bottom: 1px solid #a7a5a5;
+      font-weight: 600;
+      font-size: 14px;
     }
 
-    tr:nth-child(even) {
-      background-color: lightgray;
+    tr {
+      width: 100%;
     }
+
+    td {
+      text-align: left;
+      padding: 40px 24px;
+      text-align: left;
+
+
+      &:first-child {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        gap: 20px;
+      }
+
+      img {
+        width: 80px;
+        height: 100%;
+      }
+
+      .cart-btn {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        gap: 14px;
+
+        .minus,
+        .plus {
+          width: 29px;
+          height: 29px;
+          border-radius: 50%;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          box-shadow: 0px 1px 14px 0px rgba(209, 203, 203, 0.48);
+          cursor: pointer;
+          font-weight: 500;
+        }
+
+        .minus {
+          background: #e0dfdf;
+        }
+      }
+    }
+  }
+
+  .cart-right {
+    flex: 2;
   }
 }

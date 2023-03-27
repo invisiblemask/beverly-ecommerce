@@ -31,7 +31,7 @@ export default function Product() {
     }
   };
 
-  const price = 180;
+  const price = 80.6;
 
   return (
     <div>
@@ -123,7 +123,7 @@ export default function Product() {
             </div>
             <div className="total-price">
               Total Price:
-              <span>${(price * increment).toLocaleString() + ".00"}</span>
+              <span>${(price * increment).toLocaleString()}</span>
             </div>
             <div className="order-btns">
               <button className="order-color">Buy Now</button>
