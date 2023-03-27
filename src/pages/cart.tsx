@@ -1,6 +1,7 @@
 /* eslint-disable @next/next/no-img-element */
 import Navbar from "@/components/Navbar";
 import { useState } from "react";
+import { RiDeleteBinLine } from "react-icons/ri";
 
 export default function Cart() {
   const [increment, setIncrement] = useState(1);
@@ -32,7 +33,12 @@ export default function Cart() {
           </tr>
           <tr>
             <td>
-              <img src="/images/products/product1.jpeg" alt="" />
+              <div className="cart-img">
+                <img src="/images/products/product1.jpeg" alt="" />
+                <div className="overlay">
+                  <RiDeleteBinLine className="animated-icon" />
+                </div>
+              </div>
               <div className="cart-name">The Print Monroe Dress</div>
             </td>
             <td>$80.60</td>
