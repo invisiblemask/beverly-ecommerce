@@ -31,7 +31,7 @@ export default function Product() {
     }
   };
 
-  const price = 22500;
+  const price = 180;
 
   return (
     <div>
@@ -65,14 +65,15 @@ export default function Product() {
         </div>
         <div className="product-details">
           <div className="product-name">The Print Monroe Dress</div>
-          <div className="product-summary">
-            A silk slip dress with a side ruche detail
-          </div>
-          <div className="product-price">
-            <span>₦37,500.00</span> ₦22,500.00
-          </div>
+          <div className="product-price">$80.60</div>
           <div className="product-color">
             <span>Colour:</span> Chocolate Brown
+          </div>
+          <div className="product-summary">
+            Lorem ipsum dolor, uga est iure doloremque deserunt nobis voluptatem
+            vero ut inventore illum quam accusamus laborum, iusto reiciendis
+            voluptates saepe. Saepe ipsam, odit maiores sit iure libero
+            distinctio?
           </div>
           <div className="product-size">
             <label htmlFor="">Sizes</label>
@@ -122,7 +123,7 @@ export default function Product() {
             </div>
             <div className="total-price">
               Total Price:
-              <span>₦{(price * increment).toLocaleString() + ".00"}</span>
+              <span>${(price * increment).toLocaleString() + ".00"}</span>
             </div>
             <div className="order-btns">
               <button className="order-color">Buy Now</button>
