@@ -15,6 +15,10 @@
     gap: 2rem;
   }
 
+  @include media("<=1280px", "<desktop") {
+    justify-content: center;
+  }
+
   .table {
     @include media(">=phone", "<desktop") {
       overflow-x: auto;
@@ -154,7 +158,23 @@
   }
 
   .cart-right-container {
-    width: 100%;
+    width: 350px;
+
+    @include media(">=phone", "<desktop") {
+      width: 100%;
+    }
+
+    @include media("<=1280px", "<desktop") {
+      width: 400px;
+    }
+
+    @include media("<=tablet") {
+      width: 100%;
+    }
+
+    @include media("<=820px") {
+      width: 100%;
+    }
 
     .cart-right {
       border: 1px solid #e6e3e3;
