@@ -51,7 +51,7 @@ export default function Modal({ toggleModal }: ModalProps) {
         <div className="modal-initial">
           <HiOutlineShoppingCart className="modal-cart" />
           <div className="modal-text">Your Shopping Cart is empty</div>
-          <Link href="/" onClick={toggleModal}>
+          <Link href="/shop" onClick={toggleModal}>
             <button className="modal-btn">Starting Shopping</button>
           </Link>
         </div>

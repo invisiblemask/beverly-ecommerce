@@ -1,5 +1,6 @@
 /* eslint-disable @next/next/no-img-element */
 import Navbar from "@/components/Navbar";
+import Link from "next/link";
 import { useState } from "react";
 import { RiDeleteBinLine } from "react-icons/ri";
 
@@ -24,59 +25,65 @@ export default function Cart() {
     <div>
       <Navbar />
       <div className="cart">
-        <table>
-          <thead>
-            <tr>
-              <th>PRODUCT</th>
-              <th>PRICE</th>
-              <th>QUANTITY</th>
-              <th>TOTAL</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td>
-                <div className="cart-img">
-                  <img src="/images/products/product1.jpeg" alt="" />
-                  <div className="overlay">
-                    <RiDeleteBinLine className="animated-icon" />
+        <div className="table">
+          <table>
+            <thead>
+              <tr>
+                <th>PRODUCT</th>
+                <th>PRICE</th>
+                <th>QUANTITY</th>
+                <th>TOTAL</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>
+                  <div className="cart-img">
+                    <img src="/images/products/product1.jpeg" alt="" />
+                    <div className="overlay">
+                      <RiDeleteBinLine className="animated-icon" />
+                    </div>
                   </div>
-                </div>
-                <div className="cart-name">The Print Monroe Dress</div>
-              </td>
-              <td>$80.60</td>
-              <td>
-                <div className="cart-btn">
-                  <div onClick={handleDecrease} className="minus">
-                    -
+                  <div className="cart-name">The Print Monroe Dress</div>
+                </td>
+                <td>$80.60</td>
+                <td>
+                  <div className="cart-btn">
+                    <div onClick={handleDecrease} className="minus">
+                      -
+                    </div>
+                    <div className="num">{increment}</div>
+                    <div onClick={handleIncrease} className="plus">
+                      +
+                    </div>
                   </div>
-                  <div className="num">{increment}</div>
-                  <div onClick={handleIncrease} className="plus">
-                    +
-                  </div>
-                </div>
-              </td>
-              <td>
-                <span>${(price * increment).toLocaleString()}</span>
-              </td>
-            </tr>
-          </tbody>
-        </table>
-        <div className="cart-right">
-          <div className="cart-total">Cart Total</div>
-          <div className="sub-total">
-            Sub-total: <span>$234.56</span>
+                </td>
+                <td>
+                  <span>${(price * increment).toLocaleString()}</span>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div className="cart-right-container">
+          <div className="cart-right">
+            <div className="cart-total">Cart Total</div>
+            <div className="sub-total">
+              Sub-total: <span>$234.56</span>
+            </div>
+            <div className="delivery">
+              Delivery: <span>Free</span>
+            </div>
+            <div className="discount">
+              Discount: <span>-15%</span>
+            </div>
+            <div className="total">
+              Discount: <span>$199.376</span>
+            </div>
+            <Link href="/checkout">
+              <div className="checkout-btn">Checkout</div>
+            </Link>
           </div>
-          <div className="delivery">
-            Delivery: <span>Free</span>
-          </div>
-          <div className="discount">
-            Discount: <span>-15%</span>
-          </div>
-          <div className="total">
-            Discount: <span>$199.376</span>
-          </div>
-          <div className="checkout-btn">Checkout</div>
         </div>
       </div>
     </div>
