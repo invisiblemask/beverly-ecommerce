@@ -34,7 +34,7 @@
             margin-top: 24px;
 
             @include media("<=phone") {
-                width: 320px;
+                width: 330px;
             }
 
 
@@ -75,13 +75,12 @@
     .order-info {
         width: 350px;
         height: fit-content;
-        padding: 18px;
         display: flex;
         flex-direction: column;
         gap: 2rem;
 
         @include media("<=phone") {
-            // width: 100%;
+            padding: 0;
         }
 
         .your-order {
