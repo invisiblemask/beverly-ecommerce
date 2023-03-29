@@ -27,7 +27,7 @@
 
 
             input {
-                padding: 10px;
+                padding: 12px 10px;
                 width: 100%;
                 outline: none;
                 border: 1px solid #e6e3e3;
@@ -61,7 +61,7 @@
     }
 
     .order-info {
-        border: 1px solid #e6e3e3;
+
         width: 350px;
         height: fit-content;
         padding: 18px;
@@ -70,29 +70,53 @@
         gap: 2rem;
 
         .your-order {
+            padding: 12px;
             font-weight: 700;
             font-size: 18px;
             color: #1c1c1c;
+            box-shadow: 0px 1px 6px 0px rgba(209, 203, 203, 0.48);
         }
 
-        .sub-total,
-        .delivery,
-        .discount,
-        .total {
+        .order-container {
+            padding: 18px;
             display: flex;
-            flex-direction: row;
-            justify-content: space-between;
-            font-weight: 600;
-            font-size: 14px;
-            color: #555555;
-            text-transform: uppercase;
-            border-bottom: 1px dashed #e6e3e3;
-            padding-bottom: 5px;
+            flex-direction: column;
+            gap: 2rem;
+            box-shadow: 0px 1px 6px 0px rgba(209, 203, 203, 0.48);
 
-            span {
+            .sub-total,
+            .delivery,
+            .discount,
+            .total {
+                display: flex;
+                flex-direction: row;
+                justify-content: space-between;
                 font-weight: 600;
-                font-size: 16px;
+                font-size: 14px;
+                color: #555555;
+                text-transform: uppercase;
+                padding-bottom: 5px;
+
+                span {
+                    font-weight: 600;
+                    font-size: 16px;
+                }
             }
+
+            .sub-total,
+            .delivery,
+            .discount {
+                border-bottom: 1px dashed #e6e3e3;
+            }
+        }
+
+        .payment-header {
+            font-weight: 700;
+            font-size: 18px;
+            color: #1c1c1c;
+            margin-bottom: 20px;
+            box-shadow: 0px 1px 6px 0px rgba(209, 203, 203, 0.48);
+            padding: 12px;
         }
 
         .checkout-btn {

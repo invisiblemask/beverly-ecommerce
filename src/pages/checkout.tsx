@@ -1,3 +1,4 @@
+import Accordion from "@/components/Accordion/Accordion";
 import Navbar from "@/components/Navbar";
 
 export default function Checkout() {
@@ -46,17 +47,23 @@ export default function Checkout() {
         </div>
         <div className="order-info">
           <div className="your-order">Your Order</div>
-          <div className="sub-total">
-            Sub-total: <span>$234.56</span>
+          <div className="order-container">
+            <div className="sub-total">
+              Sub-total: <span>$234.56</span>
+            </div>
+            <div className="delivery">
+              Delivery: <span>Free</span>
+            </div>
+            <div className="discount">
+              Discount: <span>-15%</span>
+            </div>
+            <div className="total">
+              Total: <span>$199.376</span>
+            </div>
           </div>
-          <div className="delivery">
-            Delivery: <span>Free</span>
-          </div>
-          <div className="discount">
-            Discount: <span>-15%</span>
-          </div>
-          <div className="total">
-            Discount: <span>$199.376</span>
+          <div className="payment-method">
+            <div className="payment-header">Payment Method</div>
+            <Accordion />
           </div>
           <div className="checkout-btn">Place Order</div>
         </div>
