@@ -1,3 +1,4 @@
+import Link from "next/link";
 import Card from "./Card";
 
 export default function ProductPage() {
@@ -11,7 +12,9 @@ export default function ProductPage() {
         intelligence and most importantly style…
       </div>
       <Card />
-      <button className="product-button">view more</button>
+      <Link href="/shop">
+        <button className="product-button">view more</button>
+      </Link>
     </section>
   );
 }

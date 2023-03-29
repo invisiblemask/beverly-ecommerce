@@ -1,28 +1,38 @@
 .collection {
   display: flex;
   flex-direction: column;
+  justify-content: center;
   gap: 40px;
   padding: 0 10rem;
   margin-top: 8rem;
   margin-bottom: 40px;
 
   .collection-container {
-    display: flex;
-    flex-direction: row;
-    gap: 40px;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 10px;
+    flex-wrap: wrap;
 
     .card-wrapper {
       display: flex;
       flex-direction: column;
       gap: 10px;
 
+      img {
+        width: 270px;
+        object-fit: contain;
+      }
+
       .card-name {
-        font-weight: bold;
+        font-size: 14px;
+        font-weight: 600;
+        text-transform: uppercase;
         text-transform: uppercase;
       }
 
       .card-price {
         color: $banner-bg-color;
+        font-size: 13px;
       }
     }
   }
@@ -41,6 +51,7 @@
       font-size: $font-lg;
       font-weight: 400;
 
+
       span {
         color: $banner-bg-color;
         font-size: 18px;
@@ -48,130 +59,15 @@
     }
 
     .img-collection {
-      display: flex;
-      flex-direction: row;
-      gap: 40px;
-
-      img {
-        width: 300px;
-      }
-    }
-  }
-
-  @media (min-width: $layout-breakpoint-xsmall) {
-    padding: 0 14px;
-    margin-top: 1rem;
-    padding-bottom: 20px;
-
-    .collection-container {
       display: grid;
-      grid-template-columns: repeat(2, 1fr);
-      grid-template-rows: repeat(2, 1fr);
+      grid-template-columns: repeat(4, 1fr);
       gap: 10px;
 
-      .card-wrapper {
-        img {
-          width: 100%;
-        }
-      }
-    }
-
-    .collection-wrapper {
-      .collection-header {
-        text-align: center;
-      }
-
-      .img-collection {
-        flex-direction: column;
-        gap: 20px;
-
-        img {
-          width: 100%;
-        }
+      img {
+        width: 270px;
       }
     }
   }
 
-  @media (min-width: $layout-breakpoint-small) {
-    padding: 0 14px;
-    margin-top: 1rem;
-    padding-bottom: 20px;
 
-    .collection-container {
-      display: grid;
-      grid-template-columns: repeat(2, 1fr);
-      grid-template-rows: repeat(2, 1fr);
-      gap: 20px;
-
-      .card-wrapper {
-        img {
-          width: 100%;
-        }
-      }
-    }
-
-    .collection-wrapper {
-      .collection-header {
-        text-align: center;
-      }
-
-      .img-collection {
-        flex-direction: column;
-        gap: 20px;
-
-        img {
-          width: 100%;
-        }
-
-        @media (min-width: $layout-breakpoint-small) {
-          display: grid;
-          grid-template-columns: repeat(2, 1fr);
-          grid-template-rows: repeat(2, 1fr);
-          gap: 20px;
-        }
-      }
-    }
-  }
-
-  @media (min-width: $layout-breakpoint-large) {
-    gap: 40px;
-    padding: 0 8rem;
-    margin-top: 8rem;
-    margin-bottom: 40px;
-
-    .collection-container {
-      display: flex;
-      flex-direction: row;
-      flex-wrap: wrap;
-      gap: 20px;
-
-      .card-wrapper {
-        img {
-          width: 100%;
-        }
-      }
-    }
-
-    .collection-wrapper {
-      .collection-header {
-        text-align: center;
-      }
-
-      .img-collection {
-        flex-direction: column;
-        gap: 20px;
-
-        img {
-          width: 300px;
-        }
-
-        @media (min-width: $layout-breakpoint-large) {
-          display: flex;
-          flex-direction: row;
-          flex-wrap: wrap;
-          gap: 20px;
-        }
-      }
-    }
-  }
 }
