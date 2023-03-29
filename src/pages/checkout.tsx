@@ -5,6 +5,7 @@ export default function Checkout() {
   return (
     <div>
       <Navbar />
+      <div className="header">Checkout Page</div>
       <div className="checkout">
         <div className="checkout-container">
           <div className="billing">Billing Address</div>

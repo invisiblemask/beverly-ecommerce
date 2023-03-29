@@ -47,12 +47,12 @@
             font-size: 14px;
             color: #555555;
             text-transform: uppercase;
-            width: 100%;
+            width: 350px;
 
             .input-form {
                 display: flex;
                 flex-direction: column;
-                width: 100%;
+                // width: 100%;
 
                 span {
                     color: red;
@@ -61,7 +61,7 @@
 
                 input {
                     padding: 12px 10px;
-                    width: 100%;
+                    width: 305px;
                     outline: none;
                     border: 1px solid #e6e3e3;
                     margin-top: 8px;
@@ -71,11 +71,11 @@
             .info-card {
                 display: flex;
                 flex-direction: row;
-                gap: 4rem;
-                width: 100%;
+                gap: 5px;
+                // width: 100%;
 
                 .info-input {
-                    width: 100%;
+                    width: 74%;
                 }
             }
         }

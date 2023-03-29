@@ -6,12 +6,20 @@
     margin-top: 4rem;
     gap: 10rem;
 
+    @include media("<=phone") {
+        padding: 0 14px;
+        flex-direction: column;
+    }
+
 
     .checkout-container {
         display: flex;
         flex-direction: column;
         width: 40%;
 
+        @include media("<=phone") {
+            width: 100%;
+        }
 
         .billing {
             font-weight: 600;
@@ -24,6 +32,10 @@
             flex-direction: column;
             gap: 2rem;
             margin-top: 24px;
+
+            @include media("<=phone") {
+                width: 320px;
+            }
 
 
             input {
@@ -51,7 +63,7 @@
 
     .input-container {
         font-weight: 600;
-        font-size: 12px;
+        font-size: 13px;
         color: #1c1c1c;
         text-transform: uppercase;
 
@@ -61,13 +73,16 @@
     }
 
     .order-info {
-
         width: 350px;
         height: fit-content;
         padding: 18px;
         display: flex;
         flex-direction: column;
         gap: 2rem;
+
+        @include media("<=phone") {
+            // width: 100%;
+        }
 
         .your-order {
             padding: 12px;

@@ -1,6 +1,7 @@
 /* eslint-disable @next/next/no-img-element */
 import Navbar from "@/components/Navbar";
 import Head from "next/head";
+import Link from "next/link";
 import { useState } from "react";
 import { HiOutlineShoppingCart } from "react-icons/hi";
 
@@ -126,7 +127,9 @@ export default function Product() {
               <span>${(price * increment).toLocaleString()}</span>
             </div>
             <div className="order-btns">
-              <button className="order-color">Buy Now</button>
+              <Link href="/checkout">
+                <button className="order-color">Buy Now</button>
+              </Link>
               <button className="order-plane">
                 <HiOutlineShoppingCart className="order-cart" />
                 Add to Cart

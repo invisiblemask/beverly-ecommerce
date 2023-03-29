@@ -24,10 +24,10 @@ nav {
         &.active {
           background-color: black;
         }
+      }
 
-        .link-other {
-          background-color: black;
-        }
+      .link-other {
+        background: black;
       }
     }
 
@@ -47,10 +47,10 @@ nav {
           background-color: black;
         }
       }
+    }
 
-      .link-other {
-        background-color: black;
-      }
+    .link-other {
+      background-color: black;
     }
 
     @include media(">=tablet") {
@@ -68,10 +68,15 @@ nav {
         &.active {
           background-color: black;
         }
+      }
 
-        .link-other {
-          background-color: black;
-        }
+      .link-other {
+        background-color: black;
+      }
+
+      .link-text {
+        background-color: transparent;
+        color: black;
       }
     }
   }
@@ -102,7 +107,7 @@ nav {
       color: $white;
     }
 
-    .link-other {
+    .link-text {
       color: black;
     }
   }

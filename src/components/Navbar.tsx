@@ -61,17 +61,17 @@ export default function Navbar() {
           className={
             path === "/" ? "hamburger-one" : "hamburger-one link-other"
           }
-        ></div>
+        />
         <div
           className={
             path === "/" ? "hamburger-two" : "hamburger-two link-other"
           }
-        ></div>
+        />
         <div
           className={
             path === "/" ? "hamburger-three" : "hamburger-three link-other"
           }
-        ></div>
+        />
       </div>
       <div className="middle-left">
         {links1.map((link, index) => {
@@ -79,7 +79,7 @@ export default function Navbar() {
             <Link
               key={index}
               href={link.href}
-              className={path === "/" ? "link-home" : "link-other"}
+              className={path === "/" ? "link-home" : "link-text"}
             >
               {link.name}
             </Link>
@@ -103,7 +103,7 @@ export default function Navbar() {
               <Link
                 key={index}
                 href={link.href}
-                className={path === "/" ? "link-home" : "link-other"}
+                className={path === "/" ? "link-home" : "link-text"}
               >
                 {link.name}
               </Link>
