@@ -50,7 +50,7 @@
     }
   }
 
-  @include media(">=phone") {
+  @include media("<=414px") {
     padding: 0 14px;
     margin-top: 35rem;
     padding-bottom: 20px;
@@ -60,9 +60,9 @@
     }
   }
 
-  @include media(">375px", "<=414px") {
-    padding: 0 14px;
-    margin-top: 20rem;
+  @include media(">=320px", "<360px") {
+    // padding: 0 14px;
+    margin-top: 35rem;
     padding-bottom: 20px;
 
     .paragraph {

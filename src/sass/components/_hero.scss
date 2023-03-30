@@ -25,7 +25,7 @@
         color: $white;
         font-weight: 600;
 
-        @include media(">=phone", "<desktop") {
+        @include media("<=414px") {
           display: none;
         }
 
@@ -37,7 +37,7 @@
       .hero-image {
         display: none;
 
-        @include media(">=phone", "<desktop") {
+        @include media("<=414px") {
           display: block;
 
           img {
@@ -61,7 +61,7 @@
       }
     }
 
-    @include media(">=phone", "<=375px") {
+    @include media("<=414px") {
       display: flex;
       justify-content: center;
       align-items: center;
@@ -86,30 +86,30 @@
       }
     }
 
-    @include media(">375px", "<=414px") {
-      display: flex;
-      justify-content: center;
-      align-items: center;
+    // @include media(">375px", "<=414px") {
+    //   display: flex;
+    //   justify-content: center;
+    //   align-items: center;
 
-      .hero-wrapper {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        flex-direction: column;
+    //   .hero-wrapper {
+    //     display: flex;
+    //     justify-content: center;
+    //     align-items: center;
+    //     flex-direction: column;
 
-        .hero-text {
-          font-size: $font-xl;
-          text-align: center;
-          color: $white;
-          font-weight: 600;
-        }
+    //     .hero-text {
+    //       font-size: $font-xl;
+    //       text-align: center;
+    //       color: $white;
+    //       font-weight: 600;
+    //     }
 
-        button {
-          margin-top: 20px;
-          width: 200px;
-        }
-      }
-    }
+    //     button {
+    //       margin-top: 20px;
+    //       width: 200px;
+    //     }
+    //   }
+    // }
 
     @include media(">=820px", "<=960px") {
       display: flex;
@@ -197,7 +197,7 @@
     transform: translate(-50%, -50%);
     gap: 4rem;
 
-    @include media("<=phone") {
+    @include media("<=414px") {
       position: relative;
       display: flex;
       flex-direction: column;
@@ -206,7 +206,8 @@
       padding: 0 14px;
     }
 
-    @include media(">375px", "<=414px") {
+    @include media(">=320px",
+      "<360px") {
       position: relative;
       display: flex;
       flex-direction: column;
@@ -254,7 +255,7 @@
       background-size: contain;
       box-shadow: 11px 13px 12px -13px rgba(0, 0, 0, 0.48);
 
-      @include media(">=phone", "<=375px") {
+      @include media("<=414px") {
         width: 100%;
       }
 

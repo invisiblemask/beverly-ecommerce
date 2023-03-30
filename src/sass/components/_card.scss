@@ -28,7 +28,7 @@
     }
   }
 
-  @include media(">=phone") {
+  @include media("<=414px") {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     gap: 20px;
@@ -40,17 +40,17 @@
     }
   }
 
-  @include media(">375px", "<=414px") {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 20px;
+  // @include media(">375px", "<=414px") {
+  //   display: grid;
+  //   grid-template-columns: repeat(2, 1fr);
+  //   gap: 20px;
 
-    .card-wrapper {
-      img {
-        width: 100%;
-      }
-    }
-  }
+  //   .card-wrapper {
+  //     img {
+  //       width: 100%;
+  //     }
+  //   }
+  // }
 
   @include media(">=820px", "<=960px") {
     display: grid;

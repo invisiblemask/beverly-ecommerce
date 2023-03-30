@@ -31,6 +31,11 @@ nav {
       }
     }
 
+    @include media(">=1024px",
+      "<=desktop") {
+      display: none;
+    }
+
     @include media(">phone", "<=425px") {
       display: flex;
       flex-direction: column;
@@ -53,7 +58,7 @@ nav {
       background-color: black;
     }
 
-    @include media(">=tablet") {
+    @include media(">=tablet", "<1024px") {
       display: flex;
       flex-direction: column;
       gap: 6px;

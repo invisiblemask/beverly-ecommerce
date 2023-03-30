@@ -7,11 +7,32 @@
   margin-top: 8rem;
   margin-bottom: 40px;
 
+  @include media("<=414px") {
+    padding: 0 14px;
+    flex-direction: column;
+  }
+
+  @include media(">=tablet",
+    "<desktop") {
+    padding: 0 14px;
+    flex-direction: column;
+  }
+
   .collection-container {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     gap: 10px;
     flex-wrap: wrap;
+
+    @include media("<=414px") {
+      grid-template-columns: repeat(2, 1fr);
+    }
+
+    @include media(">=tablet",
+      "<desktop") {
+      grid-template-columns: repeat(2, 1fr);
+    }
+
 
     .card-wrapper {
       display: flex;
@@ -21,6 +42,15 @@
       img {
         width: 270px;
         object-fit: contain;
+
+        @include media("<=414px") {
+          width: 100%;
+        }
+
+        @include media(">=tablet",
+          "<desktop") {
+          width: 100%;
+        }
       }
 
       .card-name {
@@ -63,8 +93,25 @@
       grid-template-columns: repeat(4, 1fr);
       gap: 10px;
 
+      @include media("<=414px") {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      @include media(">=tablet",
+        "<desktop") {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
       img {
         width: 270px;
+
+        @include media("<=414px") {
+          width: 100%;
+        }
+
+        @include media(">=tablet", "<desktop") {
+          width: 100%;
+        }
       }
     }
   }

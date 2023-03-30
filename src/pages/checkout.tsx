@@ -1,4 +1,4 @@
-import Accordion from "@/components/Accordion/Accordion";
+import Accordion from "@/components/Accordion";
 import Navbar from "@/components/Navbar";
 import Head from "next/head";
 

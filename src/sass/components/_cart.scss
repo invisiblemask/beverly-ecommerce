@@ -5,7 +5,7 @@
   margin-top: 4rem;
   gap: 4rem;
 
-  @include media(">=phone", "<desktop") {
+  @include media("<=phone") {
     padding: 0 14px;
     flex-direction: column;
   }
@@ -20,7 +20,7 @@
   }
 
   .table {
-    @include media(">=phone", "<desktop") {
+    @include media("<=phone") {
       overflow-x: auto;
     }
 
