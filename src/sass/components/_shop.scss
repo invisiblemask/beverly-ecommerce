@@ -1,0 +1,14 @@
+.shop {
+    padding: 0 10rem;
+    margin-top: 4rem;
+    display: flex;
+    flex-direction: column;
+    gap: 4rem;
+
+    button {
+        color: black;
+        border: 2px solid black;
+        align-self: center;
+        font-weight: 600;
+    }
+}
