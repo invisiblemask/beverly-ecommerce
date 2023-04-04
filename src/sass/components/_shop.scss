@@ -3,12 +3,72 @@
     margin-top: 4rem;
     display: flex;
     flex-direction: column;
-    gap: 4rem;
+    gap: 2rem;
+
+    .sort-range {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+
+        .range-number {
+            font-size: 14px;
+            color: #4a4949;
+        }
+
+        .range-price {
+            font-size: 14px;
+            color: #4a4949;
+            display: flex;
+            flex-direction: row;
+            gap: 10px;
+            cursor: pointer;
+            position: relative;
+
+            .sort-span {
+                font-weight: 400;
+                color: black;
+                display: flex;
+                flex-direction: row;
+                align-items: center;
+                gap: 4px;
+
+                .dropdown-icon {
+                    width: 18px;
+                    height: 18px;
+                }
+            }
+
+            .price-list {
+                cursor: pointer;
+                position: absolute;
+                top: 30px;
+                display: flex;
+                flex-direction: column;
+                gap: 4px;
+                background: white;
+                width: 90px;
+                padding: 8px;
+                box-shadow: 0px 1px 14px 0px rgba(209, 203, 203, 0.48);
+
+                div {
+                    &:hover {
+                        background-color: #f8f9f9;
+                    }
+                }
+            }
+        }
+    }
 
     button {
         color: black;
         border: 2px solid black;
         align-self: center;
         font-weight: 600;
+
+        &:hover {
+            background-color: $banner-bg-color;
+            color: $white;
+            transition: all ease-in-out 0.5s;
+        }
     }
 }
