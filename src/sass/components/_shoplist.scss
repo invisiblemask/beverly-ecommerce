@@ -1,0 +1,63 @@
+.shoplist-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    padding-bottom: 20px;
+
+    .shoplist-wrapper {
+        display: flex;
+        flex-direction: column;
+        gap: 5px;
+
+        // img {
+        //     width: 100px;
+        // }
+
+        .shoplist-name {
+            font-size: 14px;
+            font-weight: 600;
+            text-transform: uppercase;
+        }
+
+        .shoplist-price {
+            color: $banner-bg-color;
+            font-size: 13px;
+        }
+    }
+
+    @include media("<=414px") {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 20px;
+
+        .shoplist-wrapper {
+            img {
+                width: 100%;
+            }
+        }
+    }
+
+    @include media(">=820px", "<=960px") {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 20px;
+
+        .shoplist-wrapper {
+            img {
+                width: 100%;
+            }
+        }
+    }
+
+    @include media(">=desktop") {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 20px;
+
+        .shoplist-wrapper {
+            img {
+                width: 250px;
+            }
+        }
+    }
+}

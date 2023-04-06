@@ -1,72 +1,130 @@
 .shop {
-    padding: 0 10rem;
-    margin-top: 4rem;
     display: flex;
     flex-direction: column;
-    gap: 2rem;
+    gap: 4rem;
+    padding: 0 10rem;
+    margin-top: 4rem;
 
     @include media("<=phone") {
         padding: 0 14px;
         flex-direction: column;
     }
 
-    .sort-range {
+    .shop-container {
         display: flex;
         flex-direction: row;
         justify-content: space-between;
 
         @include media("<=phone") {
             flex-direction: column;
-            gap: 20px;
+            gap: 25px;
         }
 
-        .range-number {
-            font-size: 15px;
-            color: #4a4949;
-        }
-
-        .range-price {
-            font-size: 15px;
-            color: #4a4949;
+        .side-sort {
             display: flex;
-            flex-direction: row;
-            gap: 10px;
-            cursor: pointer;
-            position: relative;
+            flex-direction: column;
+            gap: 2rem;
 
-            .sort-span {
-                font-weight: 400;
-                color: black;
+            .search-input {
+                border: 1px solid #d2d1d1;
+                display: flex;
+                flex-direction: row;
+                align-items: center;
+                gap: 6px;
+                padding-right: 14px;
+
+                @include media("<=phone") {
+                    width: fit-content;
+                }
+
+                input {
+                    padding: 12px 14px;
+                    border: none;
+                    outline: none;
+                }
+
+                .search-icon {
+                    width: 20px;
+                    height: 20px;
+                    cursor: pointer;
+                    color: #d2d1d1;
+                }
+            }
+
+            .cats {
                 display: flex;
                 flex-direction: row;
                 align-items: center;
                 gap: 4px;
+                cursor: pointer;
+            }
+        }
 
-                .dropdown-icon {
-                    width: 18px;
-                    height: 18px;
-                }
+        .sort-range {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+
+            @include media("<=phone") {
+                flex-direction: column;
+                gap: 20px;
             }
 
-            .price-list {
-                cursor: pointer;
-                position: absolute;
-                top: 30px;
-                display: flex;
-                flex-direction: column;
-                gap: 4px;
-                background: white;
-                width: 90px;
-                padding: 8px;
-                box-shadow: 0px 1px 14px 0px rgba(209, 203, 203, 0.48);
+            .range-number {
+                font-size: 15px;
+                color: #4a4949;
+            }
 
-                div {
-                    &:hover {
-                        background-color: #f8f9f9;
+            .range-price {
+                font-size: 15px;
+                color: #4a4949;
+                display: flex;
+                flex-direction: row;
+                gap: 10px;
+                cursor: pointer;
+                position: relative;
+
+                .sort-span {
+                    font-weight: 400;
+                    color: black;
+                    display: flex;
+                    flex-direction: row;
+                    align-items: center;
+                    gap: 4px;
+
+                    .dropdown-icon {
+                        width: 18px;
+                        height: 18px;
+                    }
+                }
+
+                .price-list {
+                    cursor: pointer;
+                    position: absolute;
+                    top: 30px;
+                    display: flex;
+                    flex-direction: column;
+                    gap: 4px;
+                    background: white;
+                    width: 90px;
+                    padding: 8px;
+                    box-shadow: 0px 1px 14px 0px rgba(209, 203, 203, 0.48);
+
+                    div {
+                        &:hover {
+                            background-color: #f8f9f9;
+                        }
                     }
                 }
             }
         }
+
+        .shop-wrapper {
+            display: flex;
+            flex-direction: column;
+            gap: 2rem;
+        }
+
     }
 
     button {

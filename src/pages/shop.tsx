@@ -1,12 +1,13 @@
-import Card from "@/components/Card";
 import Navbar from "@/components/Navbar";
-import Spinner from "@/components/Spinner";
+import ShopList from "@/components/ShopList";
 import Head from "next/head";
 import { useState } from "react";
 import {
   MdOutlineKeyboardArrowDown,
   MdOutlineKeyboardArrowUp,
 } from "react-icons/md";
+import { HiOutlineMagnifyingGlass } from "react-icons/hi2";
+import { IoIosArrowDown } from "react-icons/io";
 
 export default function Shop() {
   const [isOpen, setIsOpen] = useState(false);
@@ -14,6 +15,15 @@ export default function Shop() {
     "Low To High",
     "$0 - $55",
     "$55 - $100",
+  ]);
+
+  const [cats, setCats] = useState([
+    "CATEGORIES",
+    "BRANDING",
+    "FILTER PRICE",
+    "SIZE",
+    "COLORS",
+    "TAGS",
   ]);
   const [dropdown, setDropdown] = useState(false);
 
@@ -39,30 +49,46 @@ export default function Shop() {
       </Head>
       <Navbar />
       <div className="shop">
-        <div className="sort-range">
-          <div className="range-number">Showing 1–12 of 126 results</div>
-          <div className="range-price" onClick={handleToggle}>
-            Sort by Price:{" "}
-            <span className="sort-span" onClick={handleDropdown}>
-              <div>{select[2]}</div>
-              {dropdown ? (
-                <MdOutlineKeyboardArrowDown className="dropdown-icon" />
-              ) : (
-                <MdOutlineKeyboardArrowUp className="dropdown-icon" />
-              )}
-              {dropdown && (
-                <div className="price-list" onClick={handleSelect}>
-                  {select.map((option, index) => {
-                    return <div key={index}>{option}</div>;
-                  })}
+        <div className="shop-container">
+          <div className="side-sort">
+            <div className="search-input">
+              <input type="text" autoFocus placeholder="Search here..." />
+              <HiOutlineMagnifyingGlass className="search-icon" />
+            </div>
+            {cats.map((cat, index) => {
+              return (
+                <div key={index} className="cats">
+                  {cat} <IoIosArrowDown />
                 </div>
-              )}
-            </span>
+              );
+            })}
+          </div>
+          <div className="shop-wrapper">
+            <div className="sort-range">
+              <div className="range-number">Showing 1–12 of 126 results</div>
+              <div className="range-price" onClick={handleToggle}>
+                Sort by Price:{" "}
+                <span className="sort-span" onClick={handleDropdown}>
+                  <div>{select[2]}</div>
+                  {dropdown ? (
+                    <MdOutlineKeyboardArrowDown className="dropdown-icon" />
+                  ) : (
+                    <MdOutlineKeyboardArrowUp className="dropdown-icon" />
+                  )}
+                  {dropdown && (
+                    <div className="price-list" onClick={handleSelect}>
+                      {select.map((option, index) => {
+                        return <div key={index}>{option}</div>;
+                      })}
+                    </div>
+                  )}
+                </span>
+              </div>
+            </div>
+            <ShopList />
           </div>
         </div>
-        <Card />
         <button>Load More</button>
-        <Spinner />
       </div>
     </>
   );
