@@ -3,6 +3,7 @@ import { GetStaticPaths, GetStaticProps } from "next";
 import { StaticImageData } from "next/image";
 import Link from "next/link";
 import { products } from "./data";
+import { BsEye } from "react-icons/bs";
 
 type Product = {
   id: number;
@@ -25,7 +26,12 @@ export default function Card({ product }: ProductProps) {
             href={`/product/${product.id}`}
             className="card-wrapper"
           >
-            <img src={product.image.src} alt="" />
+            <div className="card-img">
+              <img src={product.image.src} alt="" />
+              <div className="overlay">
+                <BsEye className="animated-icon" />
+              </div>
+            </div>
             <span className="card-name">{product.name}</span>
             <span className="card-price">{product.price}</span>
           </Link>
