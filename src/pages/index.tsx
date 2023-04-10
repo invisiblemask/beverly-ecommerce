@@ -1,4 +1,5 @@
 import HeroPage from "@/components/Hero";
+import Offer from "@/components/Offer";
 import ProductDisplay from "@/components/ProductDisplay";
 import ProductPage from "@/components/ProductPage";
 import SLCollection from "@/components/SLCollection";
@@ -21,6 +22,7 @@ export default function Home() {
         <ProductPage />
         <ProductDisplay />
         <SLCollection />
+        <Offer />
       </main>
     </>
   );
