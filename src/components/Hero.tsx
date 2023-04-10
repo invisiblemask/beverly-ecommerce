@@ -1,23 +1,26 @@
 /* eslint-disable @next/next/no-img-element */
 import Link from "next/link";
-import Navbar from "./Navbar";
-import hero1 from "/public/images/hero-1.jpeg";
-import hero2 from "/public/images/hero-2.jpeg";
-import hero3 from "/public/images/hero-3.jpeg";
+import hero1 from "/public/images/products/product-8.jpg.webp";
+import hero2 from "/public/images/products/product-9.jpg.webp";
+import hero3 from "/public/images/products/product-10.jpg.webp";
 
 export default function HeroPage() {
   return (
     <div className="hero">
-      <Navbar />
       <section className="hero-container">
         <div className="hero-wrapper">
-          <div className="hero-text">
-            <span>THE</span> SOFT LIFE COLLECTION
+          <div className="hero-text-wrapper">
+            <div className="hero-text">
+              <span>#NEW SUMMER COLLECTION 2023</span> ARRIVALS <br /> SALES
+            </div>
+            <button>SHOP NOW</button>
+          </div>
+          <div className="hero-lg-img">
+            <img src="/images/products/model_3.png" alt="" />
           </div>
           <div className="hero-image">
             <img src="/images/benaya-white-small.png" alt="" />
           </div>
-          <button>BUY NOW</button>
         </div>
       </section>
       <div className="image-container">
@@ -25,7 +28,7 @@ export default function HeroPage() {
           href="/"
           style={{
             backgroundImage: `
-          linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)),
+          linear-gradient(rgba(116, 116, 116, 0.2), rgba(116, 114, 114, 0.2)),
           url(${hero1.src})`,
           }}
           className="image-link"
@@ -40,7 +43,7 @@ export default function HeroPage() {
           className="image-link"
           style={{
             backgroundImage: `
-          linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)),
+          linear-gradient(rgba(116, 116, 116, 0.2), rgba(116, 114, 114, 0.2)),
           url(${hero2.src})`,
           }}
         >
@@ -54,7 +57,7 @@ export default function HeroPage() {
           className="image-link"
           style={{
             backgroundImage: `
-          linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)),
+          linear-gradient(rgba(116, 116, 116, 0.2), rgba(116, 114, 114, 0.2)),
           url(${hero3.src})`,
           }}
         >

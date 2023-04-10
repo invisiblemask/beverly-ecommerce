@@ -12,7 +12,6 @@ export default function Checkout() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-      <Navbar />
       <div className="header">Checkout Page</div>
       <div className="checkout">
         <div className="checkout-container">

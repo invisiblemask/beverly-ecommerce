@@ -57,30 +57,72 @@ li {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  background-color: rgba(56, 56, 56, 0.5);
+  background-color: rgba(71, 70, 70, 0.5);
   opacity: 0;
   transition: opacity 0.3s ease;
+  overflow: hidden;
 
   &:hover {
     opacity: 1;
 
+    .overlay-cover {
+      animation: slideIn 0.8s forwards;
+      animation-delay: 0.2s;
+    }
+
     .animated-icon {
       animation: slideIn 0.5s forwards;
-      animation-delay: 0.2s;
+      animation-delay: 0.3s;
+    }
+
+    .div {
+      animation: slideLeft .8s forwards;
+      animation-delay: 0.4s;
     }
   }
 
   .animated-icon {
     opacity: 0;
-    color: #fff;
-    // color: #000;
-    padding: 10px 20px;
+    color: #e7e7e7;
     border: none;
     border-radius: 4px;
-    font-size: 1.2rem;
+    width: 1.5rem;
+    height: 1.5rem;
     font-weight: bold;
     cursor: pointer;
     animation-duration: 0.5s;
     animation-timing-function: ease;
+  }
+
+  // .overlay-cover {
+  //   background: #000;
+  //   width: 40px;
+  //   height: 40px;
+  //   border-radius: 50%;
+  //   opacity: 0;
+  //   // padding: 4px 10px;
+  //   display: flex;
+  //   justify-self: center;
+  //   align-items: center;
+
+  // }
+
+  .div {
+    opacity: 0;
+    animation-duration: 0.8s;
+    animation-timing-function: ease;
+    margin-right: 20px;
+  }
+}
+
+@keyframes slideLeft {
+  from {
+    transform: translateX(100%);
+    opacity: 0;
+  }
+
+  to {
+    transform: translateX(0%);
+    opacity: 1;
   }
 }

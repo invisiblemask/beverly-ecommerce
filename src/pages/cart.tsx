@@ -31,7 +31,6 @@ export default function Cart() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-      <Navbar />
       <div className="cart">
         <div className="table">
           <table>

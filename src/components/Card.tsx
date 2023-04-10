@@ -19,24 +19,31 @@ type ProductProps = {
 export default function Card({ product }: ProductProps) {
   return (
     <div className="card-container">
-      {products.map((product, index) => {
-        return (
-          <Link
-            key={index}
-            href={`/product/${product.id}`}
-            className="card-wrapper"
-          >
-            <div className="card-img">
-              <img src={product.image.src} alt="" />
-              <div className="overlay">
-                <BsEye className="animated-icon" />
+      {products
+        .map((product, index) => {
+          return (
+            <Link
+              key={index}
+              href={`/product/${product.id}`}
+              className="card-wrapper"
+            >
+              <div className="card-img">
+                <img src={product.image.src} alt="" />
+                <div className="overlay">
+                  <BsEye className="animated-icon" />
+                </div>
               </div>
-            </div>
-            <span className="card-name">{product.name}</span>
-            <span className="card-price">{product.price}</span>
-          </Link>
-        );
-      })}
+              <span className="card-name">{product.name}</span>
+              <span className="card-price">{product.price}</span>
+              {product.isNew && <div className="new">New</div>}
+
+              {product.slashedPrice !== null && (
+                <div className="discount">Discount</div>
+              )}
+            </Link>
+          );
+        })
+        .slice(0, 8)}
     </div>
   );
 }

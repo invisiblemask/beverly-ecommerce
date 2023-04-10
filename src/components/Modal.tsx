@@ -1,7 +1,7 @@
 /* eslint-disable @next/next/no-img-element */
 import Link from "next/link";
 import { AiOutlineClose } from "react-icons/ai";
-import { HiOutlineShoppingCart } from "react-icons/hi";
+import { CiShoppingCart } from "react-icons/ci";
 import { RiDeleteBinLine } from "react-icons/ri";
 
 type ModalProps = {
@@ -49,7 +49,7 @@ export default function Modal({ toggleModal }: ModalProps) {
           </div>
         </div> */}
         <div className="modal-initial">
-          <HiOutlineShoppingCart className="modal-cart" />
+          <CiShoppingCart className="modal-cart" />
           <div className="modal-text">Your Shopping Cart is empty</div>
           <Link href="/shop" onClick={toggleModal}>
             <button className="modal-btn">Starting Shopping</button>

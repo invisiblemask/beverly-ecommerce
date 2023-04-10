@@ -43,8 +43,6 @@ export default function Product() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-      <Navbar />
-
       <section className="product">
         <div className="product-image">
           <div className="main-image">

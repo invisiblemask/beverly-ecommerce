@@ -5,6 +5,31 @@ nav {
   padding: 1rem 10rem;
   z-index: 999;
   background-color: transparent;
+  transition: all 0.3s ease;
+  height: 80px;
+
+
+  @include media("<=414px") {
+    height: 30px;
+
+    &.active {
+      position: sticky;
+      height: 40px;
+      top: 0;
+      left: 0;
+      right: 0;
+      background: #ffffff;
+      box-shadow: 2px 4px 3px 1px rgba(234, 236, 235, 0.5);
+    }
+  }
+
+  &.active {
+    position: sticky;
+    height: 40px;
+    top: 0;
+    background: #ffffff;
+    box-shadow: 2px 4px 3px 1px rgba(234, 236, 235, 0.5);
+  }
 
   .hamburger {
     display: none;
@@ -17,9 +42,9 @@ nav {
       .hamburger-one,
       .hamburger-two,
       .hamburger-three {
-        width: 40px;
-        height: 3px;
-        background: $white;
+        width: 30px;
+        height: 2px;
+        background: black;
 
         &.active {
           background-color: black;
@@ -34,24 +59,6 @@ nav {
     @include media(">=1024px",
       "<=desktop") {
       display: none;
-    }
-
-    @include media(">phone", "<=425px") {
-      display: flex;
-      flex-direction: column;
-      gap: 6px;
-
-      .hamburger-one,
-      .hamburger-two,
-      .hamburger-three {
-        width: 40px;
-        height: 3px;
-        background: $white;
-
-        &.active {
-          background-color: black;
-        }
-      }
     }
 
     .link-other {
@@ -90,48 +97,22 @@ nav {
     animation: fadeIn 0.5s ease;
   }
 
-  .middle-left,
-  .middle-right {
+  .middle-left {
     display: flex;
     flex-direction: row;
     gap: 3rem;
-    font-size: 16px;
-    color: $white;
-    font-weight: 400;
-    // font-family: 'Clash Grotesk', sans-serif;
-
-    a {
-      color: $white;
-
-      &.active {
-        color: black;
-      }
-    }
-
-    .link-home {
-      color: $white;
-    }
+    font-size: 13px;
+    font-family: 'Clash Grotesk', sans-serif;
 
     .link-text {
       color: black;
     }
   }
 
-  .middle-right {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    color: $white;
-
-    .right {
-      display: flex;
-      gap: 3rem;
-    }
-  }
-
   img {
     width: 100px;
-    height: 100px;
+    height: 100%;
+    object-fit: contain;
   }
 
   .cart-container {
@@ -139,10 +120,13 @@ nav {
     cursor: pointer;
 
     .cart-icon {
-      width: 35px;
-      height: 35px;
-      font-weight: 100;
-      color: $white;
+      width: 25px;
+      height: 25px;
+
+      @include media("<=414px") {
+        width: 33px;
+        height: 33px;
+      }
     }
 
     .link-home {
@@ -153,11 +137,11 @@ nav {
       position: absolute;
       top: -6px;
       right: -8px;
-      font-size: 14px;
+      font-size: 10px;
       background-color: $banner-bg-color;
-      color: $white;
-      width: 10px;
-      height: 10px;
+      color: white;
+      width: 6px;
+      height: 6px;
       display: flex;
       justify-content: center;
       align-items: center;
@@ -175,12 +159,6 @@ nav {
       display: none;
     }
 
-    .middle-right {
-      .right {
-        display: none;
-      }
-    }
-
     img {
       display: none;
     }
@@ -195,12 +173,6 @@ nav {
       display: none;
     }
 
-    .middle-right {
-      .right {
-        display: none;
-      }
-    }
-
     img {
       display: none;
     }
@@ -213,12 +185,6 @@ nav {
 
     .middle-left {
       display: none;
-    }
-
-    .middle-right {
-      .right {
-        display: none;
-      }
     }
 
     img {

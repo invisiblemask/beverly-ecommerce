@@ -2,18 +2,18 @@
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
-  justify-content: center;
-  align-items: center;
   gap: 4rem;
   padding-bottom: 20px;
 
   .card-wrapper {
+    position: relative;
     display: flex;
     flex-direction: column;
     gap: 5px;
 
     img {
-      width: 200px;
+      width: 100%;
+      height: 100%;
     }
 
     .card-img {
@@ -21,22 +21,39 @@
 
     }
 
-
     .card-name {
       font-size: 14px;
-      font-weight: 600;
-      text-transform: uppercase;
+      font-weight: 500;
+      text-transform: capitalize;
     }
 
     .card-price {
       color: $banner-bg-color;
       font-size: 13px;
     }
+
+    .new,
+    .discount {
+      position: absolute;
+      font-size: 12px;
+      color: white;
+      text-transform: uppercase;
+      padding: 4px 10px;
+      font-weight: 500;
+    }
+
+    .new {
+      background: #000;
+    }
+
+    .discount {
+      background: #d70e69;
+    }
   }
 
   @include media("<=414px") {
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(1, 1fr);
     gap: 20px;
 
     .card-wrapper {
@@ -60,12 +77,13 @@
 
   @include media(">=desktop") {
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
+    grid-template-columns: repeat(3, 1fr);
     gap: 20px;
 
     .card-wrapper {
       img {
-        width: 250px;
+        width: 100%;
+        height: 100%;
       }
     }
   }
