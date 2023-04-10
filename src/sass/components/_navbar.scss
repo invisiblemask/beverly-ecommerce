@@ -97,15 +97,15 @@ nav {
     animation: fadeIn 0.5s ease;
   }
 
-  .middle-left {
+  .links {
     display: flex;
     flex-direction: row;
     gap: 3rem;
     font-size: 13px;
     font-family: 'Clash Grotesk', sans-serif;
 
-    .link-text {
-      color: black;
+    a {
+      color: #4e4d4d;
     }
   }
 
@@ -115,13 +115,16 @@ nav {
     object-fit: contain;
   }
 
-  .cart-container {
-    position: relative;
-    cursor: pointer;
+  .nav-icons {
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+    align-items: center;
 
-    .cart-icon {
-      width: 25px;
-      height: 25px;
+    .nav-icon {
+      width: 22px;
+      height: 22px;
+      color: #4e4d4d;
 
       @include media("<=414px") {
         width: 33px;
@@ -129,24 +132,30 @@ nav {
       }
     }
 
-    .link-home {
-      color: black;
-    }
-
-    div {
-      position: absolute;
-      top: -6px;
-      right: -8px;
-      font-size: 10px;
-      background-color: $banner-bg-color;
-      color: white;
-      width: 6px;
-      height: 6px;
+    .cart-container {
+      position: relative;
+      cursor: pointer;
       display: flex;
-      justify-content: center;
-      align-items: center;
-      padding: 6px;
-      border-radius: 100%;
+
+      .link-home {
+        color: black;
+      }
+
+      div {
+        position: absolute;
+        top: -6px;
+        right: -8px;
+        font-size: 10px;
+        background-color: $banner-bg-color;
+        color: white;
+        width: 6px;
+        height: 6px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 6px;
+        border-radius: 100%;
+      }
     }
   }
 
@@ -155,7 +164,7 @@ nav {
     display: flex;
     align-items: center;
 
-    .middle-left {
+    .links {
       display: none;
     }
 
@@ -169,7 +178,7 @@ nav {
     display: flex;
     align-items: center;
 
-    .middle-left {
+    .links {
       display: none;
     }
 
@@ -183,7 +192,7 @@ nav {
     display: flex;
     align-items: center;
 
-    .middle-left {
+    .links {
       display: none;
     }
 

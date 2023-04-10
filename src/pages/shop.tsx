@@ -1,14 +1,13 @@
-import Navbar from "@/components/Navbar";
+import LoadingPage from "@/components/LoadingPage";
 import ShopList from "@/components/ShopList";
 import Head from "next/head";
-import { useState, useEffect } from "react";
+import { useEffect, useState } from "react";
+import { HiOutlineMagnifyingGlass } from "react-icons/hi2";
+import { IoIosArrowDown } from "react-icons/io";
 import {
   MdOutlineKeyboardArrowDown,
   MdOutlineKeyboardArrowUp,
 } from "react-icons/md";
-import { HiOutlineMagnifyingGlass } from "react-icons/hi2";
-import { IoIosArrowDown } from "react-icons/io";
-import LoadingPage from "@/components/LoadingPage";
 
 export default function Shop() {
   const [isOpen, setIsOpen] = useState(false);

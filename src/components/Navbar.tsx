@@ -3,7 +3,7 @@ import { animated, useSpring } from "@react-spring/web";
 import Link from "next/link";
 import { useRouter } from "next/router";
 import { useEffect, useState } from "react";
-import { CiShoppingCart } from "react-icons/ci";
+import { CiShoppingCart, CiUser } from "react-icons/ci";
 import Modal from "./Modal";
 
 const links = [
@@ -18,10 +18,6 @@ const links = [
   {
     name: "ABOUT",
     href: "/about",
-  },
-  {
-    name: "ACCOUNT",
-    href: "/account",
   },
   {
     name: "CONTACT",
@@ -76,7 +72,7 @@ export default function Navbar() {
       <Link href="/">
         <img src="/images/benaya-banner-2.png" alt="" />
       </Link>
-      <div className="middle-left">
+      <div className="links">
         {links.map((link, index) => {
           return (
             <Link key={index} href={link.href}>
@@ -85,9 +81,14 @@ export default function Navbar() {
           );
         })}
       </div>
-      <div className="cart-container" onClick={handleCartClick}>
-        <CiShoppingCart className="cart-icon" />
-        <div>2</div>
+      <div className="nav-icons">
+        <Link href="/account" className="cart-container">
+          <CiUser className="nav-icon" />
+        </Link>
+        <div className="cart-container" onClick={handleCartClick}>
+          <CiShoppingCart className="nav-icon" />
+          <div>2</div>
+        </div>
       </div>
       {isOpen && (
         <animated.div

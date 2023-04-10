@@ -9,9 +9,14 @@
         flex-direction: column;
         gap: 5px;
 
+        .shoplist-img {
+            position: relative;
+
+        }
+
         img {
             width: 100px;
-            // height: 350px;
+            height: 100%;
         }
 
         .shoplist-name {
@@ -23,6 +28,24 @@
         .shoplist-price {
             color: $banner-bg-color;
             font-size: 13px;
+        }
+
+        .new,
+        .discount {
+            position: absolute;
+            font-size: 12px;
+            color: white;
+            text-transform: uppercase;
+            padding: 4px 10px;
+            font-weight: 500;
+        }
+
+        .new {
+            background: #000;
+        }
+
+        .discount {
+            background: #d70e69;
         }
     }
 

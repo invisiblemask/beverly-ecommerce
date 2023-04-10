@@ -18,11 +18,17 @@
     flex-direction: column;
   }
 
-  .collection-container {
+  .collection-header {
+    text-align: left;
+    font-size: 24px;
+    font-weight: 500;
+  }
+
+  .img-collection {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     gap: 10px;
-    flex-wrap: wrap;
+    position: relative;
 
     @include media("<=414px") {
       grid-template-columns: repeat(2, 1fr);
@@ -33,88 +39,17 @@
       grid-template-columns: repeat(2, 1fr);
     }
 
-
-    .card-wrapper {
-      display: flex;
-      flex-direction: column;
-      gap: 10px;
-
-      img {
-        width: 270px;
-        object-fit: contain;
-
-        @include media("<=414px") {
-          width: 100%;
-        }
-
-        @include media(">=tablet",
-          "<desktop") {
-          width: 100%;
-        }
-      }
-
-      .card-name {
-        font-size: 14px;
-        font-weight: 600;
-        text-transform: uppercase;
-        text-transform: uppercase;
-      }
-
-      .card-price {
-        color: $banner-bg-color;
-        font-size: 13px;
-      }
-    }
-  }
-
-  .collection-wrapper {
-    display: flex;
-    flex-direction: column;
-    gap: 40px;
-
-    .collection-header {
-      display: flex;
-      flex-direction: column;
-      gap: 10px;
-      justify-content: center;
-      align-items: center;
-      font-size: $font-lg;
-      font-weight: 400;
-
-
-      span {
-        color: $banner-bg-color;
-        font-size: 18px;
-      }
-    }
-
-    .img-collection {
-      display: grid;
-      grid-template-columns: repeat(4, 1fr);
-      gap: 10px;
+    img {
+      width: 270px;
 
       @include media("<=414px") {
-        grid-template-columns: repeat(2, 1fr);
+        width: 100%;
       }
 
-      @include media(">=tablet",
-        "<desktop") {
-        grid-template-columns: repeat(2, 1fr);
-      }
-
-      img {
-        width: 270px;
-
-        @include media("<=414px") {
-          width: 100%;
-        }
-
-        @include media(">=tablet", "<desktop") {
-          width: 100%;
-        }
+      @include media(">=tablet", "<desktop") {
+        width: 100%;
       }
     }
   }
-
 
 }
