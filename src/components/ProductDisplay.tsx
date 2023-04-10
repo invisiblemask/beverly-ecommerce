@@ -21,12 +21,12 @@ export default function ProductDisplay() {
             <Link href="/shop" className="side-display-card">
               <img src="/images/products/product-8.jpg.webp" alt="" />
               <span className="display-card-name">The Print Monroe Dress</span>
-              <span className="display-card-price">₦37,500</span>
+              <span className="display-card-price">£75.00</span>
             </Link>
             <Link href="/shop" className="side-display-card">
               <img src="/images/products/product-6.jpg.webp" alt="" />
               <span className="display-card-name">The Bali Shirt Dress</span>
-              <span className="display-card-price">₦39,850</span>
+              <span className="display-card-price">£30.00</span>
             </Link>
           </div>
         </div>
@@ -41,12 +41,12 @@ export default function ProductDisplay() {
             <Link href="/shop" className="side-display-card">
               <img src="/images/products/product-10.jpg.webp" alt="" />
               <span className="display-card-name">The Imani set</span>
-              <span className="display-card-price">₦44,950</span>
+              <span className="display-card-price">£45.00</span>
             </Link>
             <Link href="/shop" className="side-display-card">
               <img src="/images/products/product-12.jpg.webp" alt="" />
               <span className="display-card-name">The cabo set</span>
-              <span className="display-card-price">₦41,050</span>
+              <span className="display-card-price">£15.00</span>
             </Link>
           </div>
         </div>

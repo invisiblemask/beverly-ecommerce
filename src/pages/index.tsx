@@ -1,4 +1,5 @@
 import HeroPage from "@/components/Hero";
+import Newsletter from "@/components/Newsletter";
 import Offer from "@/components/Offer";
 import ProductDisplay from "@/components/ProductDisplay";
 import ProductPage from "@/components/ProductPage";
@@ -23,6 +24,7 @@ export default function Home() {
         <ProductDisplay />
         <SLCollection />
         <Offer />
+        <Newsletter />
       </main>
     </>
   );
