@@ -1,6 +1,8 @@
 import Head from "next/head";
+import { useEffect, useState } from "react";
 import Banner from "./Banner";
 import Footer from "./Footer";
+import LoadingPage from "./LoadingPage";
 import Navbar from "./Navbar";
 
 type LayoutProps = {
@@ -8,6 +10,15 @@ type LayoutProps = {
 };
 
 export default function Layout({ children }: LayoutProps) {
+  const [isLoading, setIsLoading] = useState(true);
+
+  useEffect(() => {
+    // Some async operation that sets isLoading to false
+    setTimeout(() => {
+      setIsLoading(false);
+    }, 3000);
+  }, []);
+
   return (
     <div>
       <Head>
@@ -16,11 +27,16 @@ export default function Layout({ children }: LayoutProps) {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-
-      <Banner />
-      <Navbar />
-      <main>{children}</main>
-      <Footer />
+      {isLoading ? (
+        <LoadingPage />
+      ) : (
+        <>
+          <Banner />
+          <Navbar />
+          <main>{children}</main>
+          <Footer />
+        </>
+      )}
     </div>
   );
 }

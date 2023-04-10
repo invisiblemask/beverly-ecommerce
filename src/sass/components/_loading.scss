@@ -1,0 +1,28 @@
+@import '~animate.css/animate.css';
+
+.loading-page {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+
+    .loading-spinner {
+        width: 2rem;
+        height: 2rem;
+        border-radius: 50%;
+        border: 0.2rem solid #ccc;
+        border-top-color: #333;
+        animation: rotate 1s linear infinite;
+    }
+}
+
+@keyframes rotate {
+    from {
+        transform: rotate(0deg);
+    }
+
+    to {
+        transform: rotate(360deg);
+    }
+}

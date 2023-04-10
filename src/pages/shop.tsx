@@ -1,13 +1,14 @@
 import Navbar from "@/components/Navbar";
 import ShopList from "@/components/ShopList";
 import Head from "next/head";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import {
   MdOutlineKeyboardArrowDown,
   MdOutlineKeyboardArrowUp,
 } from "react-icons/md";
 import { HiOutlineMagnifyingGlass } from "react-icons/hi2";
 import { IoIosArrowDown } from "react-icons/io";
+import LoadingPage from "@/components/LoadingPage";
 
 export default function Shop() {
   const [isOpen, setIsOpen] = useState(false);
@@ -37,6 +38,15 @@ export default function Shop() {
     setIsOpen(!isOpen);
   };
 
+  const [isLoading, setIsLoading] = useState(true);
+
+  useEffect(() => {
+    // Some async operation that sets isLoading to false
+    setTimeout(() => {
+      setIsLoading(false);
+    }, 3000);
+  }, []);
+
   return (
     <>
       <Head>
@@ -47,48 +57,52 @@ export default function Shop() {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <div className="shop">
-        <div className="shop-container">
-          <div className="side-sort">
-            <div className="search-input">
-              <input type="text" autoFocus placeholder="Search here..." />
-              <HiOutlineMagnifyingGlass className="search-icon" />
-            </div>
-            {cats.map((cat, index) => {
-              return (
-                <div key={index} className="cats">
-                  {cat} <IoIosArrowDown />
-                </div>
-              );
-            })}
-          </div>
-          <div className="shop-wrapper">
-            <div className="sort-range">
-              <div className="range-number">Showing 1–12 of 126 results</div>
-              <div className="range-price" onClick={handleToggle}>
-                Sort by Price:{" "}
-                <span className="sort-span" onClick={handleDropdown}>
-                  <div>{select[2]}</div>
-                  {dropdown ? (
-                    <MdOutlineKeyboardArrowDown className="dropdown-icon" />
-                  ) : (
-                    <MdOutlineKeyboardArrowUp className="dropdown-icon" />
-                  )}
-                  {dropdown && (
-                    <div className="price-list" onClick={handleSelect}>
-                      {select.map((option, index) => {
-                        return <div key={index}>{option}</div>;
-                      })}
-                    </div>
-                  )}
-                </span>
+      {isLoading ? (
+        <LoadingPage />
+      ) : (
+        <div className="shop">
+          <div className="shop-container">
+            <div className="side-sort">
+              <div className="search-input">
+                <input type="text" autoFocus placeholder="Search here..." />
+                <HiOutlineMagnifyingGlass className="search-icon" />
               </div>
+              {cats.map((cat, index) => {
+                return (
+                  <div key={index} className="cats">
+                    {cat} <IoIosArrowDown />
+                  </div>
+                );
+              })}
             </div>
-            <ShopList />
+            <div className="shop-wrapper">
+              <div className="sort-range">
+                <div className="range-number">Showing 1–12 of 126 results</div>
+                <div className="range-price" onClick={handleToggle}>
+                  Sort by Price:{" "}
+                  <span className="sort-span" onClick={handleDropdown}>
+                    <div>{select[2]}</div>
+                    {dropdown ? (
+                      <MdOutlineKeyboardArrowDown className="dropdown-icon" />
+                    ) : (
+                      <MdOutlineKeyboardArrowUp className="dropdown-icon" />
+                    )}
+                    {dropdown && (
+                      <div className="price-list" onClick={handleSelect}>
+                        {select.map((option, index) => {
+                          return <div key={index}>{option}</div>;
+                        })}
+                      </div>
+                    )}
+                  </span>
+                </div>
+              </div>
+              <ShopList />
+            </div>
           </div>
+          <button>Load More</button>
         </div>
-        <button>Load More</button>
-      </div>
+      )}
     </>
   );
 }
