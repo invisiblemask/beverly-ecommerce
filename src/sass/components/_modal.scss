@@ -27,13 +27,12 @@ $easing: cubic-bezier(0.42, 0, 0.58, 1);
         height: 300px;
         animation: modalFadeIn 0.3s ease-out forwards;
 
-        @include media(">=phone", "<desktop") {
-            width: 85%;
+        @include media("<=414px") {
+            width: 80%;
         }
 
         .modal-item {
             display: flex;
-            height: 50;
             flex-direction: column;
             gap: 24px;
             overflow: auto;
@@ -106,7 +105,7 @@ $easing: cubic-bezier(0.42, 0, 0.58, 1);
             border-top: 1px solid #cecece;
             padding-top: 15px;
 
-            @include media(">=phone", "<desktop") {
+            @include media("<=414px") {
                 flex-direction: column;
             }
 
@@ -122,13 +121,28 @@ $easing: cubic-bezier(0.42, 0, 0.58, 1);
                 gap: 20px;
                 align-items: center;
 
-                @include media(">=phone", "<desktop") {
+                @include media("<=414px") {
                     margin-top: 20px;
+                    flex-direction: column;
+                }
+
+                a {
+                    width: 100%;
+
+                    button {
+                        @include media("<=414px") {
+                            width: 100%;
+                        }
+                    }
                 }
 
                 button {
                     text-transform: uppercase;
                     font-weight: bold;
+
+                    @include media("<=414px") {
+                        width: 100%;
+                    }
                 }
 
                 button:nth-child(1) {

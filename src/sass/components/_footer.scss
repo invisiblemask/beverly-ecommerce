@@ -5,6 +5,10 @@ footer {
   margin-top: 8rem;
   padding: 2rem 10rem 0 10rem;
 
+  @include media("<=414px") {
+    padding: 0 14px;
+  }
+
   .footer {
     display: flex;
     flex-direction: row;
@@ -12,10 +16,18 @@ footer {
     border-bottom: 1px solid #dedada;
     padding-bottom: 2rem;
 
+    @include media("<=414px") {
+      flex-direction: column;
+    }
+
     .footer-left {
       display: flex;
       flex-direction: column;
       gap: 10px;
+
+      @include media("<=414px") {
+        padding-top: 44px;
+      }
 
       img {
         width: 105px;
@@ -36,6 +48,10 @@ footer {
     .footer-right {
       display: flex;
       gap: 4rem;
+
+      @include media("<=414px") {
+        flex-direction: column;
+      }
 
       .links {
         display: flex;
@@ -69,6 +85,10 @@ footer {
     a {
       color: black;
       font-size: 14px;
+    }
+
+    @include media("<=414px") {
+      flex-wrap: wrap;
     }
   }
 }
