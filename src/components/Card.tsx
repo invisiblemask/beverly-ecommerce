@@ -1,9 +1,10 @@
 /* eslint-disable @next/next/no-img-element */
 import { GetStaticPaths, GetStaticProps } from "next";
 import { StaticImageData } from "next/image";
-import Link from "next/link";
-import { products } from "./data";
+import { useState } from "react";
 import { BsEye } from "react-icons/bs";
+import { products } from "./data";
+import ProductModal from "./ProductModal";
 
 type Product = {
   id: number;
@@ -17,14 +18,25 @@ type ProductProps = {
 };
 
 export default function Card({ product }: ProductProps) {
+  const [showModal, setShowModal] = useState(false);
+
+  const clickProduct: () => void = () => {
+    setShowModal(true);
+  };
+
+  const toggleModal = () => {
+    setShowModal(!showModal);
+  };
+
   return (
     <div className="card-container">
       {products
         .map((product, index) => {
           return (
-            <Link
+            <div
               key={index}
-              href={`/product/${product.id}`}
+              // href={`/product/${product.id}`}
+              onClick={clickProduct}
               className="card-wrapper"
             >
               <div className="card-img">
@@ -40,10 +52,11 @@ export default function Card({ product }: ProductProps) {
               {product.slashedPrice !== null && (
                 <div className="discount">Discount</div>
               )}
-            </Link>
+            </div>
           );
         })
         .slice(0, 8)}
+      {showModal && <ProductModal toggleModal={toggleModal} />}
     </div>
   );
 }
