@@ -27,14 +27,34 @@ $easing: cubic-bezier(0.42, 0, 0.58, 1);
         margin-top: 90px;
         animation: product-modalFadeIn 0.8s ease-out forwards;
 
-        @include media("<=414px") {
+        @include media(">=1920px") {
             width: 80%;
+            height: fit-content;
+        }
+
+        @include media(">=414px", "<tablet") {
+            flex-direction: column;
+            width: 80%;
+            gap: 1rem;
+            padding: 20px;
+            height: fit-content;
+            margin-top: 20px;
+        }
+
+        @include media(">=tablet", "<desktop") {
+            width: 90%;
+            padding: 20px;
+            gap: 4rem
         }
 
         .product-image {
             display: flex;
             flex-direction: row;
             gap: 20px;
+
+            @include media(">=414px", "<1024px") {
+                margin-top: 25px;
+            }
 
             .main-image {
                 position: relative;
@@ -45,18 +65,24 @@ $easing: cubic-bezier(0.42, 0, 0.58, 1);
                     height: 100%;
                     object-fit: cover;
 
-                    @include media("<=414px") {
-                        width: 100%;
+                    @include media(">=1920px") {
+                        width: 600px;
+                        height: 900px;
                     }
 
-                    @include media(">414px",
-                        "<=540px") {
+                    @include media(">=tablet", "<1024px") {
                         width: 100%;
+                        height: 300px;
                     }
 
-                    @include media(">=tablet",
-                        "<=desktop") {
+                    @include media(">=1024px", "<desktop") {
                         width: 100%;
+                        height: 500px;
+                    }
+
+                    @include media(">=414px", "<tablet") {
+                        width: 100%;
+                        height: 100%;
                     }
                 }
             }
@@ -67,13 +93,16 @@ $easing: cubic-bezier(0.42, 0, 0.58, 1);
                 gap: 2px;
                 cursor: pointer;
 
-                @include media("<=414px") {
-                    grid-template-columns: repeat(3, 1fr);
+                @include media(">=414px", "<1024px") {
+                    grid-template-rows: repeat(3, 60px);
                 }
 
-                @include media(">414px", "<=540px") {
-                    grid-template-columns: repeat(3, 1fr);
-                    gap: 4px;
+                @include media(">=tablet", "<desktop") {
+                    grid-template-rows: repeat(3, 60px);
+                }
+
+                @include media(">=1920px") {
+                    grid-template-rows: repeat(3, 200px);
                 }
 
                 .small-img {
@@ -81,21 +110,20 @@ $easing: cubic-bezier(0.42, 0, 0.58, 1);
                     height: 100%;
                     // object-fit: cover;
 
-                    @include media("<=414px") {
-                        width: 100%;
-                        height: 100px;
+                    @include media(">=414px",
+                        "<1024px") {
+                        width: 50px;
+                        height: 100%;
                     }
 
-                    @include media(">414px",
-                        "<=540px") {
-                        width: 100%;
-                        height: 100px;
+                    @include media(">=tablet", "<desktop") {
+                        width: 60px;
+                        height: 100%;
                     }
 
-                    @include media(">=tablet",
-                        "<=desktop") {
-                        width: 100%;
-                        height: 100px;
+                    @include media(">=1920px") {
+                        width: 200px;
+                        height: 100%;
                     }
 
                     .selected-img {
@@ -110,24 +138,68 @@ $easing: cubic-bezier(0.42, 0, 0.58, 1);
             flex-direction: column;
             gap: 10px;
 
+            @include media(">=tablet", "<desktop") {
+                flex: 1;
+            }
+
             .products-detail-name {
                 font-size: 34px;
+
+                @include media(">=414px",
+                    "<1024px") {
+                    font-size: 24px;
+                }
+
+                @include media(">=1920px") {
+                    font-size: 54px;
+                }
             }
 
             .products-detail-price {
                 font-size: 20px;
+
+                @include media(">=1920px") {
+                    font-size: 44px;
+                }
+            }
+
+            .products-detail-color {
+                @include media(">=1920px") {
+                    font-size: 34px;
+                }
             }
 
             .products-detail-desc {
                 font-size: 14px;
                 color: #6f6f6f;
+
+                @include media(">=414px",
+                    "<1024px") {
+                    text-overflow: ellipsis;
+                    word-wrap: break-word;
+                    overflow: hidden;
+                    max-height: 3.6em;
+                    line-height: 1.8em;
+                }
+
+                @include media(">=1920px") {
+                    font-size: 30px;
+                }
             }
 
             .stock {
+                @include media(">=1920px") {
+                    font-size: 30px;
+                }
+
                 span:nth-child(2) {
                     font-weight: 600;
                     margin-left: 6px;
                     font-size: 14px;
+
+                    @include media(">=1920px") {
+                        font-size: 30px;
+                    }
                 }
             }
 
@@ -138,12 +210,26 @@ $easing: cubic-bezier(0.42, 0, 0.58, 1);
 
                 .size-label {
                     font-size: 16px;
+
+                    @include media(">=1920px") {
+                        font-size: 34px;
+                    }
                 }
 
                 .sizes-container {
                     display: grid;
                     grid-template-columns: repeat(4, 60px);
                     gap: 8px;
+
+                    @include media(">=414px",
+                        "<1024px") {
+                        grid-template-columns: repeat(4, 40px);
+                        width: 80px;
+                    }
+
+                    @include media(">=1920px") {
+                        grid-template-columns: repeat(6, 100px);
+                    }
 
                     div {
                         border: 1px solid #6f6f6f;
@@ -152,6 +238,10 @@ $easing: cubic-bezier(0.42, 0, 0.58, 1);
                         justify-content: center;
                         align-items: center;
                         cursor: pointer;
+
+                        @include media(">=1920px") {
+                            font-size: 30px;
+                        }
                     }
 
                     .selected {
@@ -169,37 +259,9 @@ $easing: cubic-bezier(0.42, 0, 0.58, 1);
 
                 gap: 18px;
 
-                @include media("<=414px") {
-                    width: fit-content;
-                }
-
-                @include media(">=tablet",
-                    "<=desktop") {
-                    width: 435px;
-                }
-
-                .order-item {
-                    display: flex;
-                    flex-direction: row;
-                    gap: 10px;
-
-                    .order-img {
-                        width: 100px;
-                        height: 70px;
-                        object-fit: cover;
-                    }
-
-                    .selected {
-                        display: flex;
-                        flex-direction: column;
-                        font-size: 16px;
-                        flex-wrap: wrap;
-                        gap: 8px;
-
-                        span:nth-child(2) {
-                            font-weight: 500;
-                        }
-                    }
+                @include media(">=414px",
+                    "<1024px") {
+                    width: 100%;
                 }
 
                 .qty {
@@ -218,6 +280,11 @@ $easing: cubic-bezier(0.42, 0, 0.58, 1);
                         padding: 10px;
                         border-radius: 8px;
 
+                        @include media(">=1920px") {
+                            margin-top: 30px;
+                            border: none;
+                        }
+
                         .minus,
                         .plus {
                             width: 29px;
@@ -229,10 +296,22 @@ $easing: cubic-bezier(0.42, 0, 0.58, 1);
                             box-shadow: 0px 1px 14px 0px rgba(209, 203, 203, 0.48);
                             cursor: pointer;
                             font-weight: 500;
+
+                            @include media(">=1920px") {
+                                width: 80px;
+                                height: 80px;
+                                font-size: 34px;
+                            }
                         }
 
                         .minus {
                             background: #e0dfdf;
+                        }
+
+                        .num {
+                            @include media(">=1920px") {
+                                font-size: 30px;
+                            }
                         }
                     }
                 }
@@ -243,9 +322,17 @@ $easing: cubic-bezier(0.42, 0, 0.58, 1);
                     justify-content: space-between;
                     margin-top: 20px;
 
+                    @include media(">=1920px") {
+                        font-size: 30px;
+                    }
+
                     span {
                         font-weight: 500;
                         font-size: 17px;
+
+                        @include media(">=1920px") {
+                            font-size: 30px;
+                        }
                     }
                 }
 
@@ -255,15 +342,40 @@ $easing: cubic-bezier(0.42, 0, 0.58, 1);
                     gap: 14px;
                     margin-top: auto;
 
+                    @include media(">=414px",
+                        "<1024px") {
+                        flex-direction: column;
+                    }
+
                     .order-color,
                     .order-plane {
                         border-radius: 8px;
                         font-size: 15px;
+
+                        @include media(">=1920px") {
+                            width: 100%;
+                            font-size: 24px;
+                        }
+
+                        @include media(">=414px", "<1024px") {
+                            width: 100%;
+                        }
+                    }
+
+                    a {
+                        @include media(">=1920px") {
+                            width: 100%;
+                        }
                     }
 
                     .order-color {
                         background: $banner-bg-color;
                         color: #ffffff;
+
+                        @include media(">=1920px") {
+                            width: 100%;
+                            padding: 30px 20px;
+                        }
                     }
 
                     .order-plane {
@@ -275,6 +387,15 @@ $easing: cubic-bezier(0.42, 0, 0.58, 1);
                         color: $banner-bg-color;
                         border: 1px solid $banner-bg-color;
 
+                        @include media(">=1920px") {
+                            width: 100%;
+                        }
+
+                        @include media(">=414px",
+                            "<1024px") {
+                            width: 100%;
+                        }
+
                         &:hover {
                             background: #f7f6f6;
                             color: #121212;
@@ -283,6 +404,11 @@ $easing: cubic-bezier(0.42, 0, 0.58, 1);
                         .order-cart {
                             width: 20px;
                             height: 20px;
+
+                            @include media(">=1920px") {
+                                width: 35px;
+                                height: 35px;
+                            }
                         }
                     }
                 }
@@ -293,21 +419,17 @@ $easing: cubic-bezier(0.42, 0, 0.58, 1);
             position: absolute;
             top: 10px;
             right: 10px;
-            outline: none;
-            border: none;
-            padding: 4px;
-            width: 25px;
-            height: 25px;
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
             cursor: pointer;
 
             .product-modal-icon {
                 width: 1.5rem;
                 height: 1.5rem;
                 color: #919090f8;
+
+                @include media(">=1920px") {
+                    width: 4rem;
+                    height: 4rem;
+                }
             }
         }
     }
