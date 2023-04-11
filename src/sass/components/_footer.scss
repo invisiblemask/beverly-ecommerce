@@ -51,11 +51,19 @@ footer {
 
       img {
         width: 105px;
+
+        @include media(">=1920px") {
+          width: 220px;
+        }
       }
 
       .footer-about {
         line-height: 1.5;
         font-size: 14px;
+
+        @include media(">=1920px") {
+          font-size: 30px;
+        }
 
         @include media(">=tablet",
           "<desktop") {
@@ -67,6 +75,10 @@ footer {
         margin: 10px 0;
         font-weight: 500;
         font-size: 14px;
+
+        @include media(">=1920px") {
+          font-size: 30px;
+        }
       }
     }
 
@@ -91,10 +103,18 @@ footer {
         .footer-header {
           font-size: 16px;
           font-weight: 500;
+
+          @include media(">=1920px") {
+            font-size: 30px;
+          }
         }
 
         li {
           font-size: 14px;
+
+          @include media(">=1920px") {
+            font-size: 28px;
+          }
         }
       }
 
@@ -112,9 +132,17 @@ footer {
     gap: 8px;
     font-size: 14px;
 
+    @include media(">=1920px") {
+      font-size: 26px;
+    }
+
     a {
       color: black;
       font-size: 14px;
+
+      @include media(">=1920px") {
+        font-size: 26px;
+      }
     }
 
     @include media(">=414px",

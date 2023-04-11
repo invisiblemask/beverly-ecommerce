@@ -8,6 +8,11 @@
   font-size: 13px;
   text-transform: uppercase;
 
+  @include media(">=1920px") {
+    font-size: 20px;
+    height: 45px;
+  }
+
   @include media("<=414px") {
     width: 100%;
   }

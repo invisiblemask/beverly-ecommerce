@@ -24,11 +24,19 @@
       font-size: 14px;
       font-weight: 500;
       text-transform: capitalize;
+
+      @include media(">=1920px") {
+        font-size: 25px;
+      }
     }
 
     .card-price {
       color: $banner-bg-color;
       font-size: 13px;
+
+      @include media(">=1920px") {
+        font-size: 22px;
+      }
     }
 
     .new,

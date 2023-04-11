@@ -29,6 +29,10 @@
         font-weight: 600;
         text-align: center;
 
+        @include media(">=1920px") {
+            font-size: 65px;
+        }
+
         @include media(">=tablet",
             "<desktop") {
             text-align: left;
@@ -62,6 +66,10 @@
     .newsletter-sm {
         font-size: 15px;
         color: #3e3d3d;
+
+        @include media(">=1920px") {
+            font-size: 30px;
+        }
     }
 
     .newsletter-input-container {
@@ -97,6 +105,11 @@
             width: 300px;
             background-color: #faf9f9;
 
+            @include media(">=1920px") {
+                width: 565px;
+                padding: 22px 10px;
+            }
+
             @include media(">=tablet",
                 "<desktop") {
                 width: 100%;
@@ -113,6 +126,11 @@
             .newsletter-icon {
                 width: 1.8rem;
                 height: 1.8rem;
+
+                @include media(">=1920px") {
+                    width: 2.5rem;
+                    height: 2.5rem;
+                }
             }
 
             input {
@@ -125,12 +143,21 @@
                 @include media("<=414px") {
                     width: 100%;
                 }
+
+                @include media(">=1920px") {
+                    font-size: 30px;
+                }
             }
         }
 
         button {
             background: #000;
             color: white;
+
+            @include media(">=1920px") {
+                width: 320px;
+                font-size: 30px;
+            }
         }
     }
 }

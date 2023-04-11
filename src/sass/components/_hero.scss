@@ -2,6 +2,10 @@
   padding: 0 10rem;
   justify-content: space-between;
 
+  @include media(">=1920px") {
+    justify-content: center;
+  }
+
   @include media(">=1024px", "<desktop") {
     padding: 1rem 4rem;
   }
@@ -23,6 +27,10 @@
   .hero-container {
     display: flex;
     height: 100vh;
+
+    @include media(">=1920px") {
+      height: 100vh;
+    }
 
     @include media(">desktop") {
       width: 100%;
@@ -52,6 +60,10 @@
       gap: 10rem;
       align-items: center;
 
+      @include media(">=1920px") {
+        height: 100vh;
+      }
+
       .hero-text-wrapper {
         display: flex;
         flex-direction: column;
@@ -59,14 +71,14 @@
         .hero-text {
           display: flex;
           flex-direction: column;
-          font-size: 70px;
+          font-size: 80px;
           color: black;
           font-weight: 600;
           text-align: left;
           line-height: 1.2;
 
-          @include media(">desktop") {
-            font-size: 100px;
+          @include media(">=1920px") {
+            font-size: 230px;
           }
 
           @include media(">=tablet",
@@ -91,6 +103,11 @@
           font-weight: 600;
           color: black;
 
+          @include media(">=1920px") {
+            width: 320px;
+            font-size: 30px;
+          }
+
           &:hover {
             background-color: black;
             color: white;
@@ -106,6 +123,10 @@
         span {
           font-size: 25px;
           font-weight: 400;
+
+          @include media(">=1920px") {
+            font-size: 50px;
+          }
         }
       }
 
@@ -116,8 +137,8 @@
           height: 100%;
           object-fit: contain;
 
-          @include media(">desktop") {
-            // width: 700px;
+          @include media(">=1920px") {
+            width: 800px;
           }
 
           @include media(">=tablet",
@@ -156,6 +177,12 @@
     margin-top: 70px;
     gap: 4rem;
 
+    @include media(">=1920px") {
+      display: flex;
+      flex-direction: row;
+      gap: 4rem;
+    }
+
     @include media(">=1024px", "<desktop") {
       flex-direction: row;
     }
@@ -187,6 +214,12 @@
       background-repeat: no-repeat;
       box-shadow: 11px 13px 12px -13px rgba(0, 0, 0, 0.48);
 
+      @include media(">=1920px") {
+        width: 700px;
+        height: 300px;
+        object-fit: cover;
+      }
+
       @include media(">=1024px", "<desktop") {
         width: 100%;
       }
@@ -217,8 +250,16 @@
         padding-left: 20px;
         color: white;
 
+        @include media(">=1920px") {
+          font-size: 55px;
+        }
+
         span {
           font-size: $font-sm;
+
+          @include media(">=1920px") {
+            font-size: 40px;
+          }
         }
       }
     }

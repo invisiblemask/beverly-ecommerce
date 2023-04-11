@@ -36,6 +36,11 @@
     font-weight: 600;
     text-transform: uppercase;
 
+    @include media(">=1920px") {
+      width: 280px;
+      font-size: 25px;
+    }
+
     &:hover {
       background-color: $banner-bg-color;
       color: $white;
