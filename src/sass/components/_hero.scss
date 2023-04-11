@@ -26,7 +26,6 @@
 
     @include media(">desktop") {
       width: 100%;
-      border: 1px solid violet;
     }
 
     @include media(">=tablet",
@@ -118,7 +117,7 @@
           object-fit: contain;
 
           @include media(">desktop") {
-            width: 700px;
+            // width: 700px;
           }
 
           @include media(">=tablet",
