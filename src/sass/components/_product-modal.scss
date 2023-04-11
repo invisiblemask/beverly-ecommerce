@@ -41,6 +41,15 @@ $easing: cubic-bezier(0.42, 0, 0.58, 1);
             margin-top: 20px;
         }
 
+        @include media("<=414px") {
+            flex-direction: column;
+            width: 80%;
+            gap: 1rem;
+            padding: 20px;
+            height: fit-content;
+            margin-top: 20px;
+        }
+
         @include media(">=tablet", "<desktop") {
             width: 90%;
             padding: 20px;
@@ -51,6 +60,10 @@ $easing: cubic-bezier(0.42, 0, 0.58, 1);
             display: flex;
             flex-direction: row;
             gap: 20px;
+
+            @include media("<=414px") {
+                margin-top: 25px;
+            }
 
             @include media(">=414px", "<1024px") {
                 margin-top: 25px;
@@ -84,6 +97,11 @@ $easing: cubic-bezier(0.42, 0, 0.58, 1);
                         width: 100%;
                         height: 100%;
                     }
+
+                    @include media("<=414px") {
+                        width: 100%;
+                        height: 100%;
+                    }
                 }
             }
 
@@ -92,6 +110,10 @@ $easing: cubic-bezier(0.42, 0, 0.58, 1);
                 grid-template-rows: repeat(3, 120px);
                 gap: 2px;
                 cursor: pointer;
+
+                @include media("<=414px") {
+                    grid-template-rows: repeat(3, 60px);
+                }
 
                 @include media(">=414px", "<1024px") {
                     grid-template-rows: repeat(3, 60px);
@@ -109,6 +131,11 @@ $easing: cubic-bezier(0.42, 0, 0.58, 1);
                     width: 100px;
                     height: 100%;
                     // object-fit: cover;
+
+                    @include media("<=414px") {
+                        width: 50px;
+                        height: 100%;
+                    }
 
                     @include media(">=414px",
                         "<1024px") {
@@ -145,6 +172,10 @@ $easing: cubic-bezier(0.42, 0, 0.58, 1);
             .products-detail-name {
                 font-size: 34px;
 
+                @include media("<=414px") {
+                    font-size: 24px;
+                }
+
                 @include media(">=414px",
                     "<1024px") {
                     font-size: 24px;
@@ -172,6 +203,14 @@ $easing: cubic-bezier(0.42, 0, 0.58, 1);
             .products-detail-desc {
                 font-size: 14px;
                 color: #6f6f6f;
+
+                @include media("<=414px") {
+                    text-overflow: ellipsis;
+                    word-wrap: break-word;
+                    overflow: hidden;
+                    max-height: 3.6em;
+                    line-height: 1.8em;
+                }
 
                 @include media(">=414px",
                     "<1024px") {
@@ -221,6 +260,11 @@ $easing: cubic-bezier(0.42, 0, 0.58, 1);
                     grid-template-columns: repeat(4, 60px);
                     gap: 8px;
 
+                    @include media("<=414px") {
+                        grid-template-columns: repeat(4, 40px);
+                        width: 80px;
+                    }
+
                     @include media(">=414px",
                         "<1024px") {
                         grid-template-columns: repeat(4, 40px);
@@ -259,6 +303,10 @@ $easing: cubic-bezier(0.42, 0, 0.58, 1);
 
                 gap: 18px;
 
+                @include media("<=414px") {
+                    width: 100%;
+                }
+
                 @include media(">=414px",
                     "<1024px") {
                     width: 100%;
@@ -266,15 +314,13 @@ $easing: cubic-bezier(0.42, 0, 0.58, 1);
 
                 .qty {
                     display: flex;
-                    flex-direction: row;
-                    justify-content: space-between;
-                    align-items: center;
+                    flex-direction: column;
                     gap: 10px;
 
                     .qty-btn {
                         display: flex;
                         flex-direction: row;
-                        align-items: center;
+                        align-self: start;
                         gap: 14px;
                         border: 1px solid #eeee;
                         padding: 10px;
@@ -342,6 +388,10 @@ $easing: cubic-bezier(0.42, 0, 0.58, 1);
                     gap: 14px;
                     margin-top: auto;
 
+                    @include media("<=414px") {
+                        flex-direction: column;
+                    }
+
                     @include media(">=414px",
                         "<1024px") {
                         flex-direction: column;
@@ -355,6 +405,10 @@ $easing: cubic-bezier(0.42, 0, 0.58, 1);
                         @include media(">=1920px") {
                             width: 100%;
                             font-size: 24px;
+                        }
+
+                        @include media("<=414px") {
+                            width: 100%;
                         }
 
                         @include media(">=414px", "<1024px") {
@@ -393,6 +447,10 @@ $easing: cubic-bezier(0.42, 0, 0.58, 1);
 
                         @include media(">=414px",
                             "<1024px") {
+                            width: 100%;
+                        }
+
+                        @include media("<=414px") {
                             width: 100%;
                         }
 

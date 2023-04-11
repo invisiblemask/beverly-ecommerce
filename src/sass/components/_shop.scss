@@ -5,9 +5,26 @@
     padding: 0 10rem;
     margin-top: 4rem;
 
-    @include media("<=phone") {
+    @include media(">=414px",
+        "<tablet") {
         padding: 0 14px;
         flex-direction: column;
+        margin-top: 2rem;
+    }
+
+    @include media("<=414px") {
+        padding: 0 14px;
+        flex-direction: column;
+        margin-top: 2rem;
+    }
+
+    @include media(">=tablet",
+        "<1024px") {
+        padding: 0 14px;
+    }
+
+    @include media(">=1024px", "<desktop") {
+        padding: 1rem 4rem;
     }
 
     .shop-container {
@@ -15,9 +32,15 @@
         flex-direction: row;
         justify-content: space-between;
 
-        @include media("<=phone") {
+        @include media(">=414px",
+            "<tablet") {
+            padding: 0 14px;
             flex-direction: column;
-            gap: 25px;
+        }
+
+        @include media("<=414px") {
+            padding: 0 14px;
+            flex-direction: column;
         }
 
         .side-sort {
@@ -33,7 +56,12 @@
                 gap: 6px;
                 padding-right: 14px;
 
-                @include media("<=phone") {
+                @include media(">=414px",
+                    "<tablet") {
+                    width: fit-content;
+                }
+
+                @include media("<=414px") {
                     width: fit-content;
                 }
 
@@ -65,7 +93,13 @@
             flex-direction: row;
             justify-content: space-between;
 
-            @include media("<=phone") {
+            @include media(">=414px",
+                "<tablet") {
+                flex-direction: column;
+                gap: 20px;
+            }
+
+            @include media("<=414px") {
                 flex-direction: column;
                 gap: 20px;
             }

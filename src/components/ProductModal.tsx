@@ -89,6 +89,7 @@ export default function ProductModal({ toggleModal }: ModalProps) {
           </div>
           <div className="order">
             <div className="qty">
+              <div className="qty-label">QTY</div>
               <div className="qty-btn">
                 <div onClick={handleDecrease} className="minus">
                   -
