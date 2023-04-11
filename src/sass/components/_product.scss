@@ -7,6 +7,20 @@
   align-items: center;
   gap: 2rem;
 
+  @include media(">=1024px", "<desktop") {
+    padding: 1rem 4rem;
+  }
+
+  @include media(">=tablet",
+    "<1024px") {
+    padding: 0 14px;
+  }
+
+  @include media(">=414px",
+    "<tablet") {
+    padding: 0 14px;
+  }
+
   @include media("<=414px") {
     padding: 0 14px;
   }

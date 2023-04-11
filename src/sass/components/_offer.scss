@@ -6,6 +6,18 @@
     justify-content: center;
     width: fit-content;
 
+    @include media(">=tablet",
+        "<desktop") {
+        padding: 0 14px;
+        flex-direction: row;
+    }
+
+    @include media(">=414px",
+        "<tablet") {
+        padding: 0 14px;
+        flex-direction: column;
+    }
+
     @include media("<=414px") {
         padding: 0 14px;
         flex-direction: column;
@@ -14,6 +26,19 @@
     img {
         border-top-left-radius: 10px;
         border-bottom-left-radius: 10px;
+
+        @include media(">=tablet",
+            "<desktop") {
+            width: 100%;
+        }
+
+        @include media(">=414px",
+            "<tablet") {
+            width: 100%;
+            border-top-left-radius: 10px;
+            border-top-right-radius: 10px;
+            border-bottom-left-radius: 0px;
+        }
 
         @include media("<=414px") {
             width: 100%;
@@ -33,6 +58,14 @@
         padding: 28px;
         border-top-right-radius: 10px;
         border-bottom-right-radius: 10px;
+
+        @include media(">=414px",
+            "<tablet") {
+            width: fit-content;
+            border-top-right-radius: 0px;
+            border-bottom-left-radius: 10px;
+            border-bottom-right-radius: 10px;
+        }
 
         @include media("<=414px") {
             width: fit-content;
@@ -57,6 +90,11 @@
             color: black;
             font-weight: 600;
             margin-top: 20px;
+
+            @include media(">=414px",
+                "<tablet") {
+                align-self: center;
+            }
 
             @include media("<=414px") {
                 align-self: center;

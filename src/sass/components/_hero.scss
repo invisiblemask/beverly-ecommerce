@@ -2,6 +2,20 @@
   padding: 0 10rem;
   justify-content: space-between;
 
+  @include media(">=1024px", "<desktop") {
+    padding: 1rem 4rem;
+  }
+
+  @include media(">=tablet",
+    "<1024px") {
+    padding: 0 14px;
+  }
+
+  @include media(">=414px",
+    "<tablet") {
+    padding: 0 14px;
+  }
+
   @include media("<=414px") {
     padding: 0 14px;
   }
@@ -10,10 +24,26 @@
     display: flex;
     height: 100vh;
 
+    @include media(">desktop") {
+      width: 100%;
+      border: 1px solid violet;
+    }
+
+    @include media(">=tablet",
+      "<desktop") {
+      height: 100%;
+      margin-top: 45px;
+    }
+
+    @include media(">=414px",
+      "<tablet") {
+      height: 100%;
+      margin-top: 45px;
+    }
+
     @include media("<=414px") {
       height: 100%;
       margin-top: 45px;
-      // display: none;
     }
 
     .hero-wrapper {
@@ -35,6 +65,20 @@
           font-weight: 600;
           text-align: left;
           line-height: 1.2;
+
+          @include media(">desktop") {
+            font-size: 100px;
+          }
+
+          @include media(">=tablet",
+            "<desktop") {
+            font-size: 55px;
+          }
+
+          @include media(">=414px",
+            "<tablet") {
+            font-size: 55px;
+          }
 
           @include media("<=414px") {
             font-size: 55px;
@@ -72,6 +116,19 @@
           width: 500px;
           height: 100%;
           object-fit: contain;
+
+          @include media(">desktop") {
+            width: 700px;
+          }
+
+          @include media(">=tablet",
+            "<desktop") {
+            width: 100%;
+          }
+        }
+
+        @include media(">=414px", "<tablet") {
+          display: none;
         }
 
         @include media("<=414px") {
@@ -100,6 +157,24 @@
     margin-top: 70px;
     gap: 4rem;
 
+    @include media(">=1024px", "<desktop") {
+      flex-direction: row;
+    }
+
+    @include media(">=tablet",
+      "<1024px") {
+      flex-direction: column;
+      display: grid;
+      grid-template-columns: repeat(1, 1fr);
+    }
+
+    @include media(">=414px",
+      "<tablet") {
+      flex-direction: column;
+      display: grid;
+      grid-template-columns: repeat(1, 1fr);
+    }
+
     @include media("<=414px") {
       flex-direction: column;
       display: grid;
@@ -112,6 +187,20 @@
       height: 247px;
       background-repeat: no-repeat;
       box-shadow: 11px 13px 12px -13px rgba(0, 0, 0, 0.48);
+
+      @include media(">=1024px", "<desktop") {
+        width: 100%;
+      }
+
+      @include media(">=tablet",
+        "<1024px") {
+        width: 100%;
+      }
+
+      @include media(">=414px",
+        "<tablet") {
+        width: 100%;
+      }
 
       @include media("<=414px") {
         width: 100%;

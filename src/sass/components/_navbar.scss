@@ -9,6 +9,10 @@ nav {
   height: 80px;
 
 
+  @include media(">=1024px", "<desktop") {
+    padding: 1rem 4rem;
+  }
+
   @include media("<=414px") {
     height: 30px;
 
@@ -34,6 +38,29 @@ nav {
   .hamburger {
     display: none;
 
+    @include media(">=414px",
+      "<1024px") {
+      display: flex;
+      flex-direction: column;
+      gap: 6px;
+
+      .hamburger-one,
+      .hamburger-two,
+      .hamburger-three {
+        width: 30px;
+        height: 2px;
+        background: black;
+
+        &.active {
+          background-color: black;
+        }
+      }
+
+      .link-other {
+        background: black;
+      }
+    }
+
     @include media("<=phone") {
       display: flex;
       flex-direction: column;
@@ -56,40 +83,8 @@ nav {
       }
     }
 
-    @include media(">=1024px",
-      "<=desktop") {
-      display: none;
-    }
-
     .link-other {
       background-color: black;
-    }
-
-    @include media(">=tablet", "<1024px") {
-      display: flex;
-      flex-direction: column;
-      gap: 6px;
-
-      .hamburger-one,
-      .hamburger-two,
-      .hamburger-three {
-        width: 40px;
-        height: 3px;
-        background: $white;
-
-        &.active {
-          background-color: black;
-        }
-      }
-
-      .link-other {
-        background-color: black;
-      }
-
-      .link-text {
-        background-color: transparent;
-        color: black;
-      }
     }
   }
 

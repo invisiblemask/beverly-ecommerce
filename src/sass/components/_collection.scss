@@ -7,6 +7,16 @@
   margin-top: 8rem;
   margin-bottom: 40px;
 
+  @include media(">=1024px", "<desktop") {
+    padding: 1rem 4rem;
+  }
+
+  @include media(">=414px",
+    "<1024px") {
+    padding: 0 14px;
+    flex-direction: column;
+  }
+
   @include media("<=414px") {
     padding: 0 14px;
     flex-direction: column;
@@ -30,6 +40,11 @@
     gap: 10px;
     position: relative;
 
+    @include media(">=414px",
+      "<tablet") {
+      grid-template-columns: repeat(2, 1fr);
+    }
+
     @include media("<=414px") {
       grid-template-columns: repeat(2, 1fr);
     }
@@ -41,6 +56,11 @@
 
     img {
       width: 270px;
+
+      @include media(">=414px",
+        "<1024px") {
+        width: 100%;
+      }
 
       @include media("<=414px") {
         width: 100%;

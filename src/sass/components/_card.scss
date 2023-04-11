@@ -50,6 +50,32 @@
     }
   }
 
+  @include media(">=tablet",
+    "<desktop") {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+
+    .card-wrapper {
+      img {
+        width: 100%;
+      }
+    }
+  }
+
+  @include media(">=414px",
+    "<tablet") {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    gap: 20px;
+
+    .card-wrapper {
+      img {
+        width: 100%;
+      }
+    }
+  }
+
   @include media("<=414px") {
     display: grid;
     grid-template-columns: repeat(1, 1fr);

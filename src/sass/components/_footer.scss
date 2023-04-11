@@ -5,6 +5,16 @@ footer {
   margin-top: 8rem;
   padding: 2rem 10rem 0 10rem;
 
+  @include media(">=tablet",
+    "<desktop") {
+    padding: 2rem 14px 0 14px;
+  }
+
+  @include media(">=414px",
+    "<tablet") {
+    padding: 0 14px;
+  }
+
   @include media("<=414px") {
     padding: 0 14px;
   }
@@ -16,6 +26,11 @@ footer {
     border-bottom: 1px solid #dedada;
     padding-bottom: 2rem;
 
+    @include media(">=414px",
+      "<tablet") {
+      flex-direction: column;
+    }
+
     @include media("<=414px") {
       flex-direction: column;
     }
@@ -24,6 +39,11 @@ footer {
       display: flex;
       flex-direction: column;
       gap: 10px;
+
+      @include media(">=414px",
+        "<tablet") {
+        padding-top: 44px;
+      }
 
       @include media("<=414px") {
         padding-top: 44px;
@@ -36,6 +56,11 @@ footer {
       .footer-about {
         line-height: 1.5;
         font-size: 14px;
+
+        @include media(">=tablet",
+          "<desktop") {
+          width: 80%;
+        }
       }
 
       .footer-contact {
@@ -48,6 +73,11 @@ footer {
     .footer-right {
       display: flex;
       gap: 4rem;
+
+      @include media(">=414px",
+        "<tablet") {
+        flex-direction: column;
+      }
 
       @include media("<=414px") {
         flex-direction: column;
@@ -85,6 +115,11 @@ footer {
     a {
       color: black;
       font-size: 14px;
+    }
+
+    @include media(">=414px",
+      "<tablet") {
+      flex-wrap: wrap;
     }
 
     @include media("<=414px") {
