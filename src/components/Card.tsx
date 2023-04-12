@@ -33,11 +33,11 @@ export default function Card({ product }: ProductProps) {
       {products
         .map((product, index) => {
           return (
-            <div key={index} onClick={clickProduct} className="card-wrapper">
+            <div key={index} className="card-wrapper">
               <div className="card-img">
                 <img src={product.image.src} alt="" />
                 <div className="overlay">
-                  <BsEye className="animated-icon" />
+                  <BsEye className="animated-icon" onClick={clickProduct} />
                 </div>
               </div>
               <span className="card-name">{product.name}</span>

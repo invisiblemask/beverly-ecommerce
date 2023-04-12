@@ -20,11 +20,11 @@ export default function ShopList() {
     <div className="shoplist-container">
       {products.map((product, index) => {
         return (
-          <div onClick={clickProduct} key={index} className="shoplist-wrapper">
+          <div key={index} className="shoplist-wrapper">
             <div className="shoplist-img">
               <img src={product.image.src} alt="" />
               <div className="overlay">
-                <BsEye className="animated-icon" />
+                <BsEye className="animated-icon" onClick={clickProduct} />
               </div>
             </div>
             <span className="shoplist-name">{product.name}</span>
