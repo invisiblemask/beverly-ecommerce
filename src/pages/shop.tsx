@@ -58,9 +58,7 @@ export default function Shop() {
             <HiOutlineMagnifyingGlass className="search-icon" />
           </div>
           <div className="shop-container">
-            <div className="side-sort">
-              <Sort />
-            </div>
+            <Sort />
             <div className="shop-wrapper">
               <div className="sort-range">
                 <div className="range-number">Showing 1–12 of 126 results</div>

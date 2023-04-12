@@ -14,6 +14,10 @@
             margin: 0;
             font-size: 17px;
             font-weight: 500;
+
+            @include media(">=1920px") {
+                font-size: 40px;
+            }
         }
 
         .accordion-icon {

@@ -1,6 +1,6 @@
 .shoplist-container {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(4, 1fr);
     gap: 20px;
     padding-bottom: 20px;
 
@@ -23,11 +23,19 @@
             font-size: 14px;
             font-weight: 500;
             text-transform: uppercase;
+
+            @include media(">=1920px") {
+                font-size: 26px;
+            }
         }
 
         .shoplist-price {
             color: $banner-bg-color;
             font-size: 13px;
+
+            @include media(">=1920px") {
+                font-size: 25px;
+            }
         }
 
         .new,
@@ -46,6 +54,42 @@
 
         .discount {
             background: #d70e69;
+        }
+    }
+
+    @include media(">=1920px") {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 20px;
+
+        .shoplist-wrapper {
+            img {
+                width: 100%;
+            }
+        }
+    }
+
+    @include media(">=tablet", "<1024px") {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 20px;
+
+        .shoplist-wrapper {
+            img {
+                width: 100%;
+            }
+        }
+    }
+
+    @include media(">=414px", "<tablet") {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 20px;
+
+        .shoplist-wrapper {
+            img {
+                width: 100%;
+            }
         }
     }
 
@@ -73,9 +117,9 @@
         }
     }
 
-    @include media(">=desktop") {
+    @include media(">=desktop", "<1920px") {
         display: grid;
-        grid-template-columns: repeat(3, 1fr);
+        grid-template-columns: repeat(4, 1fr);
         gap: 20px;
 
         .shoplist-wrapper {

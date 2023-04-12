@@ -2,7 +2,6 @@
     display: flex;
     flex-direction: column;
     gap: 4px;
-    cursor: pointer;
     font-size: 17px;
     font-weight: 500;
 
@@ -11,13 +10,17 @@
 
         .categories {
             color: #aaaaaa;
-            font-size: 16px;
+            font-size: 15px;
             display: flex;
             flex-direction: column;
             gap: 10px;
             font-weight: 400;
             cursor: pointer;
             align-self: start;
+
+            @include media(">=1920px") {
+                font-size: 35px;
+            }
 
             div {
                 align-self: start;
@@ -60,7 +63,7 @@
                 font-size: 16px;
 
                 @include media(">=1920px") {
-                    font-size: 30px;
+                    font-size: 35px;
                 }
             }
 
@@ -76,6 +79,10 @@
             grid-template-columns: repeat(4, 40px);
             gap: 8px;
 
+            @include media(">=1920px") {
+                grid-template-columns: repeat(4, 100px);
+            }
+
             .color-wrapper {
                 width: 30px;
                 height: 30px;
@@ -86,66 +93,63 @@
                 align-items: center;
                 justify-content: center;
 
-                .red {
-                    width: 30px;
-                    height: 30px;
-                    border-radius: 50%;
-                    background-color: #e52034;
+                @include media(">=1920px") {
+                    width: 80px;
+                    height: 80px;
                 }
 
-                .brown {
-                    width: 30px;
-                    height: 30px;
-                    border-radius: 50%;
-                    background-color: #a55505;
-                }
-
-                .blue {
-                    width: 30px;
-                    height: 30px;
-                    border-radius: 50%;
-                    background-color: #060844;
-                }
-
-                .white {
-                    width: 30px;
-                    height: 30px;
-                    border-radius: 50%;
-                    background-color: white;
-                }
-
-                .green {
-                    width: 30px;
-                    height: 30px;
-                    border-radius: 50%;
-                    background-color: #035935;
-                }
-
-                .black {
-                    width: 30px;
-                    height: 30px;
-                    border-radius: 50%;
-                    background-color: #000000;
-                }
-
-                .pink {
-                    width: 30px;
-                    height: 30px;
-                    border-radius: 50%;
-                    background-color: #e66fd6;
-                }
-
-                .carton {
-                    width: 30px;
-                    height: 30px;
-                    border-radius: 50%;
-                    background-color: #e6b06f;
-                }
-
+                .red,
+                .black,
+                .brown,
+                .carton,
+                .blue,
+                .white,
+                .green,
+                .pink,
                 .orange {
                     width: 30px;
                     height: 30px;
                     border-radius: 50%;
+
+                    @include media(">=1920px") {
+                        width: 80px;
+                        height: 80px;
+                    }
+                }
+
+                .red {
+                    background-color: #e52034;
+                }
+
+                .brown {
+                    background-color: #a55505;
+                }
+
+                .blue {
+                    background-color: #060844;
+                }
+
+                .white {
+                    background-color: white;
+                }
+
+                .green {
+                    background-color: #035935;
+                }
+
+                .black {
+                    background-color: #000000;
+                }
+
+                .pink {
+                    background-color: #e66fd6;
+                }
+
+                .carton {
+                    background-color: #e6b06f;
+                }
+
+                .orange {
                     background-color: #e86113;
                 }
             }
@@ -153,11 +157,15 @@
 
 
         .tags {
-            display: flex;
-            flex-direction: row;
-            flex-wrap: wrap;
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
             gap: 10px;
             width: 100%;
+
+            @include media(">=414px",
+                "<1024px") {
+                grid-template-columns: repeat(2, 1fr);
+            }
 
             div {
                 padding: 4px;
@@ -178,7 +186,7 @@
                 }
 
                 @include media(">=1920px") {
-                    font-size: 30px;
+                    font-size: 35px;
                 }
             }
         }

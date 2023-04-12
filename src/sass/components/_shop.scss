@@ -34,16 +34,22 @@
         align-items: center;
         gap: 6px;
         padding-right: 14px;
-        align-self: end;
+        // align-self: end;
         width: 400px;
+
+        @include media(">=1920px") {
+            width: 600px;
+        }
 
         @include media(">=414px",
             "<tablet") {
-            width: fit-content;
+            width: 100%;
+            align-self: center;
         }
 
         @include media("<=414px") {
-            width: fit-content;
+            width: 100%;
+            align-self: center;
         }
 
         input {
@@ -52,6 +58,11 @@
             outline: none;
             width: 100%;
             font-size: 15px;
+
+            @include media(">=1920px") {
+                font-size: 35px;
+                padding: 18px 24px;
+            }
         }
 
         .search-icon {
@@ -59,18 +70,24 @@
             height: 22px;
             cursor: pointer;
             color: #d2d1d1;
+
+            @include media(">=1920px") {
+                width: 40px;
+                height: 40px;
+            }
         }
     }
 
     .shop-container {
         display: flex;
         flex-direction: row;
-        justify-content: space-between;
+        gap: 5rem;
+        // justify-content: space-between;
 
-        @include media(">=414px",
-            "<tablet") {
+        @include media(">=tablet",
+            "<1024px") {
             padding: 0 14px;
-            flex-direction: column;
+            flex-direction: row;
         }
 
         @include media("<=414px") {
@@ -78,8 +95,8 @@
             flex-direction: column;
         }
 
-        .side-sort {
-            width: 300px;
+        @include media(">414px", "<tablet") {
+            flex-direction: column;
         }
 
         .sort-range {
@@ -101,6 +118,10 @@
             .range-number {
                 font-size: 15px;
                 color: #4a4949;
+
+                @include media(">=1920px") {
+                    font-size: 28px;
+                }
             }
 
             .range-price {
@@ -111,6 +132,10 @@
                 gap: 10px;
                 cursor: pointer;
                 position: relative;
+
+                @include media(">=1920px") {
+                    font-size: 28px;
+                }
 
                 .sort-span {
                     font-weight: 400;
@@ -160,6 +185,10 @@
         border: 2px solid black;
         align-self: center;
         font-weight: 600;
+
+        @include media(">=1920px") {
+            font-size: 28px;
+        }
 
         &:hover {
             background-color: $banner-bg-color;
