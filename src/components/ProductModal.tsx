@@ -20,6 +20,7 @@ export default function ProductModal({ toggleModal }: ModalProps) {
   const [ind, setInd] = useState(0);
   const [increment, setIncrement] = useState(1);
   const [sizes, setSizes] = useState(["XS", "S", "M", "L", "XL", "XXL", "3XL"]);
+  const [selectedSize, setSelectedSize] = useState("");
 
   const handleIncrease = () => {
     setIncrement(increment + 1);
@@ -78,6 +79,8 @@ export default function ProductModal({ toggleModal }: ModalProps) {
                   onClick={(e) => {
                     e.preventDefault();
                     setInd(index + 1);
+                    setSelectedSize(size);
+                    console.log(selectedSize);
                   }}
                   className={`${ind === index + 1 ? "selected" : ""}`}
                   key={index}

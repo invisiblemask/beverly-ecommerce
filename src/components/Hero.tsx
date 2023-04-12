@@ -18,9 +18,6 @@ export default function HeroPage() {
           <div className="hero-lg-img">
             <img src="/images/products/model_3.png" alt="" />
           </div>
-          {/* <div className="hero-image">
-            <img src="/images/benaya-banner-2.png" alt="" />
-          </div> */}
         </div>
       </section>
       <div className="image-container">
