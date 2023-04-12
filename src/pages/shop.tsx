@@ -1,5 +1,6 @@
 import LoadingPage from "@/components/LoadingPage";
 import ShopList from "@/components/ShopList";
+import Sort from "@/components/Sort";
 import Head from "next/head";
 import { useEffect, useState } from "react";
 import { HiOutlineMagnifyingGlass } from "react-icons/hi2";
@@ -17,14 +18,6 @@ export default function Shop() {
     "$55 - $100",
   ]);
 
-  const [cats, setCats] = useState([
-    "CATEGORIES",
-    "BRANDING",
-    "FILTER PRICE",
-    "SIZE",
-    "COLORS",
-    "TAGS",
-  ]);
   const [dropdown, setDropdown] = useState(false);
 
   const handleDropdown = () => {
@@ -60,19 +53,13 @@ export default function Shop() {
         <LoadingPage />
       ) : (
         <div className="shop">
+          <div className="search-input">
+            <input type="text" autoFocus placeholder="Search here..." />
+            <HiOutlineMagnifyingGlass className="search-icon" />
+          </div>
           <div className="shop-container">
             <div className="side-sort">
-              <div className="search-input">
-                <input type="text" autoFocus placeholder="Search here..." />
-                <HiOutlineMagnifyingGlass className="search-icon" />
-              </div>
-              {cats.map((cat, index) => {
-                return (
-                  <div key={index} className="cats">
-                    {cat} <IoIosArrowDown />
-                  </div>
-                );
-              })}
+              <Sort />
             </div>
             <div className="shop-wrapper">
               <div className="sort-range">
@@ -97,9 +84,9 @@ export default function Shop() {
                 </div>
               </div>
               <ShopList />
+              <button>Load More</button>
             </div>
           </div>
-          <button>Load More</button>
         </div>
       )}
     </>

@@ -27,6 +27,41 @@
         padding: 1rem 4rem;
     }
 
+    .search-input {
+        border: 1px solid #d2d1d1;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        gap: 6px;
+        padding-right: 14px;
+        align-self: end;
+        width: 400px;
+
+        @include media(">=414px",
+            "<tablet") {
+            width: fit-content;
+        }
+
+        @include media("<=414px") {
+            width: fit-content;
+        }
+
+        input {
+            padding: 12px 14px;
+            border: none;
+            outline: none;
+            width: 100%;
+            font-size: 15px;
+        }
+
+        .search-icon {
+            width: 22px;
+            height: 22px;
+            cursor: pointer;
+            color: #d2d1d1;
+        }
+    }
+
     .shop-container {
         display: flex;
         flex-direction: row;
@@ -44,48 +79,7 @@
         }
 
         .side-sort {
-            display: flex;
-            flex-direction: column;
-            gap: 2rem;
-
-            .search-input {
-                border: 1px solid #d2d1d1;
-                display: flex;
-                flex-direction: row;
-                align-items: center;
-                gap: 6px;
-                padding-right: 14px;
-
-                @include media(">=414px",
-                    "<tablet") {
-                    width: fit-content;
-                }
-
-                @include media("<=414px") {
-                    width: fit-content;
-                }
-
-                input {
-                    padding: 12px 14px;
-                    border: none;
-                    outline: none;
-                }
-
-                .search-icon {
-                    width: 20px;
-                    height: 20px;
-                    cursor: pointer;
-                    color: #d2d1d1;
-                }
-            }
-
-            .cats {
-                display: flex;
-                flex-direction: row;
-                align-items: center;
-                gap: 4px;
-                cursor: pointer;
-            }
+            width: 300px;
         }
 
         .sort-range {

@@ -1,0 +1,186 @@
+.sort {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    cursor: pointer;
+    font-size: 17px;
+    font-weight: 500;
+
+    .category {
+        color: black;
+
+        .categories {
+            color: #aaaaaa;
+            font-size: 16px;
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            font-weight: 400;
+            cursor: pointer;
+            align-self: start;
+
+            div {
+                align-self: start;
+
+                &:hover {
+                    color: black;
+                    transition: all ease-in .5s;
+                }
+            }
+
+        }
+
+        .sizes-container {
+            display: grid;
+            grid-template-columns: repeat(3, 60px);
+            gap: 8px;
+
+            @include media("<=414px") {
+                grid-template-columns: repeat(4, 40px);
+                width: 80px;
+            }
+
+            @include media(">=414px",
+                "<1024px") {
+                grid-template-columns: repeat(4, 40px);
+                width: 80px;
+            }
+
+            @include media(">=1920px") {
+                grid-template-columns: repeat(6, 100px);
+            }
+
+            div {
+                border: 1px solid #6f6f6f;
+                padding: 4px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                cursor: pointer;
+                font-size: 16px;
+
+                @include media(">=1920px") {
+                    font-size: 30px;
+                }
+            }
+
+            .selected {
+                background-color: #101010;
+                color: #ffffff;
+                transition: all ease-in .5s;
+            }
+        }
+
+        .color-container {
+            display: grid;
+            grid-template-columns: repeat(4, 40px);
+            gap: 8px;
+
+            .color-wrapper {
+                width: 30px;
+                height: 30px;
+                border-radius: 50%;
+                border: 1px solid #e1e1e1;
+                padding: 2px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+
+                .red {
+                    width: 30px;
+                    height: 30px;
+                    border-radius: 50%;
+                    background-color: #e52034;
+                }
+
+                .brown {
+                    width: 30px;
+                    height: 30px;
+                    border-radius: 50%;
+                    background-color: #a55505;
+                }
+
+                .blue {
+                    width: 30px;
+                    height: 30px;
+                    border-radius: 50%;
+                    background-color: #060844;
+                }
+
+                .white {
+                    width: 30px;
+                    height: 30px;
+                    border-radius: 50%;
+                    background-color: white;
+                }
+
+                .green {
+                    width: 30px;
+                    height: 30px;
+                    border-radius: 50%;
+                    background-color: #035935;
+                }
+
+                .black {
+                    width: 30px;
+                    height: 30px;
+                    border-radius: 50%;
+                    background-color: #000000;
+                }
+
+                .pink {
+                    width: 30px;
+                    height: 30px;
+                    border-radius: 50%;
+                    background-color: #e66fd6;
+                }
+
+                .carton {
+                    width: 30px;
+                    height: 30px;
+                    border-radius: 50%;
+                    background-color: #e6b06f;
+                }
+
+                .orange {
+                    width: 30px;
+                    height: 30px;
+                    border-radius: 50%;
+                    background-color: #e86113;
+                }
+            }
+        }
+
+
+        .tags {
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+            gap: 10px;
+            width: 100%;
+
+            div {
+                padding: 4px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                cursor: pointer;
+                font-size: 15px;
+                background-color: #f1f5f8;
+                color: #000000;
+                text-transform: uppercase;
+                font-weight: 300;
+
+                &:hover {
+                    background-color: #000000;
+                    color: #ffffff;
+                    transition: all .5s ease-in-out;
+                }
+
+                @include media(">=1920px") {
+                    font-size: 30px;
+                }
+            }
+        }
+    }
+}
