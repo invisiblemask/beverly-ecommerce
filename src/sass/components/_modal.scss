@@ -29,6 +29,22 @@ $easing: cubic-bezier(0.42, 0, 0.58, 1);
 
         @include media("<=414px") {
             width: 80%;
+            // overflow: auto;
+            // height: fit-content;
+        }
+
+        @include media(">=LGdesktop") {
+            width: 80%;
+            height: fit-content;
+            padding: 30px;
+        }
+
+        @include media(">=tablet", "<=1440px") {
+            width: 80%;
+        }
+
+        @include media(">=425px", "<tablet") {
+            width: 80%;
         }
 
         .modal-item {
@@ -37,10 +53,18 @@ $easing: cubic-bezier(0.42, 0, 0.58, 1);
             gap: 24px;
             overflow: auto;
 
+            @include media("<=414px") {
+                overflow: hidden;
+            }
+
             .item-header {
                 font-size: 18px;
                 font-weight: 600;
                 font-family: $font-robo;
+
+                @include media(">=LGdesktop") {
+                    font-size: 24px;
+                }
 
                 span {
                     font-weight: lighter;
@@ -51,48 +75,109 @@ $easing: cubic-bezier(0.42, 0, 0.58, 1);
                 display: flex;
                 justify-content: space-between;
                 align-items: center;
+                flex-direction: row;
+
+                @include media("<=414px") {
+                    align-items: start;
+                }
 
                 .details-wrapper {
                     display: flex;
                     flex-direction: row;
                     gap: 20px;
 
-                    @include media(">=phone", "<desktop") {
+                    @include media("<=414px") {
                         flex-direction: column;
                     }
 
-                    img {
-                        width: 90px;
-                        height: 90px;
-                        object-fit: cover;
+                    @include media(">=1024px", "<desktop") {
+                        flex-direction: row;
+                    }
 
-                        @include media(">=phone", "<desktop") {
+                    .img {
+                        width: 100px;
+                        // height: 500px;
+                        flex: 2;
+                        border: 1px solid gainsboro;
+
+                        img {
                             width: 100%;
+                            height: 100%;
+                            object-fit: cover;
+                            // border: 1px solid gainsboro;
+
+                            @include media("<=414px") {
+                                width: 100%;
+                                // height: 400px;
+                            }
+
+                            @include media(">=LGdesktop") {
+                                width: 250px;
+                            }
                         }
                     }
+
 
                     .items-info {
                         display: flex;
                         flex-direction: column;
-                        gap: 10px;
-                        font-family: serif;
+                        gap: 8px;
+                        // flex: 1;
+
+                        @include media("<=414px") {
+                            flex: 2;
+                        }
 
                         span:nth-child(1) {
-                            font-weight: 500;
+                            font-weight: 400;
 
+                            @include media(">=LGdesktop") {
+                                font-size: 24px;
+                            }
+
+                            @include media("<=414px") {
+                                font-size: 14px;
+                            }
                         }
 
                         span:nth-child(2) {
-                            font-weight: 600;
+                            font-weight: 500;
+
+                            @include media(">=LGdesktop") {
+                                font-size: 22px;
+                            }
+
+                            @include media("<=414px") {
+                                font-size: 12px;
+                            }
                         }
                     }
                 }
 
                 .item-icon {
-                    width: 25px;
-                    height: 25px;
+                    width: 22px;
+                    height: 22px;
                     cursor: pointer;
                     margin-right: 40px;
+                    color: #464646;
+                    align-self: center;
+
+                    @include media(">=LGdesktop") {
+                        width: 35px;
+                        height: 35px;
+                    }
+
+                    @include media("<=414px") {
+                        margin-right: 0;
+                    }
+
+                    @include media(">=tablet", "<=1440px") {
+                        align-self: start;
+                    }
+
+                    @include media(">=425px", "<tablet") {
+                        align-self: start;
+                    }
                 }
             }
         }
@@ -107,6 +192,15 @@ $easing: cubic-bezier(0.42, 0, 0.58, 1);
 
             @include media("<=414px") {
                 flex-direction: column;
+            }
+
+            @include media(">=LGdesktop") {
+                font-size: 24px;
+            }
+
+            @include media(">=425px", "<tablet") {
+                flex-direction: column;
+                gap: 10px;
             }
 
             .total {
@@ -133,6 +227,10 @@ $easing: cubic-bezier(0.42, 0, 0.58, 1);
                         @include media("<=414px") {
                             width: 100%;
                         }
+
+                        @include media(">=LGdesktop") {
+                            font-size: 24px;
+                        }
                     }
                 }
 
@@ -142,6 +240,10 @@ $easing: cubic-bezier(0.42, 0, 0.58, 1);
 
                     @include media("<=414px") {
                         width: 100%;
+                    }
+
+                    @include media(">=LGdesktop") {
+                        font-size: 24px;
                     }
                 }
 
@@ -205,10 +307,21 @@ $easing: cubic-bezier(0.42, 0, 0.58, 1);
             cursor: pointer;
             background-color: #919090f8;
 
+            @include media(">=LGdesktop") {
+                top: -85px;
+                width: 45px;
+                height: 45px;
+            }
+
             .modal-icon {
                 width: 1rem;
                 height: 1rem;
                 color: white;
+
+                @include media(">=LGdesktop") {
+                    width: 2rem;
+                    height: 2rem;
+                }
             }
         }
     }

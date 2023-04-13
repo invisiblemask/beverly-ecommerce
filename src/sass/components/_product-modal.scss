@@ -27,7 +27,7 @@ $easing: cubic-bezier(0.42, 0, 0.58, 1);
         margin-top: 90px;
         animation: product-modalFadeIn 0.8s ease-out forwards;
 
-        @include media(">=1920px") {
+        @include media(">=LGdesktop") {
             width: 80%;
             height: fit-content;
         }
@@ -83,7 +83,7 @@ $easing: cubic-bezier(0.42, 0, 0.58, 1);
                     height: 100%;
                     object-fit: cover;
 
-                    @include media(">=1920px") {
+                    @include media(">=LGdesktop") {
                         width: 600px;
                         height: 900px;
                     }
@@ -128,7 +128,7 @@ $easing: cubic-bezier(0.42, 0, 0.58, 1);
                     grid-template-rows: repeat(3, 60px);
                 }
 
-                @include media(">=1920px") {
+                @include media(">=LGdesktop") {
                     grid-template-rows: repeat(3, 200px);
                 }
 
@@ -152,7 +152,7 @@ $easing: cubic-bezier(0.42, 0, 0.58, 1);
                         height: 100%;
                     }
 
-                    @include media(">=1920px") {
+                    @include media(">=LGdesktop") {
                         width: 200px;
                         height: 100%;
                     }
@@ -189,7 +189,7 @@ $easing: cubic-bezier(0.42, 0, 0.58, 1);
                     font-size: 24px;
                 }
 
-                @include media(">=1920px") {
+                @include media(">=LGdesktop") {
                     font-size: 54px;
                 }
             }
@@ -197,13 +197,13 @@ $easing: cubic-bezier(0.42, 0, 0.58, 1);
             .products-detail-price {
                 font-size: 20px;
 
-                @include media(">=1920px") {
+                @include media(">=LGdesktop") {
                     font-size: 44px;
                 }
             }
 
             .products-detail-color {
-                @include media(">=1920px") {
+                @include media(">=LGdesktop") {
                     font-size: 34px;
                 }
             }
@@ -229,13 +229,13 @@ $easing: cubic-bezier(0.42, 0, 0.58, 1);
                     line-height: 1.8em;
                 }
 
-                @include media(">=1920px") {
+                @include media(">=LGdesktop") {
                     font-size: 30px;
                 }
             }
 
             .stock {
-                @include media(">=1920px") {
+                @include media(">=LGdesktop") {
                     font-size: 30px;
                 }
 
@@ -244,7 +244,7 @@ $easing: cubic-bezier(0.42, 0, 0.58, 1);
                     margin-left: 6px;
                     font-size: 14px;
 
-                    @include media(">=1920px") {
+                    @include media(">=LGdesktop") {
                         font-size: 30px;
                     }
                 }
@@ -258,7 +258,7 @@ $easing: cubic-bezier(0.42, 0, 0.58, 1);
                 .size-label {
                     font-size: 16px;
 
-                    @include media(">=1920px") {
+                    @include media(">=LGdesktop") {
                         font-size: 34px;
                     }
                 }
@@ -279,7 +279,7 @@ $easing: cubic-bezier(0.42, 0, 0.58, 1);
                         width: 80px;
                     }
 
-                    @include media(">=1920px") {
+                    @include media(">=LGdesktop") {
                         grid-template-columns: repeat(6, 100px);
                     }
 
@@ -291,7 +291,7 @@ $easing: cubic-bezier(0.42, 0, 0.58, 1);
                         align-items: center;
                         cursor: pointer;
 
-                        @include media(">=1920px") {
+                        @include media(">=LGdesktop") {
                             font-size: 30px;
                         }
                     }
@@ -334,7 +334,7 @@ $easing: cubic-bezier(0.42, 0, 0.58, 1);
                         padding: 10px;
                         border-radius: 8px;
 
-                        @include media(">=1920px") {
+                        @include media(">=LGdesktop") {
                             margin-top: 30px;
                             border: none;
                         }
@@ -351,7 +351,7 @@ $easing: cubic-bezier(0.42, 0, 0.58, 1);
                             cursor: pointer;
                             font-weight: 500;
 
-                            @include media(">=1920px") {
+                            @include media(">=LGdesktop") {
                                 width: 80px;
                                 height: 80px;
                                 font-size: 34px;
@@ -363,7 +363,7 @@ $easing: cubic-bezier(0.42, 0, 0.58, 1);
                         }
 
                         .num {
-                            @include media(">=1920px") {
+                            @include media(">=LGdesktop") {
                                 font-size: 30px;
                             }
                         }
@@ -376,7 +376,7 @@ $easing: cubic-bezier(0.42, 0, 0.58, 1);
                     justify-content: space-between;
                     margin-top: 20px;
 
-                    @include media(">=1920px") {
+                    @include media(">=LGdesktop") {
                         font-size: 30px;
                     }
 
@@ -384,7 +384,7 @@ $easing: cubic-bezier(0.42, 0, 0.58, 1);
                         font-weight: 500;
                         font-size: 17px;
 
-                        @include media(">=1920px") {
+                        @include media(">=LGdesktop") {
                             font-size: 30px;
                         }
                     }
@@ -412,7 +412,7 @@ $easing: cubic-bezier(0.42, 0, 0.58, 1);
                         width: 200px;
                         padding: 12px;
 
-                        @include media(">=1920px") {
+                        @include media(">=LGdesktop") {
                             width: 100%;
                             font-size: 24px;
                         }
@@ -427,7 +427,15 @@ $easing: cubic-bezier(0.42, 0, 0.58, 1);
                     }
 
                     a {
-                        @include media(">=1920px") {
+                        @include media(">=LGdesktop") {
+                            width: 100%;
+                        }
+
+                        @include media("<=414px") {
+                            width: 100%;
+                        }
+
+                        @include media(">=414px", "<1024px") {
                             width: 100%;
                         }
                     }
@@ -436,7 +444,7 @@ $easing: cubic-bezier(0.42, 0, 0.58, 1);
                         background: $banner-bg-color;
                         color: #ffffff;
 
-                        @include media(">=1920px") {
+                        @include media(">=LGdesktop") {
                             width: 100%;
                             padding: 30px 20px;
                         }
@@ -451,7 +459,7 @@ $easing: cubic-bezier(0.42, 0, 0.58, 1);
                         color: $banner-bg-color;
                         border: 1px solid $banner-bg-color;
 
-                        @include media(">=1920px") {
+                        @include media(">=LGdesktop") {
                             width: 100%;
                             padding: 27px 20px;
                         }
@@ -474,7 +482,7 @@ $easing: cubic-bezier(0.42, 0, 0.58, 1);
                             width: 20px;
                             height: 20px;
 
-                            @include media(">=1920px") {
+                            @include media(">=LGdesktop") {
                                 width: 35px;
                                 height: 35px;
                             }
@@ -495,7 +503,7 @@ $easing: cubic-bezier(0.42, 0, 0.58, 1);
                 height: 1.5rem;
                 color: #919090f8;
 
-                @include media(">=1920px") {
+                @include media(">=LGdesktop") {
                     width: 4rem;
                     height: 4rem;
                 }
