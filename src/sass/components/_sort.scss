@@ -4,6 +4,11 @@
     gap: 4px;
     font-size: 17px;
     font-weight: 500;
+    width: 60%;
+
+    @include media(">=200px", "<tablet") {
+        width: 100%;
+    }
 
     .category {
         color: black;
@@ -19,7 +24,7 @@
             align-self: start;
 
             @include media(">=1920px") {
-                font-size: 35px;
+                font-size: 33px;
             }
 
             div {
@@ -50,7 +55,7 @@
             }
 
             @include media(">=1920px") {
-                grid-template-columns: repeat(6, 100px);
+                grid-template-columns: repeat(5, 100px);
             }
 
             div {

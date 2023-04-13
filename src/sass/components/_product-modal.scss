@@ -135,7 +135,6 @@ $easing: cubic-bezier(0.42, 0, 0.58, 1);
                 .small-img {
                     width: 100px;
                     height: 100%;
-                    // object-fit: cover;
 
                     @include media("<=414px") {
                         width: 50px;
@@ -396,6 +395,7 @@ $easing: cubic-bezier(0.42, 0, 0.58, 1);
                     flex-direction: row;
                     gap: 14px;
                     margin-top: auto;
+                    align-items: center;
 
                     @include media("<=414px") {
                         flex-direction: column;
@@ -453,6 +453,7 @@ $easing: cubic-bezier(0.42, 0, 0.58, 1);
 
                         @include media(">=1920px") {
                             width: 100%;
+                            padding: 27px 20px;
                         }
 
                         @include media(">=414px",

@@ -16,7 +16,7 @@
             font-weight: 500;
 
             @include media(">=1920px") {
-                font-size: 40px;
+                font-size: 36px;
             }
         }
 
@@ -24,6 +24,11 @@
             width: 20px;
             height: 20px;
             transition: all 0.2s ease-in-out;
+
+            @include media(">=1920px") {
+                width: 30px;
+                height: 30px;
+            }
 
             &.open {
                 background-color: #333;

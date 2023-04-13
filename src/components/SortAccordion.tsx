@@ -28,9 +28,6 @@ export default function SortAccordion({
           ) : (
             <IoIosArrowDown className="accordion-icon" />
           )}
-          {/* <span
-            className={`accordion-icon ${isOpen ? "open" : "closed"}`}
-          ></span> */}
         </div>
         <div
           className={`accordion-content ${
