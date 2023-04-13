@@ -1,5 +1,4 @@
 /* eslint-disable @next/next/no-img-element */
-import Navbar from "@/components/Navbar";
 import Head from "next/head";
 import Link from "next/link";
 import { useState } from "react";
@@ -20,7 +19,7 @@ export default function Cart() {
     }
   };
 
-  const price = 80.6;
+  const price = 69.0;
 
   return (
     <div>
@@ -46,14 +45,14 @@ export default function Cart() {
               <tr>
                 <td>
                   <div className="cart-img">
-                    <img src="/images/products/product1.jpeg" alt="" />
+                    <img src="/images/products/product-1.jpg.webp" alt="" />
                     <div className="overlay">
                       <RiDeleteBinLine className="animated-icon" />
                     </div>
                   </div>
-                  <div className="cart-name">The Print Monroe Dress</div>
+                  <div className="cart-name">KIKO LINEN SLIP DRESS, BROWN</div>
                 </td>
-                <td>$80.60</td>
+                <td>£69.0</td>
                 <td>
                   <div className="cart-btn">
                     <div onClick={handleDecrease} className="minus">
@@ -66,7 +65,7 @@ export default function Cart() {
                   </div>
                 </td>
                 <td>
-                  <span>${(price * increment).toLocaleString()}</span>
+                  <span>£{(price * increment).toLocaleString()}</span>
                 </td>
               </tr>
             </tbody>
@@ -76,7 +75,7 @@ export default function Cart() {
           <div className="cart-right">
             <div className="cart-total">Cart Total</div>
             <div className="sub-total">
-              Sub-total: <span>$234.56</span>
+              Sub-total: <span>£234.56</span>
             </div>
             <div className="delivery">
               Delivery: <span>Free</span>
@@ -85,7 +84,7 @@ export default function Cart() {
               Discount: <span>-15%</span>
             </div>
             <div className="total">
-              Discount: <span>$199.376</span>
+              Discount: <span>£199.376</span>
             </div>
             <Link href="/checkout">
               <div className="checkout-btn">Checkout</div>

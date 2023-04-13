@@ -1,59 +1,106 @@
 .shoplist-container {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
+    display: flex;
+    flex-direction: column;
     gap: 20px;
     padding-bottom: 20px;
 
-    .shoplist-wrapper {
-        display: flex;
-        flex-direction: column;
-        gap: 5px;
+    .shoplist {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 20px;
 
-        .shoplist-img {
-            position: relative;
-
+        @include media(">=1024px", "<desktop") {
+            grid-template-columns: repeat(3, 1fr);
         }
 
-        img {
-            width: 100px;
-            height: 100%;
+        @include media(">=tablet",
+            "<1024px") {
+            grid-template-columns: repeat(3, 1fr);
         }
 
-        .shoplist-name {
-            font-size: 14px;
-            font-weight: 500;
-            text-transform: uppercase;
+        @include media("<=414px") {
+            grid-template-columns: repeat(2, 1fr);
+        }
 
-            @include media(">=1920px") {
-                font-size: 26px;
+        @include media(">=414px",
+            "<tablet") {
+            grid-template-columns: repeat(2, 1fr);
+        }
+
+        .shoplist-wrapper {
+            display: flex;
+            flex-direction: column;
+            gap: 5px;
+
+            .shoplist-img {
+                position: relative;
+
+                img {
+                    width: 100%;
+                    height: 100%;
+
+                    @include media(">=desktop", "<1920px") {
+                        width: 100%;
+                        height: 100%;
+                    }
+
+                    @include media(">=tablet",
+                        "<1024px") {
+                        width: 100%;
+                        height: 100%;
+                    }
+
+                    @include media("<=414px") {
+                        width: 100%;
+                        height: 100%;
+                    }
+
+                    @include media(">=414px",
+                        "<tablet") {
+                        width: 100%;
+                        height: 100%;
+                    }
+                }
             }
-        }
 
-        .shoplist-price {
-            color: $banner-bg-color;
-            font-size: 13px;
 
-            @include media(">=1920px") {
-                font-size: 25px;
+
+            .shoplist-name {
+                font-size: 14px;
+                font-weight: 500;
+                text-transform: uppercase;
+
+                @include media(">=1920px") {
+                    font-size: 26px;
+                }
             }
-        }
 
-        .new,
-        .discount {
-            position: absolute;
-            font-size: 12px;
-            color: white;
-            text-transform: uppercase;
-            padding: 4px 10px;
-            font-weight: 500;
-        }
+            .shoplist-price {
+                color: $banner-bg-color;
+                font-size: 13px;
 
-        .new {
-            background: #000;
-        }
+                @include media(">=1920px") {
+                    font-size: 25px;
+                }
+            }
 
-        .discount {
-            background: #d70e69;
+            .new,
+            .discount {
+                position: absolute;
+                font-size: 12px;
+                color: white;
+                text-transform: uppercase;
+                padding: 4px 10px;
+                font-weight: 500;
+            }
+
+            .new {
+                background: #000;
+            }
+
+            .discount {
+                background: #d70e69;
+            }
         }
     }
 
@@ -69,63 +116,4 @@
         }
     }
 
-    @include media(">=tablet", "<1024px") {
-        display: grid;
-        grid-template-columns: repeat(2, 1fr);
-        gap: 20px;
-
-        .shoplist-wrapper {
-            img {
-                width: 100%;
-            }
-        }
-    }
-
-    @include media(">=414px", "<tablet") {
-        display: grid;
-        grid-template-columns: repeat(2, 1fr);
-        gap: 20px;
-
-        .shoplist-wrapper {
-            img {
-                width: 100%;
-            }
-        }
-    }
-
-    @include media("<=414px") {
-        display: grid;
-        grid-template-columns: repeat(2, 1fr);
-        gap: 20px;
-
-        .shoplist-wrapper {
-            img {
-                width: 100%;
-            }
-        }
-    }
-
-    @include media(">=820px", "<=960px") {
-        display: grid;
-        grid-template-columns: repeat(3, 1fr);
-        gap: 20px;
-
-        .shoplist-wrapper {
-            img {
-                width: 100%;
-            }
-        }
-    }
-
-    @include media(">=desktop", "<1920px") {
-        display: grid;
-        grid-template-columns: repeat(4, 1fr);
-        gap: 20px;
-
-        .shoplist-wrapper {
-            img {
-                width: 250px;
-            }
-        }
-    }
 }

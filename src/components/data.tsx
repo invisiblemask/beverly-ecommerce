@@ -5,6 +5,9 @@ import product3 from "/public/images/products/product-3.jpg.webp";
 import product4 from "/public/images/products/product-4.jpg.webp";
 import product5 from "/public/images/products/product-5.jpg.webp";
 import product6 from "/public/images/products/product-7.jpg.webp";
+import product7 from "/public/images/products/product-8.jpg";
+import product8 from "/public/images/products/product-9.jpg";
+import product9 from "/public/images/products/product-10.jpg";
 
 export type Product = {
   id: number;

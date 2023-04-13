@@ -33,7 +33,7 @@ export default function Card({ product }: ProductProps) {
       {products
         .map((product, index) => {
           return (
-            <div key={index} className="card-wrapper">
+            <div key={index} className="card-wrapper" onClick={clickProduct}>
               <div className="card-img">
                 <img src={product.image.src} alt="" />
                 <div className="overlay">

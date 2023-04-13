@@ -3,7 +3,7 @@ footer {
   flex-direction: column;
   background-color: #fbfbfbeb;
   margin-top: 8rem;
-  padding: 2rem 10rem 0 10rem;
+  padding: 6rem 10rem 0 10rem;
 
   @include media(">=tablet",
     "<desktop") {
