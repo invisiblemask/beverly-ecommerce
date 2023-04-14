@@ -31,28 +31,20 @@ export default function Accordion() {
           <div className="accordion-body">
             <form className="card-form">
               <label className="input-form" htmlFor="Card Name">
-                <div className="name-contai">
-                  Name on Card <span>*</span>
-                </div>
+                Name on Card <span>*</span>
                 <input type="text" />
               </label>
               <label className="input-form" htmlFor="Card Number">
-                <div className="name-container">
-                  Card Number <span>*</span>
-                </div>
+                Card Number <span>*</span>
                 <input type="text" />
               </label>
               <div className="info-card">
                 <label className="input-form" htmlFor="First Name">
-                  <div className="name-container">
-                    Expiry Date <span>*</span>
-                  </div>
+                  Expiry Date <span>*</span>
                   <input type="text" className="info-input" />
                 </label>
                 <label className="input-form" htmlFor="Last Name">
-                  <div className="name-container">
-                    CVC/CVV <span>*</span>
-                  </div>
+                  CVC/CVV <span>*</span>
                   <input type="text" className="info-input" />
                 </label>
               </div>

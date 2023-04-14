@@ -6,9 +6,22 @@
     margin-top: 4rem;
     gap: 10rem;
 
-    @include media("<=phone") {
+    @include media("<=414px") {
         padding: 0 14px;
         flex-direction: column;
+    }
+
+    @include media(">414px", "<tablet") {
+        padding: 0 14px;
+        flex-direction: column;
+    }
+
+    @include media(">=tablet", "<desktop") {
+        padding: 0 14px;
+    }
+
+    @include media(">=LGdesktop") {
+        justify-content: space-between;
     }
 
 
@@ -17,7 +30,17 @@
         flex-direction: column;
         width: 40%;
 
-        @include media("<=phone") {
+        @include media("<=414px") {
+            width: 100%;
+        }
+
+        @include media(">414px",
+            "<tablet") {
+            width: 100%;
+        }
+
+        @include media(">=tablet",
+            "<desktop") {
             width: 100%;
         }
 
@@ -25,6 +48,10 @@
             font-weight: 600;
             font-size: 20px;
             color: #1c1c1c;
+
+            @include media(">=LGdesktop") {
+                font-size: 35px;
+            }
         }
 
         form {
@@ -33,17 +60,38 @@
             gap: 2rem;
             margin-top: 24px;
 
-            @include media("<=phone") {
-                width: 330px;
+            @include media("<=414px") {
+                width: 100%;
             }
 
-
             input {
-                padding: 12px 10px;
                 width: 100%;
                 outline: none;
-                border: 1px solid #e6e3e3;
-                margin-top: 8px;
+                padding: 20px 10px;
+                border-radius: 8px;
+                border: 1px solid #fcfcfc;
+                background-color: #fcfcfc;
+                font-size: 15px;
+                margin-top: 10px;
+
+                &:focus {
+                    border: 1px solid black;
+                    transition: border .5s ease;
+                }
+
+                @include media("<=414px") {
+                    width: 92%;
+                }
+
+                @include media(">414px",
+                    "<tablet") {
+                    width: 95%;
+                }
+
+                @include media(">=LGdesktop") {
+                    padding: 25px 15px;
+                    font-size: 35px;
+                }
             }
 
             .info {
@@ -52,8 +100,25 @@
                 gap: 4rem;
                 width: 100%;
 
+                @include media("<=414px") {
+                    width: 92%;
+                    gap: 2rem;
+                    flex-direction: column;
+                }
+
+                @include media(">414px",
+                    "<tablet") {
+                    width: 95%;
+                    gap: 2rem;
+                    // flex-direction: column;
+                }
+
                 .info-input {
                     width: 100%;
+
+                    @include media("<=414px") {
+                        width: 100%;
+                    }
                 }
             }
         }
@@ -67,20 +132,41 @@
         color: #1c1c1c;
         text-transform: uppercase;
 
+        @include media(">=LGdesktop") {
+            font-size: 30px;
+        }
+
         span {
             color: red;
         }
     }
 
     .order-info {
-        width: 350px;
+        width: 30%;
         height: fit-content;
         display: flex;
         flex-direction: column;
         gap: 2rem;
 
-        @include media("<=phone") {
+        @include media("<=414px") {
             padding: 0;
+            width: 100%;
+        }
+
+        @include media(">414px",
+            "<tablet") {
+            padding: 0;
+            width: 100%;
+        }
+
+        @include media(">=tablet",
+            "<desktop") {
+            padding: 0;
+            width: 100%;
+        }
+
+        @include media(">=LGdesktop") {
+            width: 40%;
         }
 
         .your-order {
@@ -89,6 +175,10 @@
             font-size: 18px;
             color: #1c1c1c;
             box-shadow: 0px 1px 6px 0px rgba(209, 203, 203, 0.48);
+
+            @include media(">=LGdesktop") {
+                font-size: 35px;
+            }
         }
 
         .order-container {
@@ -111,9 +201,17 @@
                 text-transform: uppercase;
                 padding-bottom: 5px;
 
+                @include media(">=LGdesktop") {
+                    font-size: 27px;
+                }
+
                 span {
                     font-weight: 600;
                     font-size: 16px;
+
+                    @include media(">=LGdesktop") {
+                        font-size: 29px;
+                    }
                 }
             }
 
@@ -131,6 +229,10 @@
             margin-bottom: 20px;
             box-shadow: 0px 1px 6px 0px rgba(209, 203, 203, 0.48);
             padding: 12px;
+
+            @include media(">=LGdesktop") {
+                font-size: 35px;
+            }
         }
 
         .checkout-btn {
@@ -143,6 +245,10 @@
             border-radius: 8px;
             cursor: pointer;
             margin-top: 10px;
+
+            @include media(">=LGdesktop") {
+                font-size: 30px;
+            }
         }
     }
 }

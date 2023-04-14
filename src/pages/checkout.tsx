@@ -1,7 +1,5 @@
 import Accordion from "@/components/Accordion";
 import Layout from "@/components/layout";
-import Navbar from "@/components/Navbar";
-import Head from "next/head";
 
 export default function Checkout() {
   return (
@@ -39,11 +37,11 @@ export default function Checkout() {
             </label>
             <label className="input-container" htmlFor="Phone No">
               Phone No <span>*</span>
-              <input type="text" />
+              <input type="tel" />
             </label>
             <label className="input-container" htmlFor="Email Address">
               Email Address <span>*</span>
-              <input type="text" />
+              <input type="email" />
             </label>
           </form>
         </div>

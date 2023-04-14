@@ -41,6 +41,10 @@ li {
   font-size: 30px;
   color: #1c1c1c;
   text-transform: uppercase;
+
+  @include media(">=LGdesktop") {
+    font-size: 40px;
+  }
 }
 
 .link-other {
