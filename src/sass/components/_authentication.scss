@@ -1,0 +1,180 @@
+.authentication {
+    display: flex;
+    flex-direction: row;
+    position: relative;
+    padding: 60px 10rem;
+
+    .auth-logo {
+        position: absolute;
+        left: 10rem;
+        top: 30px;
+
+        img {
+            width: 120px;
+        }
+    }
+
+    .login-form {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        gap: 30px;
+        margin-top: 30px;
+        width: 33%;
+
+        h1 {
+            font-size: 40px;
+            margin: 0;
+        }
+
+        .signup-option {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 6px;
+            border: 1px solid gray;
+            padding: 15px;
+            text-align: center;
+            font-size: 17px;
+            border-radius: 8px;
+            cursor: pointer;
+
+            &:hover {
+                background-color: #f3f3f145;
+                transition: background-color ease-in-out .5s;
+            }
+        }
+
+        .or {
+            display: flex;
+            justify-content: center;
+            border-bottom: 1px solid gray;
+            position: relative;
+            margin-top: 20px;
+
+            div {
+                position: absolute;
+                top: -13px;
+                background-color: white;
+                padding: 0px 20px;
+                width: 20px;
+                height: 20px;
+                border-radius: 50%;
+                font-weight: 600;
+                color: #4e4e4e;
+            }
+        }
+
+        form {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+
+            input {
+                width: 100%;
+                outline: none;
+                padding: 20px 10px;
+                border-radius: 8px;
+                border: 1px solid #fcfcfc;
+                background-color: #fcfcfc;
+                font-size: 15px;
+
+                &:focus {
+                    border: 1px solid black;
+                    transition: border .5s ease;
+                }
+            }
+
+            .form-card {
+                display: flex;
+                flex-direction: row;
+                gap: 20px;
+                width: 100%;
+            }
+
+            .email-input {
+                display: flex;
+                flex-direction: row;
+            }
+
+            .password-input {
+                display: flex;
+                flex-direction: row;
+                align-items: center;
+                justify-content: center;
+                background-color: #fcfcfc;
+                padding: 0px 10px;
+
+                input {
+                    border: none;
+                }
+
+                .password-icon {
+                    width: 1.5rem;
+                    height: 1.5rem;
+                }
+
+
+                &:active {
+                    border: 1px solid black;
+                    transition: border .5s ease;
+                }
+            }
+
+            .checkbox-input {
+                display: flex;
+                flex-direction: row;
+                gap: 6px;
+                font-size: 14px;
+
+                input {
+                    width: initial;
+                }
+            }
+
+            button {
+                background-color: black;
+                color: white;
+                font-size: 17px;
+                font-weight: 600;
+                border-radius: 8px;
+                margin-top: 20px;
+                border: 1px solid black;
+
+                &:hover {
+                    background-color: white;
+                    color: black;
+                    transition: all .5s ease-in-out;
+                }
+            }
+
+        }
+
+        .login-portal {
+            align-self: center;
+            font-size: 15px;
+
+            a {
+                font-weight: bold;
+            }
+        }
+    }
+
+    .login-image {
+        position: relative;
+        margin-top: 30px;
+
+        .image-up {
+            position: absolute;
+            left: 400px;
+            width: 350px;
+        }
+
+        .image-down {
+            position: absolute;
+            top: 180px;
+            left: 200px;
+            width: 350px;
+        }
+    }
+}

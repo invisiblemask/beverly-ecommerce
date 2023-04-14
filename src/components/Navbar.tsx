@@ -31,6 +31,7 @@ export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
   const [showModal, setShowModal] = useState(false);
   const [stickyNav, setStickyNav] = useState(false);
+  const [user, setUser] = useState(false);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -62,6 +63,14 @@ export default function Navbar() {
     }
   };
 
+  const redirect = () => {
+    if (!user) {
+      router.push("/authentication");
+    } else {
+      router.push("/account");
+    }
+  };
+
   return (
     <nav className={stickyNav ? "active" : ""}>
       <div className="hamburger" onClick={() => setIsOpen(!isOpen)}>
@@ -82,9 +91,9 @@ export default function Navbar() {
         })}
       </div>
       <div className="nav-icons">
-        <Link href="/account" className="cart-container">
+        <div onClick={redirect} className="cart-container">
           <CiUser className="nav-icon" />
-        </Link>
+        </div>
         <div className="cart-container" onClick={handleCartClick}>
           <CiShoppingCart className="nav-icon" />
           <div>2</div>

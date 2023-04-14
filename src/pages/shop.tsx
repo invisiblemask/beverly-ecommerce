@@ -1,3 +1,4 @@
+import Layout from "@/components/layout";
 import LoadingPage from "@/components/LoadingPage";
 import ShopList from "@/components/ShopList";
 import Sort from "@/components/Sort";
@@ -40,7 +41,7 @@ export default function Shop() {
   }, []);
 
   return (
-    <>
+    <Layout>
       <Head>
         <title>
           Product | Offical E-commerce Fashion Store by Beverly Naya{" "}
@@ -87,6 +88,6 @@ export default function Shop() {
           </div>
         </div>
       )}
-    </>
+    </Layout>
   );
 }

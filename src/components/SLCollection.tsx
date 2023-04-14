@@ -21,7 +21,11 @@ export default function SLCollection() {
       <div className="collection-header">Popular Products</div>
       <div className="img-collection">
         {products.map((product, index) => (
-          <div className="img-collection-container" key={index}>
+          <div
+            className="img-collection-container"
+            key={index}
+            onClick={clickProduct}
+          >
             <img src={product.image.src} alt="" />
             <div className="overlay">
               <BsEye className="animated-icon" onClick={clickProduct} />

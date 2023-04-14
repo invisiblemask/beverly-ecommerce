@@ -1,9 +1,10 @@
 /* eslint-disable @next/next/no-img-element */
+import Layout from "@/components/layout";
 import Navbar from "@/components/Navbar";
 
 export default function About() {
   return (
-    <div>
+    <Layout>
       <div className="about">
         <div className="about-wrapper">
           <div className="about-header">
@@ -26,6 +27,6 @@ export default function About() {
           <img src="/images/Slide-3.jpg" alt="" />
         </div>
       </div>
-    </div>
+    </Layout>
   );
 }
