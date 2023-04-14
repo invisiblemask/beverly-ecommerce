@@ -1,3 +1,4 @@
+/* eslint-disable jsx-a11y/alt-text */
 import Head from "next/head";
 import Link from "next/link";
 import { useState } from "react";
@@ -6,6 +7,7 @@ import { FcGoogle } from "react-icons/fc";
 /* eslint-disable @next/next/no-img-element */
 export default function Authentication() {
   const [showPassword, setShowPassword] = useState(false);
+  const [borderLine, setBorderLine] = useState(false);
   const handleClickShowPassword = () => {
     setShowPassword(!showPassword);
   };
@@ -24,13 +26,15 @@ export default function Authentication() {
         </Link>
         <div className="login-form">
           <h1>Create an account</h1>
-          <div className="signup-option">
-            <BsApple />
-            Continue with Apple
-          </div>
-          <div className="signup-option">
-            <FcGoogle />
-            Continue with Google
+          <div className="options">
+            <div className="signup-option">
+              <img src="/icons/facebook.png" className="option-icon" />
+              Facebook
+            </div>
+            <div className="signup-option">
+              <img src="/icons/google.png" className="option-icon" />
+              Google
+            </div>
           </div>
           <div className="or">
             <div>or</div>
@@ -42,6 +46,7 @@ export default function Authentication() {
                   type="text"
                   className="info-input"
                   placeholder="Enter First Name"
+                  onClick={() => setBorderLine(false)}
                 />
               </div>
               <div className="text-input">
@@ -49,13 +54,23 @@ export default function Authentication() {
                   type="text"
                   className="info-input"
                   placeholder="Enter Last Name"
+                  onClick={() => setBorderLine(false)}
                 />
               </div>
             </div>
             <div className="email-input">
-              <input type="email" placeholder="Enter email address" />
+              <input
+                type="email"
+                placeholder="Enter email address"
+                onClick={() => setBorderLine(false)}
+              />
             </div>
-            <div className="password-input">
+            <div
+              className={
+                borderLine ? "password-input active" : "password-input"
+              }
+              onClick={() => setBorderLine(true)}
+            >
               <input
                 type={showPassword ? "text" : "password"}
                 placeholder="Enter password"
@@ -72,14 +87,17 @@ export default function Authentication() {
                 />
               )}
             </div>
-            <div className="checkbox-input">
+            <div
+              className="checkbox-input"
+              onClick={() => setBorderLine(false)}
+            >
               <input type="checkbox" />
               <span>Yes, I agree to the Terms and Conditions</span>
             </div>
             <button>Create Account</button>
           </form>
           <div className="login-portal">
-            Already have an account? <a href="">Login</a>
+            Already have an account? <Link href="/login">Login</Link>
           </div>
         </div>
         <div className="login-image">
