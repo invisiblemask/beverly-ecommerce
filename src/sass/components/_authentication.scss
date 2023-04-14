@@ -12,6 +12,11 @@
         padding: 0 14px;
     }
 
+    @include media(">=tablet", "<desktop") {
+        padding: 0 2rem;
+    }
+
+
     .auth-logo {
         position: absolute;
         left: 10rem;
@@ -22,11 +27,19 @@
             top: 20px;
         }
 
+        @include media(">=tablet", "<desktop") {
+            left: 2rem;
+        }
+
         img {
             width: 120px;
 
             @include media("<=414px") {
                 width: 150px;
+            }
+
+            @include media(">=LGdesktop") {
+                width: 250px;
             }
         }
     }
@@ -50,6 +63,22 @@
             margin: 90px 0 40px 0;
         }
 
+        @include media(">=tablet", "<1024px") {
+            margin-top: 90px;
+            width: 100%;
+        }
+
+        @include media(">=1024px", "<desktop") {
+            width: 40%;
+            margin-top: 90px;
+        }
+
+        @include media(">=LGdesktop") {
+            width: 40%;
+            margin-top: 90px;
+            gap: 45px;
+        }
+
         h1 {
             font-size: 40px;
             margin: 0;
@@ -57,12 +86,20 @@
             @include media("<=414px") {
                 font-size: 30px;
             }
+
+            @include media(">=LGdesktop") {
+                font-size: 85px;
+            }
         }
 
         .options {
             display: flex;
             flex-direction: row;
             gap: 10px;
+
+            @include media(">=LGdesktop") {
+                gap: 30px;
+            }
 
             .signup-option {
                 display: flex;
@@ -78,6 +115,12 @@
                 cursor: pointer;
                 width: 100%;
 
+                @include media(">=LGdesktop") {
+                    font-size: 35px;
+                    gap: 20px;
+                    padding: 30px;
+                }
+
                 &:hover {
                     background-color: #f3f3f145;
                     transition: background-color ease-in-out .5s;
@@ -85,7 +128,10 @@
 
                 .option-icon {
                     width: 1.4rem;
-                    // height: 1.2rem;
+
+                    @include media(">=LGdesktop") {
+                        width: 2.5rem;
+                    }
                 }
             }
         }
@@ -108,6 +154,13 @@
                 border-radius: 50%;
                 font-weight: 600;
                 color: #4e4e4e;
+
+                @include media(">=LGdesktop") {
+                    font-size: 35px;
+                    top: -27px;
+                    width: 40px;
+                    height: 40px;
+                }
             }
         }
 
@@ -115,6 +168,10 @@
             display: flex;
             flex-direction: column;
             gap: 15px;
+
+            @include media(">=LGdesktop") {
+                gap: 2rem;
+            }
 
             input {
                 width: 100%;
@@ -128,6 +185,11 @@
                 &:focus {
                     border: 1px solid black;
                     transition: border .5s ease;
+                }
+
+                @include media(">=LGdesktop") {
+                    padding: 50px 30px;
+                    font-size: 35px;
                 }
             }
 
@@ -144,6 +206,10 @@
 
                 .text-input {
                     display: flex;
+
+                    @include media(">=tablet", "<desktop") {
+                        width: 100%;
+                    }
                 }
             }
 
@@ -169,6 +235,11 @@
                 .password-icon {
                     width: 1.5rem;
                     height: 1.5rem;
+
+                    @include media(">=LGdesktop") {
+                        width: 3rem;
+                        height: 3rem;
+                    }
                 }
 
 
@@ -184,8 +255,18 @@
                 gap: 6px;
                 font-size: 14px;
 
+                @include media(">=LGdesktop") {
+                    font-size: 2rem;
+                    gap: 15px;
+                }
+
                 input {
                     width: initial;
+
+                    @include media(">=LGdesktop") {
+                        width: 2.5rem;
+                        height: 2.5rem;
+                    }
                 }
             }
 
@@ -197,6 +278,10 @@
                 border-radius: 8px;
                 margin-top: 20px;
                 border: 1px solid black;
+
+                @include media(">=LGdesktop") {
+                    font-size: 40px;
+                }
 
                 &:hover {
                     background-color: white;
@@ -210,6 +295,10 @@
         .login-portal {
             align-self: center;
             font-size: 15px;
+
+            @include media(">=LGdesktop") {
+                font-size: 2rem;
+            }
 
             a {
                 font-weight: bold;
@@ -230,10 +319,28 @@
             display: none;
         }
 
+        @include media(">=tablet", "<1024px") {
+            display: none;
+        }
+
+        @include media(">=1024px", "<desktop") {
+            margin-top: 40px;
+        }
+
         .image-up {
             position: absolute;
             left: 400px;
             width: 350px;
+
+            @include media(">=1024px", "<desktop") {
+                width: 250px;
+                left: 320px;
+            }
+
+            @include media(">=LGdesktop") {
+                width: 700px;
+                left: 620px;
+            }
         }
 
         .image-down {
@@ -241,6 +348,16 @@
             top: 180px;
             left: 200px;
             width: 350px;
+
+            @include media(">=1024px", "<desktop") {
+                width: 300px;
+                left: 70px;
+            }
+
+            @include media(">=LGdesktop") {
+                width: 700px;
+                // left: 300px;
+            }
         }
     }
 }
