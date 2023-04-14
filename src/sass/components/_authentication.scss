@@ -219,34 +219,46 @@
                 flex-direction: row;
             }
 
-            .password-input {
+            .password-container {
                 display: flex;
-                flex-direction: row;
-                align-items: center;
-                justify-content: center;
-                background-color: #fcfcfc;
-                border: 1px solid #fcfcfc;
-                border-radius: 8px;
-                padding: 0px 10px;
+                flex-direction: column;
+                gap: 6px;
 
-                input {
-                    border: none;
-                }
+                .password-input {
+                    display: flex;
+                    flex-direction: row;
+                    align-items: center;
+                    justify-content: center;
+                    background-color: #fcfcfc;
+                    border: 1px solid #fcfcfc;
+                    border-radius: 8px;
+                    padding: 0px 10px;
 
-                .password-icon {
-                    width: 1.5rem;
-                    height: 1.5rem;
+                    input {
+                        border: none;
+                    }
 
-                    @include media(">=LGdesktop") {
-                        width: 3rem;
-                        height: 3rem;
+                    .password-icon {
+                        width: 1.5rem;
+                        height: 1.5rem;
+
+                        @include media(">=LGdesktop") {
+                            width: 3rem;
+                            height: 3rem;
+                        }
+                    }
+
+
+                    &.active {
+                        border: 1px solid black;
+                        transition: border .5s ease;
                     }
                 }
 
-
-                &.active {
-                    border: 1px solid black;
-                    transition: border .5s ease;
+                a {
+                    align-self: end;
+                    font-size: 13px;
+                    font-weight: 500;
                 }
             }
 

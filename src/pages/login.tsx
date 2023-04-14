@@ -45,28 +45,32 @@ export default function Login() {
                 onClick={() => setBorderLine(false)}
               />
             </div>
-            <div
-              className={
-                borderLine ? "password-input active" : "password-input"
-              }
-              onClick={() => setBorderLine(true)}
-            >
-              <input
-                type={showPassword ? "text" : "password"}
-                placeholder="Enter password"
-              />
-              {showPassword ? (
-                <BsEye
-                  className="password-icon"
-                  onClick={handleClickShowPassword}
+            <div className="password-container">
+              <div
+                className={
+                  borderLine ? "password-input active" : "password-input"
+                }
+                onClick={() => setBorderLine(true)}
+              >
+                <input
+                  type={showPassword ? "text" : "password"}
+                  placeholder="Enter password"
                 />
-              ) : (
-                <BsEyeSlash
-                  className="password-icon"
-                  onClick={handleClickShowPassword}
-                />
-              )}
+                {showPassword ? (
+                  <BsEye
+                    className="password-icon"
+                    onClick={handleClickShowPassword}
+                  />
+                ) : (
+                  <BsEyeSlash
+                    className="password-icon"
+                    onClick={handleClickShowPassword}
+                  />
+                )}
+              </div>
+              <a href="">Forgot Password</a>
             </div>
+
             <div
               className="checkbox-input"
               onClick={() => setBorderLine(false)}

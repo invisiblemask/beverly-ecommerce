@@ -4,7 +4,7 @@ import Navbar from "@/components/Navbar";
 
 export default function About() {
   return (
-    <Layout>
+    <Layout title="About | Offical E-commerce Fashion Store by Beverly Naya">
       <div className="about">
         <div className="about-wrapper">
           <div className="about-header">

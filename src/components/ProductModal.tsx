@@ -108,7 +108,7 @@ export default function ProductModal({ toggleModal }: ModalProps) {
               <span>£{(price * increment).toLocaleString()}</span>
             </div>
             <div className="order-btns">
-              <Link href="/checkout">
+              <Link href="/cart">
                 <button className="order-color">Buy Now</button>
               </Link>
               <button className="order-plane">
