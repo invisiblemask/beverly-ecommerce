@@ -78,7 +78,7 @@ export default function Cart() {
               Discount: <span>-15%</span>
             </div>
             <div className="total">
-              Discount: <span>£199.376</span>
+              Total: <span>£199.376</span>
             </div>
             <Link href="/checkout">
               <div className="checkout-btn">Checkout</div>
