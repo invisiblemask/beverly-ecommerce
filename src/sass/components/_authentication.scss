@@ -4,13 +4,31 @@
     position: relative;
     padding: 60px 10rem;
 
+    @include media("<=414px") {
+        padding: 0 14px;
+    }
+
+    @include media(">414px", "<tablet") {
+        padding: 0 14px;
+        // flex-direction: column-reverse;
+    }
+
     .auth-logo {
         position: absolute;
         left: 10rem;
         top: 30px;
 
+        @include media("<=414px") {
+            left: 14px;
+            top: 20px;
+        }
+
         img {
             width: 120px;
+
+            @include media("<=414px") {
+                width: 150px;
+            }
         }
     }
 
@@ -22,9 +40,24 @@
         margin-top: 30px;
         width: 33%;
 
+        @include media("<=414px") {
+            width: 100%;
+            margin: 90px 0 40px 0;
+        }
+
+
+        @include media(">414px", "<tablet") {
+            width: 100%;
+            margin: 90px 0 40px 0;
+        }
+
         h1 {
             font-size: 40px;
             margin: 0;
+
+            @include media("<=414px") {
+                font-size: 30px;
+            }
         }
 
         .signup-option {
@@ -90,6 +123,15 @@
                 flex-direction: row;
                 gap: 20px;
                 width: 100%;
+
+                @include media("<=414px") {
+                    width: initial;
+                    flex-direction: column;
+                }
+
+                .text-input {
+                    display: flex;
+                }
             }
 
             .email-input {
@@ -163,6 +205,15 @@
     .login-image {
         position: relative;
         margin-top: 30px;
+
+        @include media("<=414px") {
+            display: none;
+        }
+
+
+        @include media(">414px", "<tablet") {
+            display: none;
+        }
 
         .image-up {
             position: absolute;

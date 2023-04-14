@@ -37,17 +37,20 @@ export default function Authentication() {
           </div>
           <form action="">
             <div className="form-card">
-              <input
-                type="text"
-                className="info-input"
-                placeholder="Enter First Name"
-              />
-
-              <input
-                type="text"
-                className="info-input"
-                placeholder="Enter Last Name"
-              />
+              <div className="text-input">
+                <input
+                  type="text"
+                  className="info-input"
+                  placeholder="Enter First Name"
+                />
+              </div>
+              <div className="text-input">
+                <input
+                  type="text"
+                  className="info-input"
+                  placeholder="Enter Last Name"
+                />
+              </div>
             </div>
             <div className="email-input">
               <input type="email" placeholder="Enter email address" />
