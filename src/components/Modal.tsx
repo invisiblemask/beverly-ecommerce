@@ -53,7 +53,7 @@ export default function Modal({ toggleModal }: ModalProps) {
           </div>
         </div>
         {/* <div className="modal-initial">
-          <CiShoppingCart className="modal-cart" />
+          <img src="/icons/trolley.png" alt=""  className="modal-cart" />
           <div className="modal-text">Your Shopping Cart is empty</div>
           <Link href="/shop" onClick={toggleModal}>
             <button className="modal-btn">Starting Shopping</button>

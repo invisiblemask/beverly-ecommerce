@@ -95,7 +95,7 @@ export default function Navbar() {
           <CiUser className="nav-icon" />
         </div>
         <div className="cart-container" onClick={handleCartClick}>
-          <CiShoppingCart className="nav-icon" />
+          <img src="/icons/trolley.png" alt="" className="nav-icon" />
           <div>2</div>
         </div>
       </div>

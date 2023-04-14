@@ -112,7 +112,7 @@ export default function ProductModal({ toggleModal }: ModalProps) {
                 <button className="order-color">Buy Now</button>
               </Link>
               <button className="order-plane">
-                <CiShoppingCart className="order-cart" />
+                <img src="/icons/trolley.png" alt="" className="order-cart" />
                 Add to Cart
               </button>
             </div>

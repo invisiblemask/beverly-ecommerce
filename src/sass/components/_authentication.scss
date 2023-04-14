@@ -128,7 +128,7 @@
                 }
 
                 .option-icon {
-                    width: 1.4rem;
+                    width: 1.2rem;
 
                     @include media(">=LGdesktop") {
                         width: 2.5rem;
@@ -219,48 +219,38 @@
                 flex-direction: row;
             }
 
-            .password-container {
+            .password-input {
                 display: flex;
-                flex-direction: column;
-                gap: 6px;
+                flex-direction: row;
+                align-items: center;
+                // justify-content: center;
+                background-color: #fcfcfc;
+                border: 1px solid #fcfcfc;
+                border-radius: 8px;
+                padding: 0px 10px;
 
-                .password-input {
-                    display: flex;
-                    flex-direction: row;
-                    align-items: center;
-                    justify-content: center;
-                    background-color: #fcfcfc;
-                    border: 1px solid #fcfcfc;
-                    border-radius: 8px;
-                    padding: 0px 10px;
+                input {
+                    border: none;
+                    width: 100%;
+                }
 
-                    input {
-                        border: none;
-                    }
+                .password-icon {
+                    width: 1.5rem;
+                    height: 1.5rem;
 
-                    .password-icon {
-                        width: 1.5rem;
-                        height: 1.5rem;
-
-                        @include media(">=LGdesktop") {
-                            width: 3rem;
-                            height: 3rem;
-                        }
-                    }
-
-
-                    &.active {
-                        border: 1px solid black;
-                        transition: border .5s ease;
+                    @include media(">=LGdesktop") {
+                        width: 3rem;
+                        height: 3rem;
                     }
                 }
 
-                a {
-                    align-self: end;
-                    font-size: 13px;
-                    font-weight: 500;
+
+                &.active {
+                    border: 1px solid black;
+                    transition: border .5s ease;
                 }
             }
+
 
             .checkbox-input {
                 display: flex;
@@ -369,8 +359,20 @@
 
             @include media(">=LGdesktop") {
                 width: 700px;
-                // left: 300px;
             }
         }
+    }
+}
+
+.password-container {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+
+
+    a {
+        align-self: end;
+        font-size: 13px;
+        font-weight: 500;
     }
 }
