@@ -82,6 +82,7 @@
         h1 {
             font-size: 40px;
             margin: 0;
+            text-align: center;
 
             @include media("<=414px") {
                 font-size: 30px;

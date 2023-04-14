@@ -2,8 +2,7 @@
 import Head from "next/head";
 import Link from "next/link";
 import { useState } from "react";
-import { BsApple, BsEye, BsEyeSlash } from "react-icons/bs";
-import { FcGoogle } from "react-icons/fc";
+import { BsEye, BsEyeSlash } from "react-icons/bs";
 /* eslint-disable @next/next/no-img-element */
 export default function Authentication() {
   const [showPassword, setShowPassword] = useState(false);
@@ -97,7 +96,7 @@ export default function Authentication() {
             <button>Create Account</button>
           </form>
           <div className="login-portal">
-            Already have an account? <Link href="/login">Login</Link>
+            Have an account? <Link href="/login">Login</Link>
           </div>
         </div>
         <div className="login-image">
