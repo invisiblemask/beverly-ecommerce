@@ -65,7 +65,7 @@ export default function Navbar() {
 
   const redirect = () => {
     if (!user) {
-      router.push("/authentication");
+      router.push("/login");
     } else {
       router.push("/account");
     }

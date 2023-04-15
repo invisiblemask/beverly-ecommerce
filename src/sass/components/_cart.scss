@@ -21,7 +21,8 @@
   }
 
   @include media(">=1024px", "<desktop") {
-    flex-direction: row;
+    flex-direction: column;
+    padding: 1rem 4rem;
     gap: 2rem;
   }
 
@@ -168,17 +169,9 @@
       width: 100%;
     }
 
-    // @include media("<=1280px", "<desktop") {
-    //   width: 400px;
-    // }
-
     @include media(">414px", "<desktop") {
       width: 100%;
     }
-
-    // @include media("<=820px") {
-    //   width: 100%;
-    // }
 
     @include media(">=LGdesktop") {
       width: 60%;
