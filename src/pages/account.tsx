@@ -1,4 +1,8 @@
 /* eslint-disable @next/next/no-img-element */
+import Address from "@/components/Address";
+import Orders from "@/components/Orders";
+import Payment from "@/components/Payments";
+import Profile from "@/components/Profile";
 import Link from "next/link";
 import { useRouter } from "next/router";
 import { useEffect, useState } from "react";
@@ -7,22 +11,27 @@ const tabLinks = [
   {
     name: "Profile Info",
     icon: "/icons/user.png",
+    component: <Profile />,
   },
   {
     name: "Orders",
     icon: "/icons/trolley.png",
+    component: <Orders />,
   },
   {
     name: "Address",
     icon: "/icons/pin.png",
+    component: <Address />,
   },
   {
     name: "Payment Methods",
-    icon: "/icons/logout.png",
+    icon: "/icons/wallet.png",
+    component: <Payment />,
   },
 ];
 
 export default function Account() {
+  const date = new Date().getFullYear();
   const [isLoading, setIsLoading] = useState(true);
   const [tab, setTab] = useState(1);
 
@@ -62,7 +71,7 @@ export default function Account() {
               );
             })}
             <div className="items-logout">
-              <img src="" className="items-icon" alt="" />
+              <img src="/icons/logout.png" className="items-icon" alt="" />
               Logout
             </div>
           </div>
@@ -74,11 +83,22 @@ export default function Account() {
                 key={index}
                 className={`${index + 1 === tab ? "show" : "hidden"}`}
               >
-                {link.name}
+                {link.component}
               </div>
             );
           })}
         </div>
+      </div>
+      <div className="footer-copyright account-footer">
+        Copyright ©{date}{" "}
+        <a
+          href="https://github.com/invisiblemask"
+          target="_blank"
+          rel="noreferrer"
+        >
+          invisiblemask.
+        </a>{" "}
+        All Rights Reserved
       </div>
     </div>
   );

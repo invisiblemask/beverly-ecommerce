@@ -1,0 +1,36 @@
+.order {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+
+    .order-container {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        font-weight: 400;
+        padding: 10px;
+    }
+
+    .order-list {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        box-shadow: 0px 1px 10px 0px rgba(229, 219, 219, 0.48);
+        padding: 10px;
+        font-size: 15px;
+        border-radius: 4px;
+        cursor: pointer;
+
+        .status-p {
+            color: #dbc013;
+        }
+
+        .status-d {
+            color: #044704;
+        }
+
+        .status-c {
+            color: #cf0f0f;
+        }
+    }
+}

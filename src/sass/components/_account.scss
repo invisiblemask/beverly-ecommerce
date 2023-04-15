@@ -2,7 +2,8 @@
     display: flex;
     flex-direction: column;
     padding: 0 10rem;
-    margin: 2rem 0;
+    margin-top: 2rem;
+    height: 100vh;
 
     .account-img {
         margin-bottom: 2rem;
@@ -16,15 +17,14 @@
     .account-container {
         display: flex;
         flex-direction: row;
-        gap: 3rem;
+        gap: 2rem;
 
         .account-dashboard {
             box-shadow: 0px 1px 10px 0px rgba(229, 219, 219, 0.48);
-            padding: 20px;
             display: flex;
             flex-direction: column;
             border-radius: 4px;
-            width: 250px;
+            width: 320px;
             height: 100%;
             gap: 30px;
 
@@ -33,6 +33,7 @@
                 flex-direction: row;
                 align-items: center;
                 gap: 10px;
+                padding: 10px;
 
                 .user-initials {
                     display: flex;
@@ -60,21 +61,20 @@
                     cursor: pointer;
                     display: flex;
                     flex-direction: row;
-                    gap: 4px;
+                    gap: 10px;
                     align-items: center;
+                    border-left: 3px solid transparent;
+                    padding-left: 20px;
 
                     &:hover {
                         border-left: 3px solid black;
-                        border-top-left-radius: 4px;
-                        border-bottom-left-radius: 4px;
                         transition: all .3s ease-in-out;
                     }
 
                     &.active {
                         border-left: 3px solid black;
-                        border-top-left-radius: 4px;
-                        border-bottom-left-radius: 4px;
                         transition: all .3s ease-in-out;
+                        background-color: #fdfdfd;
                     }
                 }
 
@@ -83,8 +83,9 @@
                     cursor: pointer;
                     display: flex;
                     flex-direction: row;
-                    gap: 4px;
+                    gap: 10px;
                     align-items: center;
+                    padding-left: 20px;
                 }
 
                 .items-icon {
@@ -96,6 +97,8 @@
 
         .account-info {
             padding: 20px;
+            width: 100%;
+
 
             .show {
                 display: block;
@@ -105,6 +108,10 @@
                 display: none;
             }
         }
+    }
+
+    .account-footer {
+        margin-top: auto;
     }
 
 }

@@ -122,36 +122,37 @@ footer {
 
   }
 
-  .footer-copyright {
+}
+
+.footer-copyright {
+  color: black;
+  display: flex;
+  justify-content: center;
+  padding: 20px 0;
+  display: flex;
+  flex-direction: row;
+  gap: 8px;
+  font-size: 14px;
+
+  @include media(">=1920px") {
+    font-size: 26px;
+  }
+
+  a {
     color: black;
-    display: flex;
-    justify-content: center;
-    padding: 20px 0;
-    display: flex;
-    flex-direction: row;
-    gap: 8px;
     font-size: 14px;
 
     @include media(">=1920px") {
       font-size: 26px;
     }
+  }
 
-    a {
-      color: black;
-      font-size: 14px;
+  @include media(">=414px",
+    "<tablet") {
+    flex-wrap: wrap;
+  }
 
-      @include media(">=1920px") {
-        font-size: 26px;
-      }
-    }
-
-    @include media(">=414px",
-      "<tablet") {
-      flex-wrap: wrap;
-    }
-
-    @include media("<=414px") {
-      flex-wrap: wrap;
-    }
+  @include media("<=414px") {
+    flex-wrap: wrap;
   }
 }
