@@ -494,14 +494,29 @@ $easing: cubic-bezier(0.42, 0, 0.58, 1);
 
         .product-modal-close {
             position: absolute;
+            width: 1.7rem;
+            height: 1.7rem;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
             top: 10px;
             right: 10px;
             cursor: pointer;
+
+            &:hover {
+                background-color: #9a9a9a;
+                transition: all .5s ease-in-out;
+            }
 
             .product-modal-icon {
                 width: 1.5rem;
                 height: 1.5rem;
                 color: #919090f8;
+
+                &:hover {
+                    color: #fffafa;
+                }
 
                 @include media(">=LGdesktop") {
                     width: 4rem;

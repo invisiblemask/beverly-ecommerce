@@ -160,8 +160,25 @@ nav {
       cursor: pointer;
       display: flex;
 
-      .link-home {
-        color: black;
+      @include media("<=phone") {
+
+        img {
+          display: block;
+        }
+      }
+
+      @include media(">phone", "<=tablet") {
+
+        img {
+          display: block;
+        }
+      }
+
+      @include media(">tablet", "<=960px") {
+
+        img {
+          display: block;
+        }
       }
 
       div {
