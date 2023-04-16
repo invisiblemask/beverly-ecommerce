@@ -31,7 +31,7 @@ export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
   const [showModal, setShowModal] = useState(false);
   const [stickyNav, setStickyNav] = useState(false);
-  const [user, setUser] = useState(false);
+  const [user, setUser] = useState(true);
 
   useEffect(() => {
     const handleScroll = () => {

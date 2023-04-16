@@ -505,18 +505,14 @@ $easing: cubic-bezier(0.42, 0, 0.58, 1);
             cursor: pointer;
 
             &:hover {
-                background-color: #9a9a9a;
+                background-color: #f1f1f1;
                 transition: all .5s ease-in-out;
             }
 
             .product-modal-icon {
                 width: 1.5rem;
                 height: 1.5rem;
-                color: #919090f8;
-
-                &:hover {
-                    color: #fffafa;
-                }
+                color: #3f3f3ff8;
 
                 @include media(">=LGdesktop") {
                     width: 4rem;

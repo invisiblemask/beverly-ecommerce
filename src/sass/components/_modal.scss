@@ -300,7 +300,7 @@ $easing: cubic-bezier(0.42, 0, 0.58, 1);
             cursor: pointer;
 
             &:hover {
-                background-color: #9a9a9a;
+                background-color: #f1f1f1;
                 transition: all .5s ease-in-out;
             }
 
@@ -314,10 +314,6 @@ $easing: cubic-bezier(0.42, 0, 0.58, 1);
                 width: 1.2rem;
                 height: 1.2rem;
                 color: #181818f8;
-
-                &:hover {
-                    color: #fffafa;
-                }
 
                 @include media(">=LGdesktop") {
                     width: 2rem;

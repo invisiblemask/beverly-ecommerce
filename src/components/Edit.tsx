@@ -59,31 +59,15 @@ export default function Edit() {
           </label>
         </div>
         <div className="edit-fields">
-          <input
-            type="text"
-            name=""
-            id=""
-            placeholder="Kelechi"
-            onClick={removeBorderLine}
-          />
-          <input
-            type="text"
-            name=""
-            id=""
-            placeholder="Okeke"
-            onClick={removeBorderLine}
-          />
+          <input type="text" placeholder="Kelechi" onClick={removeBorderLine} />
+          <input type="text" placeholder="Okeke" onClick={removeBorderLine} />
           <input
             type="email"
-            name=""
-            id=""
             placeholder="okekekelechi96@gmail.com"
             onClick={removeBorderLine}
           />
           <input
             type="tel"
-            name=""
-            id=""
             placeholder="+2347082896308"
             onClick={removeBorderLine}
           />
@@ -95,8 +79,6 @@ export default function Edit() {
           >
             <input
               type={Password ? "text" : "password"}
-              name=""
-              id=""
               placeholder="Type Password"
             />
             {Password ? (
@@ -113,8 +95,6 @@ export default function Edit() {
           >
             <input
               type={confirmPassword ? "text" : "password"}
-              name=""
-              id=""
               placeholder="Confirm Password"
             />
             {confirmPassword ? (
