@@ -1,0 +1,54 @@
+.payment {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+
+    .payment-list {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        box-shadow: 0px 1px 10px 0px rgba(229, 219, 219, 0.48);
+        padding: 6px 15px;
+        border-radius: 4px;
+        border: 1px solid #f0f0f0;
+        font-size: 15px;
+
+        .card-logo {
+            display: flex;
+            align-items: center;
+
+            img {
+                width: 64px;
+                height: 64px;
+            }
+        }
+
+        .card-icons {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            gap: 20px;
+
+            .icon-container {
+                width: 1.5rem;
+                height: 1.5rem;
+                border-radius: 50%;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                padding: 6px;
+
+                &:hover {
+                    background-color: #f1f1f1;
+                    transition: all .5s ease-in-out;
+                }
+
+                img {
+                    width: 18px;
+                    height: 18px;
+                }
+            }
+        }
+    }
+}

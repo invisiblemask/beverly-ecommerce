@@ -27,6 +27,7 @@
             width: 320px;
             height: fit-content;
             gap: 30px;
+            border: 1px solid #f0f0f0;
 
             .user-info {
                 display: flex;
@@ -78,13 +79,13 @@
 
                     &:hover {
                         border-left: 3px solid black;
-                        transition: all .3s ease-in-out;
+                        transition: all .5s ease-in-out;
                     }
 
                     &.active {
                         border-left: 3px solid black;
-                        transition: all .3s ease-in-out;
-                        background-color: #fdfdfd;
+                        transition: all .5s ease-in-out;
+                        background-color: #fafafa;
                     }
                 }
 
