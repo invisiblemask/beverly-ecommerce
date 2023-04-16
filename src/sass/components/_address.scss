@@ -1,9 +1,9 @@
-.payment {
+.address {
     display: flex;
     flex-direction: column;
     gap: 2rem;
 
-    .payment-list {
+    .address-list {
         display: flex;
         flex-direction: row;
         justify-content: space-between;
@@ -14,17 +14,7 @@
         border: 1px solid #f0f0f0;
         font-size: 15px;
 
-        .card-logo {
-            display: flex;
-            align-items: center;
-
-            img {
-                width: 64px;
-                height: 64px;
-            }
-        }
-
-        .card-icons {
+        .address-icons {
             display: flex;
             flex-direction: row;
             align-items: center;

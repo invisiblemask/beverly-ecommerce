@@ -24,7 +24,7 @@
             display: flex;
             flex-direction: column;
             border-radius: 4px;
-            width: 320px;
+            width: 400px;
             height: fit-content;
             gap: 30px;
             border: 1px solid #f0f0f0;
@@ -34,7 +34,7 @@
                 flex-direction: row;
                 align-items: center;
                 gap: 10px;
-                padding: 10px;
+                padding: 20px 10px;
 
                 .user-initials {
                     display: flex;
@@ -91,6 +91,7 @@
 
                 .items-logout {
                     padding: 8px;
+                    padding-bottom: 20px;
                     cursor: pointer;
                     display: flex;
                     flex-direction: row;
