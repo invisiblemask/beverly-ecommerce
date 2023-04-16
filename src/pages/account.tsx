@@ -1,5 +1,6 @@
 /* eslint-disable @next/next/no-img-element */
 import Address from "@/components/Address";
+import Edit from "@/components/Edit";
 import Orders from "@/components/Orders";
 import Payment from "@/components/Payments";
 import Profile from "@/components/Profile";
@@ -28,6 +29,11 @@ const tabLinks = [
     name: "Payment Methods",
     icon: "/icons/wallet.png",
     component: <Payment />,
+  },
+  {
+    name: "Edit Profile",
+    icon: "/icons/edit.png",
+    component: <Edit />,
   },
 ];
 
@@ -60,7 +66,9 @@ export default function Account() {
           <div className="account-dashboard">
             <div className="user-info">
               <div className="user-initials">KO</div>
-              <div className="user-greeting">Welcome, Kelechi</div>
+              <div className="user-greeting">
+                Welcome, <div className="name">Kelechi</div>
+              </div>
             </div>
             <div className="dashboard-items">
               {tabLinks.map((link, index) => {

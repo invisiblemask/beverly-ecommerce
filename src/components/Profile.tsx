@@ -43,7 +43,6 @@ export default function Profile() {
           </div>
         </div>
       </div>
-      <button>Save changes</button>
     </div>
   );
 }

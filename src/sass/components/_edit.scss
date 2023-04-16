@@ -1,0 +1,97 @@
+.edit {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+
+    .edit-container {
+        display: flex;
+        flex-direction: column;
+        gap: 2rem;
+
+        .edit-img-container {
+            position: relative;
+
+            .view-img {
+                width: 64px;
+                height: 64px;
+                border-radius: 50%;
+                object-fit: cover;
+            }
+
+            label {
+                position: absolute;
+                bottom: 10px;
+                left: 45px;
+                background: #ffff;
+                width: 20px;
+                height: 20px;
+                border-radius: 50%;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                padding: 5px;
+
+                img {
+                    width: 20px;
+                    height: 20px;
+                }
+            }
+        }
+
+    }
+
+    .edit-fields {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 2rem;
+
+        input {
+            width: 95%;
+            padding: 20px 10px;
+            outline: none;
+            border: none;
+            background-color: #fcfcfc;
+            font-size: 17px;
+            border-radius: 8px;
+            border: 1px solid transparent;
+
+            &:focus {
+                border: 1px solid black;
+                transition: border .5s ease;
+            }
+        }
+
+        .password-input {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: center;
+            gap: 6px;
+            background-color: #fcfcfc;
+            width: 95%;
+            padding: 0px 10px;
+            border-radius: 8px;
+            border: 1px solid transparent;
+
+            input {
+                border: none;
+            }
+
+            img {
+                width: 25px;
+                height: 25px;
+            }
+
+            &.active {
+                border: 1px solid black;
+                transition: border .5s ease;
+            }
+        }
+    }
+
+    button {
+        background-color: black;
+        color: white;
+        align-self: end;
+    }
+}

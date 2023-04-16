@@ -10,7 +10,7 @@
         align-self: start;
 
         img {
-            width: 170px;
+            width: 150px;
         }
     }
 
@@ -25,7 +25,7 @@
             flex-direction: column;
             border-radius: 4px;
             width: 320px;
-            height: 100%;
+            height: fit-content;
             gap: 30px;
 
             .user-info {
@@ -48,6 +48,16 @@
                     border-radius: 50%;
                     border: 1px solid gray;
                 }
+
+                .user-greeting {
+                    display: flex;
+                    flex-direction: column;
+
+                    .name {
+                        flex-wrap: wrap;
+                    }
+                }
+
 
             }
 
