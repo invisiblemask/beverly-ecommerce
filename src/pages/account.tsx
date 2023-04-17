@@ -1,6 +1,7 @@
 /* eslint-disable @next/next/no-img-element */
 import Address from "@/components/Address";
 import Edit from "@/components/Edit";
+import Navbar from "@/components/Navbar";
 import Orders from "@/components/Orders";
 import Payment from "@/components/Payments";
 import Profile from "@/components/Profile";
@@ -59,8 +60,9 @@ export default function Account() {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
+      <Navbar />
       <div className="account">
-        <Sidebar toggle="open">
+        <Sidebar>
           {tabLinks.map((link, index) => {
             return (
               <div
@@ -77,9 +79,6 @@ export default function Account() {
             );
           })}
         </Sidebar>
-        <Link href="/" className="account-img">
-          <img src="/images/benaya-banner-2.png" alt="" />
-        </Link>
         <div className="account-container">
           <div className="account-dashboard">
             <div className="user-info">
@@ -99,7 +98,7 @@ export default function Account() {
                     key={index}
                     className={"items " + (tab === index + 1 && "active")}
                   >
-                    <img src={link.icon} className="items-icon" alt="" />{" "}
+                    <img src={link.icon} className="items-icon" alt="" />
                     {link.name}
                   </div>
                 );

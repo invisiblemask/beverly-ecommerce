@@ -5,7 +5,7 @@
     margin-top: 2rem;
     height: 100vh;
 
-    @include media("<=414px") {
+    @include media("<desktop") {
         padding: 0 14px;
         margin-top: 15px;
     }
@@ -14,7 +14,7 @@
         margin-bottom: 2rem;
         align-self: start;
 
-        @include media("<=414px") {
+        @include media("<=768px") {
             display: none;
         }
 
@@ -28,8 +28,8 @@
         flex-direction: row;
         gap: 2rem;
 
-        @include media("<=414px") {
-            display: none;
+        @include media("<=768px") {
+            margin-bottom: 40px;
         }
 
         .account-dashboard {
@@ -42,12 +42,25 @@
             gap: 30px;
             border: 1px solid #f0f0f0;
 
+            @include media(">=1024px", "<desktop") {
+                width: 400px;
+            }
+
+            @include media(">=LGdesktop") {
+                width: 700px;
+            }
+
             .user-info {
                 display: flex;
                 flex-direction: row;
                 align-items: center;
                 gap: 10px;
                 padding: 20px 10px;
+
+                @include media(">=LGdesktop") {
+                    gap: 30px;
+                    padding: 40px 20px;
+                }
 
                 .user-initials {
                     display: flex;
@@ -61,11 +74,21 @@
                     height: 60px;
                     border-radius: 50%;
                     border: 1px solid gray;
+
+                    @include media(">=LGdesktop") {
+                        font-size: 48px;
+                        width: 120px;
+                        height: 120px;
+                    }
                 }
 
                 .user-greeting {
                     display: flex;
                     flex-direction: column;
+
+                    @include media(">=LGdesktop") {
+                        font-size: 40px;
+                    }
 
                     .name {
                         flex-wrap: wrap;
@@ -80,6 +103,10 @@
                 flex-direction: column;
                 gap: 20px;
 
+                @include media(">=LGdesktop") {
+                    gap: 4rem;
+                }
+
                 .items {
                     padding: 8px;
                     cursor: pointer;
@@ -89,6 +116,12 @@
                     align-items: center;
                     border-left: 3px solid transparent;
                     padding-left: 20px;
+
+                    @include media(">=LGdesktop") {
+                        font-size: 38px;
+                        padding: 16px;
+                        padding-left: 40px;
+                    }
 
                     &:hover {
                         border-left: 3px solid black;
@@ -112,18 +145,38 @@
                     align-items: center;
                     padding-left: 20px;
                     margin-top: 25px;
+
+                    @include media(">=LGdesktop") {
+                        font-size: 42px;
+                        padding: 16px;
+                        padding-left: 40px;
+                    }
                 }
 
                 .items-icon {
-                    width: 1rem;
-                    height: 1rem;
+                    width: 1.2rem;
+                    height: 1.2rem;
+
+                    @include media(">=LGdesktop") {
+                        width: 42px;
+                        height: 42px;
+                    }
                 }
+            }
+
+            @include media("<=768px") {
+                display: none;
             }
         }
 
         .account-info {
             padding: 20px;
             width: 100%;
+
+            @include media("<=768px") {
+                padding: 0;
+                margin-top: 40px;
+            }
 
 
             .show {

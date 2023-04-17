@@ -3,7 +3,7 @@ import { motion } from "framer-motion";
 
 export default function Profile() {
   return (
-    <motion.div animate={{ x: 20 }}>
+    <motion.div animate={{ x: 0 }}>
       <div className="profile">
         <h2>User Info</h2>
         <div className="info">

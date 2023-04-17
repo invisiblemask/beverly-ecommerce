@@ -1,12 +1,10 @@
 /* eslint-disable @next/next/no-img-element */
-import { ReactNode, useState } from "react";
 import { motion } from "framer-motion";
-import styles from "./Layout.module.scss";
 import Link from "next/link";
+import { useState } from "react";
 
 type SidebarProps = {
   children: React.ReactNode;
-  toggle: string;
 };
 
 const sidebarVariants = {
@@ -14,7 +12,7 @@ const sidebarVariants = {
   closed: { x: "-100%" },
 };
 
-export default function Sidebar({ children, toggle }: SidebarProps) {
+export default function Sidebar({ children }: SidebarProps) {
   const [isSidebarOpen, setIsSidebarOpen] = useState(false);
 
   const toggleSidebar = () => {
@@ -22,12 +20,10 @@ export default function Sidebar({ children, toggle }: SidebarProps) {
   };
 
   return (
-    <div className="sidebar-container" onClick={() => setIsSidebarOpen(false)}>
-      <div className="sidebar-top">
-        <img src="/icons/hamburger.png" onClick={toggleSidebar} alt="" />
-        <Link href="/" className="sidebar-logo">
-          <img src="/icons/home.png" alt="" />
-        </Link>
+    <div className="sidebar-container">
+      <div className="sidebar-top" onClick={toggleSidebar}>
+        <img src="/icons/left-arrow.png" alt="" />
+        Menu
       </div>
       <motion.div
         className={"sidebar"}
@@ -40,7 +36,9 @@ export default function Sidebar({ children, toggle }: SidebarProps) {
           onClick={toggleSidebar}
           className="close"
         />
-        <div className="items-container">{children}</div>
+        <div className="items-container" onClick={toggleSidebar}>
+          {children}
+        </div>
       </motion.div>
     </div>
   );

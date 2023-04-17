@@ -3,6 +3,14 @@
     flex-direction: column;
     gap: 10px;
 
+    @include media("<=414px") {
+        width: 100%;
+    }
+
+    @include media(">=LGdesktop") {
+        font-size: 48px;
+    }
+
     .info {
         display: flex;
         flex-direction: column;
@@ -14,16 +22,45 @@
             align-items: center;
             gap: 2rem;
 
+            @include media(">=320px", "<768px") {
+                flex-direction: column;
+                align-items: start;
+                width: 100%;
+            }
+
+            @include media(">=1024px", "<desktop") {
+                display: grid;
+                grid-template-columns: repeat(3, 1fr);
+                row-gap: 1rem;
+            }
+
+            @include media(">375px", "<=768px") {
+                display: grid;
+                grid-template-columns: repeat(2, 1fr);
+                width: 100%;
+            }
+
             .profile-name {
                 display: flex;
                 flex-direction: row;
                 gap: 10px;
+
+                @include media(">375px", "<=768px") {
+                    display: grid;
+                    grid-column: 1/3;
+                    width: 100%;
+                }
 
                 img {
                     width: 64px;
                     height: 64px;
                     border-radius: 50%;
                     object-fit: fill;
+
+                    @include media(">=LGdesktop") {
+                        width: 128px;
+                        height: 128px;
+                    }
                 }
 
                 .name-container {
@@ -31,8 +68,16 @@
                     flex-direction: column;
                     gap: 4px;
 
+                    @include media(">=LGdesktop") {
+                        font-size: 30px;
+                    }
+
                     span:nth-child(2) {
                         font-size: 13px;
+
+                        @include media(">=LGdesktop") {
+                            font-size: 28px;
+                        }
                     }
                 }
             }
@@ -49,9 +94,18 @@
                 border: 1px solid #f0f0f0;
                 border-radius: 4px;
 
+                @include media(">=LGdesktop") {
+                    font-size: 30px;
+                    gap: 12px;
+                }
+
                 span {
                     font-size: 17px;
                     font-weight: 600;
+
+                    @include media(">=LGdesktop") {
+                        font-size: 34px;
+                    }
                 }
             }
         }
@@ -64,17 +118,37 @@
             padding: 10px;
             border: 1px solid #f0f0f0;
 
+            @include media("<=768px") {
+                flex-direction: column;
+                gap: 2rem;
+            }
+
+            @include media(">=1024px", "<desktop") {
+                display: grid;
+                grid-template-columns: repeat(3, 1fr);
+                row-gap: 1rem;
+            }
+
             .details {
                 display: flex;
                 flex-direction: column;
                 gap: 6px;
                 font-size: 15px;
-                font-weight: 400;
+                font-weight: 600;
                 color: #070707;
+
+                @include media(">=LGdesktop") {
+                    font-size: 30px;
+                }
 
                 span {
                     font-size: 15px;
                     color: #363636;
+                    font-weight: 400;
+
+                    @include media(">=LGdesktop") {
+                        font-size: 30px;
+                    }
                 }
             }
         }
