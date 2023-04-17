@@ -4,6 +4,7 @@ import Edit from "@/components/Edit";
 import Orders from "@/components/Orders";
 import Payment from "@/components/Payments";
 import Profile from "@/components/Profile";
+import Sidebar from "@/components/Sidebar";
 import Head from "next/head";
 import Link from "next/link";
 import { useRouter } from "next/router";
@@ -59,6 +60,23 @@ export default function Account() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <div className="account">
+        <Sidebar toggle="open">
+          {tabLinks.map((link, index) => {
+            return (
+              <div
+                onClick={(e) => {
+                  e.preventDefault();
+                  setTab(index + 1);
+                }}
+                key={index}
+                className={"items " + (tab === index + 1 && "active")}
+              >
+                <img src={link.icon} className="items-icon" alt="" />{" "}
+                {link.name}
+              </div>
+            );
+          })}
+        </Sidebar>
         <Link href="/" className="account-img">
           <img src="/images/benaya-banner-2.png" alt="" />
         </Link>
