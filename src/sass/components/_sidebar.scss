@@ -1,4 +1,14 @@
 .sidebar-container {
+    @include media(">=1024px") {
+        display: none;
+    }
+
+    .sidebar-icon {
+        @include media(">=1024px") {
+            display: none;
+        }
+    }
+
     .sidebar-top {
 
         img {

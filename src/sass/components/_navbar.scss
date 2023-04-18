@@ -49,59 +49,6 @@ nav {
     box-shadow: 2px 4px 3px 1px rgba(234, 236, 235, 0.5);
   }
 
-  .hamburger {
-    display: none;
-
-    @include media(">=414px",
-      "<1024px") {
-      display: flex;
-      flex-direction: column;
-      gap: 6px;
-
-      .hamburger-one,
-      .hamburger-two,
-      .hamburger-three {
-        width: 30px;
-        height: 2px;
-        background: black;
-
-        &.active {
-          background-color: black;
-        }
-      }
-
-      .link-other {
-        background: black;
-      }
-    }
-
-    @include media("<414px") {
-      display: flex;
-      flex-direction: column;
-      gap: 6px;
-
-      .hamburger-one,
-      .hamburger-two,
-      .hamburger-three {
-        width: 30px;
-        height: 2px;
-        background: black;
-
-        &.active {
-          background-color: black;
-        }
-      }
-
-      .link-other {
-        background: black;
-      }
-    }
-
-    .link-other {
-      background-color: black;
-    }
-  }
-
   &.animate {
     animation: fadeIn 0.5s ease;
   }
@@ -219,6 +166,17 @@ nav {
     img {
       display: none;
     }
+
+    .sidebar-img {
+      display: block;
+    }
+
+    .sidebar-icon,
+    .close {
+      display: block;
+      width: 40px;
+      height: 40px;
+    }
   }
 
   @include media(">phone", "<=tablet") {
@@ -255,45 +213,45 @@ nav {
     }
   }
 
-  .sidebar {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: white;
-    z-index: 1;
+  .sidebar-navbar {
+    margin-top: 5rem;
     display: flex;
     flex-direction: column;
-    align-items: center;
     justify-content: center;
-    gap: 4rem;
-    font-size: $font-md;
-
-    .close {
-      position: absolute;
-      top: 0;
-      right: 0;
-      height: 100px;
-      width: 100px;
-      border-radius: 5px;
-
-      &:after {
-        position: absolute;
-        top: 0;
-        bottom: 0;
-        left: 0;
-        right: 0;
-        content: "\d7";
-        font-size: 70px;
-        line-height: 100px;
-        text-align: center;
-      }
-    }
+    align-items: center;
+    gap: 2rem;
+    font-size: 17px;
 
     img {
-      width: 120px;
-      height: 120px;
+      width: 170px;
+    }
+
+    .sidebar-auth {
+      display: flex;
+      flex-direction: row;
+      justify-items: center;
+      gap: 2rem;
+      margin-top: 40px;
+
+      .register,
+      .login {
+        border: 1px solid #4e4d4d;
+        padding: 5px 10px;
+        text-align: center;
+        width: 100px;
+      }
+
+      .register {
+        &:hover {
+          background-color: black;
+          color: white;
+        }
+      }
+
+      .login {
+        color: white;
+        background-color: black;
+      }
     }
   }
 }

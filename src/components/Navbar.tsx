@@ -5,6 +5,16 @@ import { useRouter } from "next/router";
 import { useEffect, useState } from "react";
 import { CiShoppingCart, CiUser } from "react-icons/ci";
 import Modal from "./Modal";
+import { motion } from "framer-motion";
+
+type SidebarProps = {
+  children: React.ReactNode;
+};
+
+const sidebarVariants = {
+  open: { x: 0 },
+  closed: { x: "-100%" },
+};
 
 const links = [
   {
@@ -32,6 +42,11 @@ export default function Navbar() {
   const [showModal, setShowModal] = useState(false);
   const [stickyNav, setStickyNav] = useState(false);
   const [user, setUser] = useState(true);
+  const [isSidebarOpen, setIsSidebarOpen] = useState(false);
+
+  const toggleSidebar = () => {
+    setIsSidebarOpen(!isSidebarOpen);
+  };
 
   useEffect(() => {
     const handleScroll = () => {
@@ -73,10 +88,48 @@ export default function Navbar() {
 
   return (
     <nav className={stickyNav ? "active" : ""}>
-      <div className="hamburger" onClick={() => setIsOpen(!isOpen)}>
-        <div className="hamburger-one" />
-        <div className="hamburger-two" />
-        <div className="hamburger-three" />
+      <div className="sidebar-container">
+        <img
+          src="/icons/hamburger.png"
+          alt=""
+          onClick={toggleSidebar}
+          className="sidebar-icon"
+        />
+        <div className="sidebar-top"></div>
+        <motion.div
+          className={"sidebar"}
+          variants={sidebarVariants}
+          animate={isSidebarOpen ? "open" : "closed"}
+        >
+          <img
+            src="/icons/close.png"
+            alt=""
+            onClick={toggleSidebar}
+            className="close"
+          />
+          <div className="sidebar-navbar" onClick={toggleSidebar}>
+            <img
+              src="/images/benaya-banner-2.png"
+              className="sidebar-img"
+              alt=""
+            />
+            <Link href="/">HOME</Link>
+            <Link href="/shop">SHOP</Link>
+            <Link href="/about">ABOUT</Link>
+            <Link href="/cart">CART</Link>
+            <Link href="/account">ACCOUNT</Link>
+            <Link href="/contact">CONTACT</Link>
+
+            <div className="sidebar-auth">
+              <Link href="/login" className="login">
+                Login
+              </Link>
+              <Link href="authentication" className="register">
+                Register
+              </Link>
+            </div>
+          </div>
+        </motion.div>
       </div>
       <Link href="/">
         <img src="/images/benaya-banner-2.png" alt="" />
@@ -99,7 +152,7 @@ export default function Navbar() {
           <div>2</div>
         </div>
       </div>
-      {isOpen && (
+      {/* {isOpen && (
         <animated.div
           style={sidebarAnimation}
           className="sidebar"
@@ -117,7 +170,7 @@ export default function Navbar() {
 
           <div className="close" onClick={() => setIsOpen(false)}></div>
         </animated.div>
-      )}
+      )} */}
       {showModal && <Modal toggleModal={toggleModal} />}
     </nav>
   );
