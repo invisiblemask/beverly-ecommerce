@@ -3,6 +3,12 @@
     flex-direction: column;
     gap: 2rem;
 
+    h2 {
+        @include media(">=LGdesktop") {
+            font-size: 48px;
+        }
+    }
+
     .edit-container {
         display: flex;
         flex-direction: column;
@@ -18,6 +24,19 @@
                 object-fit: cover;
             }
 
+            .avatar-img {
+                width: 64px;
+                height: 64px;
+            }
+
+            .view-img,
+            .avatar-img {
+                @include media(">=LGdesktop") {
+                    width: 150px;
+                    height: 150px;
+                }
+            }
+
             label {
                 position: absolute;
                 bottom: 10px;
@@ -26,15 +45,26 @@
                 width: 20px;
                 height: 20px;
                 border-radius: 50%;
-                border: 1px solid #dedede;
                 display: flex;
                 justify-content: center;
                 align-items: center;
                 padding: 5px;
 
+                @include media(">=LGdesktop") {
+                    left: 90px;
+                    bottom: 10px;
+                    width: 68px;
+                    height: 68px;
+                }
+
                 img {
                     width: 20px;
                     height: 20px;
+
+                    @include media(">=LGdesktop") {
+                        width: 64px;
+                        height: 64px;
+                    }
                 }
             }
         }
@@ -45,6 +75,13 @@
         display: grid;
         grid-template-columns: repeat(2, 1fr);
         gap: 2rem;
+
+        @include media("<=425px") {
+            display: flex;
+            flex-direction: column;
+            text-align: center;
+            gap: 20px;
+        }
 
         input {
             width: 95%;
@@ -59,6 +96,11 @@
             &:focus {
                 border: 1px solid black;
                 transition: border .5s ease;
+            }
+
+            @include media(">=LGdesktop") {
+                padding: 45px 10px;
+                font-size: 34px;
             }
         }
 
@@ -81,6 +123,11 @@
             img {
                 width: 25px;
                 height: 25px;
+
+                @include media(">=LGdesktop") {
+                    width: 45px;
+                    height: 45px;
+                }
             }
 
             &.active {
@@ -102,6 +149,15 @@
             background-color: #fcfcfc;
             color: black;
             transition: all .5s ease;
+        }
+
+        @include media("<=tablet") {
+            width: 100%;
+            margin: 20px 0;
+        }
+
+        @include media(">=LGdesktop") {
+            font-size: 30px;
         }
     }
 }
