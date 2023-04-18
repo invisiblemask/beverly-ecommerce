@@ -11,10 +11,10 @@ export default function Payment() {
         <div className="card-number">1234 **** **** ****</div>
         <div className="card-date">07/25</div>
         <div className="card-icons">
-          <div className="icon-container">
+          <div className="payment-icon">
             <img src="/icons/pencil.png" alt="" />
           </div>
-          <div className="icon-container">
+          <div className="payment-icon">
             <img src="/icons/recycle-bin.png" alt="" />
           </div>
         </div>
@@ -27,10 +27,10 @@ export default function Payment() {
         <div className="card-number">okekekelechi96@gmail.com</div>
         <div className="card-date">N/A</div>
         <div className="card-icons">
-          <div className="icon-container">
+          <div className="payment-icon">
             <img src="/icons/pencil.png" alt="" />
           </div>
-          <div className="icon-container">
+          <div className="payment-icon">
             <img src="/icons/recycle-bin.png" alt="" />
           </div>
         </div>

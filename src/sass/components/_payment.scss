@@ -3,6 +3,12 @@
     flex-direction: column;
     gap: 2rem;
 
+    h2 {
+        @include media(">=LGdesktop") {
+            font-size: 48px;
+        }
+    }
+
     .payment-list {
         display: flex;
         flex-direction: row;
@@ -14,6 +20,16 @@
         border: 1px solid #f0f0f0;
         font-size: 15px;
 
+        @include media("<=tablet") {
+            flex-direction: column;
+            text-align: center;
+            gap: 20px;
+        }
+
+        @include media(">=LGdesktop") {
+            font-size: 32px;
+        }
+
         .card-logo {
             display: flex;
             align-items: center;
@@ -21,6 +37,11 @@
             img {
                 width: 64px;
                 height: 64px;
+
+                @include media(">=LGdesktop") {
+                    width: 128px;
+                    height: 128px;
+                }
             }
         }
 
@@ -30,9 +51,34 @@
             align-items: center;
             gap: 20px;
 
-            img {
-                width: 18px;
-                height: 18px;
+            .payment-icon {
+                width: 1.5rem;
+                height: 1.5rem;
+                border-radius: 50%;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                padding: 6px;
+
+                @include media(">=LGdesktop") {
+                    width: 3rem;
+                    height: 3rem;
+                }
+
+                &:hover {
+                    background-color: #f1f1f1;
+                    transition: all .5s ease-in-out;
+                }
+
+                img {
+                    width: 18px;
+                    height: 18px;
+
+                    @include media(">=LGdesktop") {
+                        width: 36px;
+                        height: 36px;
+                    }
+                }
             }
         }
     }
