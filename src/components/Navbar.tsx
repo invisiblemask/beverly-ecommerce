@@ -29,10 +29,6 @@ const links = [
     name: "ABOUT",
     href: "/about",
   },
-  {
-    name: "CONTACT",
-    href: "/contact",
-  },
 ];
 
 export default function Navbar() {
@@ -118,7 +114,6 @@ export default function Navbar() {
             <Link href="/about">ABOUT</Link>
             <Link href="/cart">CART</Link>
             <Link href="/account">ACCOUNT</Link>
-            <Link href="/contact">CONTACT</Link>
 
             <div className="sidebar-auth">
               <Link href="/login" className="login">
