@@ -3,12 +3,26 @@
     flex-direction: column;
     gap: 10px;
 
+    h2 {
+        @include media(">=LGdesktop") {
+            font-size: 48px;
+        }
+    }
+
     .order-container {
         display: flex;
         flex-direction: row;
         justify-content: space-between;
         font-weight: 400;
         padding: 10px;
+
+        @include media("<=tablet") {
+            font-size: 15px;
+        }
+
+        @include media(">=LGdesktop") {
+            font-size: 32px;
+        }
     }
 
     .order-list {
@@ -20,6 +34,14 @@
         font-size: 15px;
         border-radius: 4px;
         cursor: pointer;
+
+        @include media("<=tablet") {
+            font-size: 13px;
+        }
+
+        @include media(">=LGdesktop") {
+            font-size: 30px;
+        }
 
         .status-p {
             color: #dbc013;

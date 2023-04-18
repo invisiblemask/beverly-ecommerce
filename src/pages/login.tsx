@@ -5,11 +5,13 @@ import { useState } from "react";
 import { BsEye, BsEyeSlash } from "react-icons/bs";
 /* eslint-disable @next/next/no-img-element */
 export default function Login() {
+  const date = new Date().getFullYear();
   const [showPassword, setShowPassword] = useState(false);
   const [borderLine, setBorderLine] = useState(false);
   const handleClickShowPassword = () => {
     setShowPassword(!showPassword);
   };
+
   return (
     <>
       <Head>
@@ -89,6 +91,17 @@ export default function Login() {
           <img src="/images/signin-image.jpg" alt="" className="image-up" />
           <img src="/images/signin-image-2.jpg" alt="" className="image-down" />
         </div>
+      </div>
+      <div className="footer-copyright authentication-footer">
+        Copyright ©{date}{" "}
+        <a
+          href="https://github.com/invisiblemask"
+          target="_blank"
+          rel="noreferrer"
+        >
+          invisiblemask.
+        </a>{" "}
+        All Rights Reserved
       </div>
     </>
   );

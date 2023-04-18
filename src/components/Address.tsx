@@ -8,10 +8,10 @@ export default function Address() {
         <div>Aliyu Mustapha boulevard wuye Abuja</div>
         <div>+2347082896308</div>
         <div className="address-icons">
-          <div className="icon-container">
+          <div className="address-icon">
             <img src="/icons/pencil.png" alt="" />
           </div>
-          <div className="icon-container">
+          <div className="address-icon">
             <img src="/icons/recycle-bin.png" alt="" />
           </div>
         </div>
@@ -21,10 +21,10 @@ export default function Address() {
         <div>34 John Crescent Str</div>
         <div>(555) 555-1234</div>
         <div className="address-icons">
-          <div className="icon-container">
+          <div className="address-icon">
             <img src="/icons/pencil.png" alt="" />
           </div>
-          <div className="icon-container">
+          <div className="address-icon">
             <img src="/icons/recycle-bin.png" alt="" />
           </div>
         </div>
