@@ -57,11 +57,18 @@ nav {
     display: flex;
     flex-direction: row;
     gap: 3rem;
-    font-size: 15px;
-    font-family: 'Clash Grotesk', sans-serif;
+    font-size: 14px;
+    // font-family: 'Clash Grotesk', sans-serif;
 
     a {
+      font-weight: 400;
+      letter-spacing: 1.6px;
       color: #4e4d4d;
+
+    }
+
+    .active-link {
+      color: #d70e69;
     }
 
     @include media(">=1920px") {
