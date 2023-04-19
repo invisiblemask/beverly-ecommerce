@@ -5,7 +5,7 @@
     padding: 0 10rem;
     margin-top: 4rem;
 
-    @include media(">=phone", "<desktop") {
+    @include media("<=1024px") {
         padding: 0 14px;
         flex-direction: column;
     }
@@ -44,7 +44,7 @@
             img {
                 width: 400px;
 
-                @include media(">=phone", "<desktop") {
+                @include media("<=1024px") {
                     width: 100%;
                 }
             }
@@ -53,9 +53,9 @@
 
     .about-bg-img {
         img {
-            width: 900px;
+            width: 600px;
 
-            @include media(">=phone", "<desktop") {
+            @include media("<=1024px") {
                 width: 100%;
             }
         }

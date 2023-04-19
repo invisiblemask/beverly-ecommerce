@@ -23,7 +23,7 @@ nav {
     }
   }
 
-  @include media(">=1024px", "<desktop") {
+  @include media(">tablet", "<desktop") {
     padding: 1rem 4rem;
   }
 
@@ -58,7 +58,6 @@ nav {
     flex-direction: row;
     gap: 3rem;
     font-size: 14px;
-    // font-family: 'Clash Grotesk', sans-serif;
 
     a {
       font-weight: 400;
@@ -200,25 +199,19 @@ nav {
     }
   }
 
-  @include media(">tablet", "<=960px") {
-    padding: 1rem;
-    display: flex;
-    align-items: center;
+  // @include media(">tablet", "<=960px") {
+  //   padding: 1rem;
+  //   display: flex;
+  //   align-items: center;
 
-    .links {
-      display: none;
-    }
+  //   .links {
+  //     display: none;
+  //   }
 
-    img {
-      display: none;
-    }
-  }
-
-  @include media(">desktop") {
-    .hamburger {
-      display: none;
-    }
-  }
+  //   img {
+  //     display: none;
+  //   }
+  // }
 
   .sidebar-icon {
     @include media("<=tablet") {

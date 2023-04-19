@@ -44,7 +44,7 @@
             gap: 8px;
 
             @include media("<=414px") {
-                grid-template-columns: repeat(4, 40px);
+                grid-template-columns: repeat(4, 60px);
                 width: 80px;
             }
 

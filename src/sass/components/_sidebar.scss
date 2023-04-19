@@ -1,5 +1,5 @@
 .sidebar-container {
-    @include media(">=1024px") {
+    @include media(">=769px") {
         display: none;
     }
 
