@@ -18,7 +18,11 @@ const sidebarVariants = {
 
 const links = [
   {
-    name: "HOME",
+    name: "NEW",
+    href: "/",
+  },
+  {
+    name: "BRANDS",
     href: "/",
   },
   {

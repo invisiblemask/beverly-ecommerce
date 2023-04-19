@@ -45,12 +45,12 @@
         border: 1px solid #f0f0f0;
         box-shadow: 0px 1px 10px 0px rgba(229, 219, 219, 0.48);
 
-        @include media ("<=414px") {
+        @include media ("<=425px") {
             display: flex;
         }
 
         @include media (">414px", "<=tablet") {
-            width: 50%;
+            width: 100%;
         }
 
         ul {
@@ -74,6 +74,10 @@
             left: 15px;
             width: 1.5rem;
             height: 1.5rem;
+
+            @include media("<=tablet") {
+                display: block;
+            }
         }
 
         .logo {

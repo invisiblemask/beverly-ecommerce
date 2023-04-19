@@ -27,7 +27,7 @@ nav {
     padding: 1rem 4rem;
   }
 
-  @include media("<=414px") {
+  @include media("<=425px") {
     height: 30px;
 
     &.active {
@@ -213,6 +213,14 @@ nav {
     }
   }
 
+  .sidebar-icon {
+    @include media("<=tablet") {
+      display: block;
+      width: 44px;
+      height: 44px;
+    }
+  }
+
   .sidebar-navbar {
     margin-top: 5rem;
     display: flex;
@@ -224,6 +232,10 @@ nav {
 
     img {
       width: 170px;
+
+      @include media("<=tablet") {
+        display: block;
+      }
     }
 
     .sidebar-auth {
