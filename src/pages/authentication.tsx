@@ -74,6 +74,8 @@ export default function Authentication() {
               <input
                 type={showPassword ? "text" : "password"}
                 placeholder="Enter password"
+                maxLength={16}
+                minLength={8}
               />
               {showPassword ? (
                 <BsEye
@@ -87,13 +89,13 @@ export default function Authentication() {
                 />
               )}
             </div>
-            <div
+            <label
               className="checkbox-input"
               onClick={() => setBorderLine(false)}
             >
               <input type="checkbox" />
               <span>Yes, I agree to the Terms and Conditions</span>
-            </div>
+            </label>
             <button>Create Account</button>
           </form>
           <div className="login-portal">
