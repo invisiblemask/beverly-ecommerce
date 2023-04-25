@@ -199,20 +199,6 @@ nav {
     }
   }
 
-  // @include media(">tablet", "<=960px") {
-  //   padding: 1rem;
-  //   display: flex;
-  //   align-items: center;
-
-  //   .links {
-  //     display: none;
-  //   }
-
-  //   img {
-  //     display: none;
-  //   }
-  // }
-
   .sidebar-icon {
     @include media("<=tablet") {
       display: block;
