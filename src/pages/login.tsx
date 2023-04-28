@@ -72,15 +72,7 @@ export default function Login() {
               </div>
               <a href="">Forgot Password</a>
             </div>
-
-            <div
-              className="checkbox-input"
-              onClick={() => setBorderLine(false)}
-            >
-              <input type="checkbox" />
-              <span>Yes, I agree to the Terms and Conditions</span>
-            </div>
-            <button>Create Account</button>
+            <button>Sign in</button>
           </form>
           <div className="login-portal">
             Don&apos;t have an account?{" "}
