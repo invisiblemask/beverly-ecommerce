@@ -6,10 +6,6 @@ import { useEffect, useState } from "react";
 import { CiUser } from "react-icons/ci";
 import Modal from "./Modal";
 
-type SidebarProps = {
-  children: React.ReactNode;
-};
-
 const sidebarVariants = {
   open: { x: 0 },
   closed: { x: "-100%" },
