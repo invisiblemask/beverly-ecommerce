@@ -24,6 +24,7 @@
         font-size: 14px;
         color: #555555;
         text-transform: uppercase;
+        border: 1px solid transparent;
 
         @include media(">=LGdesktop") {
             font-size: 27px;
