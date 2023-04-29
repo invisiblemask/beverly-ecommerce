@@ -21,10 +21,10 @@ export default function Authentication() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <div className="authentication">
-        <Link href="/" className="auth-logo">
-          <img src="/images/benaya-banner-2.png" alt="" />
-        </Link>
         <div className="login-form">
+          <Link href="/" className="auth-logo">
+            <img src="/icons/left-arrow.png" alt="" /> Go Home
+          </Link>
           <h1>Create an account</h1>
           <div className="options">
             <div className="signup-option">

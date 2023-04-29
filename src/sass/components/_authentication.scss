@@ -2,7 +2,7 @@
     display: flex;
     flex-direction: row;
     position: relative;
-    padding: 60px 10rem;
+    padding: 10px 10rem;
 
     @include media("<=414px") {
         padding: 0 14px;
@@ -17,33 +17,6 @@
     }
 
 
-    .auth-logo {
-        position: absolute;
-        left: 10rem;
-        top: 30px;
-
-        @include media("<=414px") {
-            left: 5rem;
-            top: 20px;
-        }
-
-        @include media(">=tablet", "<desktop") {
-            left: 2rem;
-        }
-
-        img {
-            width: 120px;
-
-            @include media("<=414px") {
-                width: 150px;
-            }
-
-            @include media(">=LGdesktop") {
-                width: 250px;
-            }
-        }
-    }
-
     .login-form {
         display: flex;
         flex-direction: column;
@@ -54,29 +27,58 @@
 
         @include media("<=414px") {
             width: 100%;
-            margin: 90px 0 40px 0;
+            margin: 15px 0 40px 0;
         }
 
 
         @include media(">414px", "<tablet") {
             width: 100%;
-            margin: 90px 0 40px 0;
+            margin: 15px 0 40px 0;
         }
 
         @include media(">=tablet", "<1024px") {
-            margin-top: 90px;
+            margin-top: 15px;
             width: 100%;
         }
 
         @include media(">=1024px", "<desktop") {
             width: 40%;
-            margin-top: 90px;
+            margin-top: 15px;
         }
 
         @include media(">=LGdesktop") {
             width: 40%;
-            margin-top: 90px;
+            margin-top: 15px;
             gap: 45px;
+        }
+
+        .auth-logo {
+            display: flex;
+            flex-direction: row;
+            gap: 10px;
+            align-items: center;
+
+            @include media("<=414px") {
+                // left: 5rem;
+                top: 20px;
+            }
+
+            @include media(">=tablet", "<desktop") {
+                // left: 2rem;
+            }
+
+            img {
+                width: 20px;
+                height: 20px;
+
+                @include media("<=414px") {
+                    width: 20px;
+                }
+
+                @include media(">=LGdesktop") {
+                    width: 20px;
+                }
+            }
         }
 
         h1 {
