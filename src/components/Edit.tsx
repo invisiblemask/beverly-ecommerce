@@ -36,6 +36,11 @@ export default function Edit() {
       setFile(URL.createObjectURL(e.target.files[0]));
     }
   };
+
+  const submitForm = (e: any) => {
+    e.preventDefault();
+  };
+
   return (
     <div className="edit">
       <h2>Edit Profile</h2>
@@ -58,60 +63,76 @@ export default function Edit() {
             <img src="/icons/add-photo.png" alt="" className="upload-img" />
           </label>
         </div>
-        <div className="edit-fields">
-          <input type="text" placeholder="Kelechi" onClick={removeBorderLine} />
-          <input type="text" placeholder="Okeke" onClick={removeBorderLine} />
-          <input
-            type="email"
-            placeholder="okekekelechi96@gmail.com"
-            onClick={removeBorderLine}
-          />
-          <input
-            type="tel"
-            placeholder="+2347082896308"
-            onClick={removeBorderLine}
-          />
-          <div
-            className={
-              borderLinePassword ? "password-input active" : "password-input"
-            }
-            onClick={removeBorderLinePassword}
-          >
+        <form className="edit-fields">
+          <div className="edit-inputs">
             <input
-              type={Password ? "text" : "password"}
-              placeholder="Type Password"
+              type="text"
+              placeholder="Kelechi"
+              onClick={removeBorderLine}
             />
-            {Password ? (
-              <img src="/icons/view.png" alt="" onClick={handlePassword} />
-            ) : (
-              <img src="/icons/hide.png" alt="" onClick={handlePassword} />
-            )}
           </div>
-          <div
-            className={
-              borderLineConfirm ? "password-input active" : "password-input"
-            }
-            onClick={removeBorderLineConfirm}
-          >
+          <div className="edit-inputs">
+            <input type="text" placeholder="Okeke" onClick={removeBorderLine} />
+          </div>
+          <div className="edit-inputs">
             <input
-              type={confirmPassword ? "text" : "password"}
-              placeholder="Confirm Password"
+              type="email"
+              placeholder="okekekelechi96@gmail.com"
+              onClick={removeBorderLine}
             />
-            {confirmPassword ? (
-              <img
-                src="/icons/view.png"
-                alt=""
-                onClick={handleConfirmPassword}
-              />
-            ) : (
-              <img
-                src="/icons/hide.png"
-                alt=""
-                onClick={handleConfirmPassword}
-              />
-            )}
           </div>
-        </div>
+          <div className="edit-inputs">
+            <input
+              type="tel"
+              placeholder="+2347082896308"
+              onClick={removeBorderLine}
+            />
+          </div>
+          <div className="edit-inputs">
+            <div
+              className={
+                borderLinePassword ? "password-input active" : "password-input"
+              }
+              onClick={removeBorderLinePassword}
+            >
+              <input
+                type={Password ? "text" : "password"}
+                placeholder="Type Password"
+              />
+              {Password ? (
+                <img src="/icons/view.png" alt="" onClick={handlePassword} />
+              ) : (
+                <img src="/icons/hide.png" alt="" onClick={handlePassword} />
+              )}
+            </div>
+          </div>
+          <div className="edit-inputs">
+            <div
+              className={
+                borderLineConfirm ? "password-input active" : "password-input"
+              }
+              onClick={removeBorderLineConfirm}
+            >
+              <input
+                type={confirmPassword ? "text" : "password"}
+                placeholder="Confirm Password"
+              />
+              {confirmPassword ? (
+                <img
+                  src="/icons/view.png"
+                  alt=""
+                  onClick={handleConfirmPassword}
+                />
+              ) : (
+                <img
+                  src="/icons/hide.png"
+                  alt=""
+                  onClick={handleConfirmPassword}
+                />
+              )}
+            </div>
+          </div>
+        </form>
       </div>
       <button>Save changes</button>
     </div>

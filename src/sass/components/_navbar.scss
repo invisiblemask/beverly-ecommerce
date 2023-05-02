@@ -43,7 +43,7 @@ nav {
 
   &.active {
     position: sticky;
-    height: 40px;
+    height: 20px;
     top: 0;
     background: #ffffff;
     box-shadow: 2px 4px 3px 1px rgba(234, 236, 235, 0.5);
@@ -103,8 +103,8 @@ nav {
       }
 
       @include media("<=414px") {
-        width: 27px;
-        height: 27px;
+        width: 24px;
+        height: 24px;
       }
     }
 
@@ -180,8 +180,8 @@ nav {
     .sidebar-icon,
     .close {
       display: block;
-      width: 40px;
-      height: 40px;
+      width: 10px;
+      height: 10px;
     }
   }
 

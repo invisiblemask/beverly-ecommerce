@@ -76,6 +76,11 @@
         grid-template-columns: repeat(2, 1fr);
         gap: 2rem;
 
+        .edit-inputs {
+            display: flex;
+            align-items: center;
+        }
+
         @include media("<=425px") {
             display: flex;
             flex-direction: column;
@@ -84,7 +89,7 @@
         }
 
         input {
-            width: 95%;
+            width: 1006%;
             padding: 20px 10px;
             outline: none;
             border: none;
@@ -111,7 +116,7 @@
             justify-content: center;
             gap: 6px;
             background-color: #fcfcfc;
-            width: 95%;
+            width: 100%;
             padding: 0px 10px;
             border-radius: 8px;
             border: 1px solid transparent;
