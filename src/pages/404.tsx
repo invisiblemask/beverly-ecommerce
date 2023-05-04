@@ -1,117 +1,95 @@
 import { gsap } from "gsap";
+import Link from "next/link";
 
 export default function Error404() {
-  gsap.set("svg", { visibility: "visible" });
-  gsap.to("#headStripe", {
-    y: 0.5,
-    rotation: 1,
-    yoyo: true,
-    repeat: -1,
-    ease: "sine.inOut",
-    duration: 1,
-  });
-  gsap.to("#spaceman", {
-    y: 0.5,
-    rotation: 1,
-    yoyo: true,
-    repeat: -1,
-    ease: "sine.inOut",
-    duration: 1,
-  });
-  gsap.to("#craterSmall", {
-    x: -3,
-    yoyo: true,
-    repeat: -1,
-    duration: 1,
-    ease: "sine.inOut",
-  });
-  gsap.to("#craterBig", {
-    x: 3,
-    yoyo: true,
-    repeat: -1,
-    duration: 1,
-    ease: "sine.inOut",
-  });
-  gsap.to("#planet", {
-    rotation: -2,
-    yoyo: true,
-    repeat: -1,
-    duration: 1,
-    ease: "sine.inOut",
-    transformOrigin: "50% 50%",
-  });
+  // gsap.set("svg", { visibility: "visible" });
+  // gsap.to("#headStripe", {
+  //   y: 0.5,
+  //   rotation: 1,
+  //   yoyo: true,
+  //   repeat: -1,
+  //   ease: "sine.inOut",
+  //   duration: 1,
+  // });
+  // gsap.to("#spaceman", {
+  //   y: 0.5,
+  //   rotation: 1,
+  //   yoyo: true,
+  //   repeat: -1,
+  //   ease: "sine.inOut",
+  //   duration: 1,
+  // });
+  // gsap.to("#craterSmall", {
+  //   x: -3,
+  //   yoyo: true,
+  //   repeat: -1,
+  //   duration: 1,
+  //   ease: "sine.inOut",
+  // });
+  // gsap.to("#craterBig", {
+  //   x: 3,
+  //   yoyo: true,
+  //   repeat: -1,
+  //   duration: 1,
+  //   ease: "sine.inOut",
+  // });
+  // gsap.to("#planet", {
+  //   rotation: -2,
+  //   yoyo: true,
+  //   repeat: -1,
+  //   duration: 1,
+  //   ease: "sine.inOut",
+  //   transformOrigin: "50% 50%",
+  // });
 
-  gsap.to("#starsBig g", {
-    rotation: "random(-30,30)",
-    transformOrigin: "50% 50%",
-    yoyo: true,
-    repeat: -1,
-    ease: "sine.inOut",
-  });
-  gsap.fromTo(
-    "#starsSmall g",
-    { scale: 0, transformOrigin: "50% 50%" },
-    {
-      scale: 1,
-      transformOrigin: "50% 50%",
-      yoyo: true,
-      repeat: -1,
-      stagger: 0.1,
-    }
-  );
-  gsap.to("#circlesSmall circle", {
-    y: -4,
-    yoyo: true,
-    duration: 1,
-    ease: "sine.inOut",
-    repeat: -1,
-  });
-  gsap.to("#circlesBig circle", {
-    y: -2,
-    yoyo: true,
-    duration: 1,
-    ease: "sine.inOut",
-    repeat: -1,
-  });
+  // gsap.to("#starsBig g", {
+  //   rotation: "random(-30,30)",
+  //   transformOrigin: "50% 50%",
+  //   yoyo: true,
+  //   repeat: -1,
+  //   ease: "sine.inOut",
+  // });
+  // gsap.fromTo(
+  //   "#starsSmall g",
+  //   { scale: 0, transformOrigin: "50% 50%" },
+  //   {
+  //     scale: 1,
+  //     transformOrigin: "50% 50%",
+  //     yoyo: true,
+  //     repeat: -1,
+  //     stagger: 0.1,
+  //   }
+  // );
+  // gsap.to("#circlesSmall circle", {
+  //   y: -4,
+  //   yoyo: true,
+  //   duration: 1,
+  //   ease: "sine.inOut",
+  //   repeat: -1,
+  // });
+  // gsap.to("#circlesBig circle", {
+  //   y: -2,
+  //   yoyo: true,
+  //   duration: 1,
+  //   ease: "sine.inOut",
+  //   repeat: -1,
+  // });
 
-  gsap.set("#glassShine", { x: -68 });
+  // gsap.set("#glassShine", { x: -68 });
 
-  gsap.to("#glassShine", {
-    x: 80,
-    duration: 2,
-    rotation: -30,
-    ease: "expo.inOut",
-    transformOrigin: "50% 50%",
-    repeat: -1,
-    repeatDelay: 8,
-    delay: 2,
-  });
+  // gsap.to("#glassShine", {
+  //   x: 80,
+  //   duration: 2,
+  //   rotation: -30,
+  //   ease: "expo.inOut",
+  //   transformOrigin: "50% 50%",
+  //   repeat: -1,
+  //   repeatDelay: 8,
+  //   delay: 2,
+  // });
 
   return (
     <div>
-      {/* <div className="hamburger-menu">
-        <button className="burger" data-state="closed">
-          <span></span>
-          <span></span>
-          <span></span>
-        </button>
-      </div>
-      <nav data-state="closed">
-        <ul>
-          <li>
-            <a href="#">Home</a>
-          </li>
-          <li>
-            <a href="#">Services</a>
-          </li>
-          <li>
-            <a href="#">About</a>
-          </li>
-          <li>
-            <a href="#">Contact</a>
-          </li>
-        </ul>
-      </nav> */}
       <div className="container">
         <svg
           version="1.1"
@@ -786,7 +764,9 @@ export default function Error404() {
             mystery. But you can click the button below to go back to the
             homepage.
           </p>
-          <button className="btn green">HOME</button>
+          <Link href="/">
+            <button className="btn black">HOME</button>
+          </Link>
         </div>
       </div>
     </div>

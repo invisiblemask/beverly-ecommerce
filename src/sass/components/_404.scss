@@ -1,66 +1,75 @@
 @import url('https://fonts.googleapis.com/css?family=Nunito+Sans');
 
-:root {
-    --blue: #0e0620;
-    --white: #fff;
-    --green: #2ccf6d;
-}
-
-svg {
-    width: 100%;
-}
 
 .container {
     display: flex;
     flex-direction: row;
     align-items: center;
     justify-content: center;
-    font-family: "Nunito Sans";
     color: var(--blue);
     font-size: 1em;
-}
+    height: 100vh;
+    padding: 0 5rem;
 
-.btn {
-    z-index: 1;
-    overflow: hidden;
-    background: transparent;
-    position: relative;
-    padding: 8px 50px;
-    border-radius: 30px;
-    cursor: pointer;
-    font-size: 1em;
-    letter-spacing: 2px;
-    transition: 0.2s ease;
-    font-weight: bold;
-    margin: 5px 0px;
+    svg {
+        width: 100%;
+    }
 
-    &.green {
-        border: 4px solid var(--green);
-        color: var(--blue);
+    h1 {
+        font-size: 64px;
+    }
 
-        &:before {
-            content: "";
-            position: absolute;
-            left: 0;
-            top: 0;
-            width: 0%;
-            height: 100%;
-            background: var(--green);
-            z-index: -1;
-            transition: 0.2s ease;
-        }
+    h2 {
+        font-size: 30px;
+    }
 
-        &:hover {
-            color: var(--white);
-            background: var(--green);
-            transition: 0.2s ease;
+    p {
+        font-size: 20px;
+    }
+
+    .btn {
+        z-index: 1;
+        overflow: hidden;
+        background: transparent;
+        position: relative;
+        padding: 10px 50px;
+        cursor: pointer;
+        font-size: 18px;
+        letter-spacing: 2px;
+        transition: 0.2s ease;
+        font-weight: 600;
+        margin: 5px 0px;
+
+        &.black {
+            border: 1px solid black;
+            color: black;
 
             &:before {
-                width: 100%;
+                content: "";
+                position: absolute;
+                left: 0;
+                top: 0;
+                width: 0%;
+                height: 100%;
+                background: black;
+                z-index: -1;
+                transition: 0.2s ease;
+            }
+
+            &:hover {
+                color: white;
+                background: black;
+                transition: 0.2s ease;
+
+                &:before {
+                    width: 100%;
+                }
             }
         }
     }
+
 }
+
 
 @media screen and (max-width:768px) {
     // body {

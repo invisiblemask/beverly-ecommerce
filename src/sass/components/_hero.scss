@@ -100,19 +100,46 @@
         button {
           width: 180px;
           margin-top: 20px;
-          border: 2px solid black;
           font-weight: 600;
-          color: black;
+          z-index: 1;
+          overflow: hidden;
+          background: transparent;
+          position: relative;
+          cursor: pointer;
+          letter-spacing: 2px;
+          transition: 0.2s ease;
+
+
+          &.black {
+            border: 1px solid black;
+            color: black;
+
+            &:before {
+              content: "";
+              position: absolute;
+              left: 0;
+              top: 0;
+              width: 0%;
+              height: 100%;
+              background: black;
+              z-index: -1;
+              transition: 0.2s ease;
+            }
+
+            &:hover {
+              color: white;
+              background: black;
+              transition: 0.2s ease;
+
+              &:before {
+                width: 100%;
+              }
+            }
+          }
 
           @include media(">=1920px") {
             width: 320px;
             font-size: 30px;
-          }
-
-          &:hover {
-            background-color: black;
-            color: white;
-            transition: all ease-in-out 0.5s;
           }
         }
 

@@ -13,7 +13,7 @@ export default function HeroPage() {
             <div className="hero-text">
               <span>#NEW SUMMER COLLECTION 2023</span> ARRIVALS <br /> SALES
             </div>
-            <button>SHOP NOW</button>
+            <button className="black">SHOP NOW</button>
           </div>
           <div className="hero-lg-img">
             <img src="/images/products/model_3.png" alt="" />
