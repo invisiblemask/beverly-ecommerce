@@ -30,22 +30,49 @@
   }
 
   button {
-    width: 200px;
-    border: 2px solid $banner-bg-color;
-    color: $banner-bg-color;
+    width: 180px;
+    margin-top: 20px;
     font-weight: 600;
-    text-transform: uppercase;
+    z-index: 1;
+    overflow: hidden;
+    background: transparent;
+    position: relative;
+    cursor: pointer;
+    letter-spacing: 1px;
+    font-size: 15px;
+    transition: 0.2s ease;
+
+
+    &.black {
+      border: 1px solid black;
+      color: black;
+
+      &:before {
+        content: "";
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 0%;
+        height: 100%;
+        background: black;
+        z-index: -1;
+        transition: 0.2s ease;
+      }
+
+      &:hover {
+        color: white;
+        background: black;
+        transition: 0.2s ease;
+
+        &:before {
+          width: 100%;
+        }
+      }
+    }
 
     @include media(">=1920px") {
-      width: 280px;
-      font-size: 25px;
-    }
-
-    &:hover {
-      background-color: $banner-bg-color;
-      color: $white;
-      transition: all ease-in-out 0.5s;
+      width: 320px;
+      font-size: 30px;
     }
   }
-
 }

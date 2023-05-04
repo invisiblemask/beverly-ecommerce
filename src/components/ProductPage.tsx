@@ -6,7 +6,7 @@ export default function ProductPage() {
     <section className="product-container">
       <Card />
       <Link href="/shop">
-        <button className="product-button">view more</button>
+        <button className="product-button black">View More</button>
       </Link>
     </section>
   );

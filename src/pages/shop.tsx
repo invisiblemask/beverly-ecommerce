@@ -75,7 +75,7 @@ export default function Shop() {
                 </div>
               </div>
               <ShopList />
-              <button>Load More</button>
+              <button className="black">Load More</button>
             </div>
           </div>
         </div>
