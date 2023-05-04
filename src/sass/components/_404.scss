@@ -13,6 +13,10 @@
 
     svg {
         width: 100%;
+
+        @include media("<tablet") {
+            display: none;
+        }
     }
 
     h1 {
@@ -66,18 +70,14 @@
                 }
             }
         }
+
+        @include media("<tablet") {
+            align-self: center;
+        }
     }
 
-}
+    @include media("<tablet") {
+        padding: 0 14px;
+    }
 
-
-@media screen and (max-width:768px) {
-    // body {
-    //     display: block;
-    // }
-
-    // .container {
-    //     margin-top: 70px;
-    //     margin-bottom: 70px;
-    // }
 }

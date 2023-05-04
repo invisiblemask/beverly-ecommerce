@@ -39,7 +39,7 @@ export default function Navbar() {
   const path = router.pathname;
   const [showModal, setShowModal] = useState(false);
   const [stickyNav, setStickyNav] = useState(false);
-  const [user, setUser] = useState(true);
+  const [user, setUser] = useState(false);
   const [isSidebarOpen, setIsSidebarOpen] = useState(false);
 
   const toggleSidebar = () => {
@@ -108,6 +108,8 @@ export default function Navbar() {
               alt=""
             />
             <Link href="/">HOME</Link>
+            <Link href="/new">NEW</Link>
+            <Link href="/brands">BRANDS</Link>
             <Link href="/shop">SHOP</Link>
             <Link href="/about">ABOUT</Link>
             <Link href="/cart">CART</Link>
